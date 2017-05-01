@@ -4,6 +4,7 @@ import { addMessage } from '../api/messaging'
 import {connect} from 'react-redux'
 import LeftBar from './LeftBar'
 import Main from './Main'
+import InstDash from './inst/InstDash'
 
 class App extends Component {
   constructor() {
@@ -33,6 +34,7 @@ class App extends Component {
 
         <LeftBar />
         <Main />
+        <InstDash />
 
         <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleChange} name="message" placeholder="Send a message..." value={this.state.message} />
