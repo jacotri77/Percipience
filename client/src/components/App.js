@@ -4,6 +4,7 @@ import { addMessage } from '../api/messaging'
 import {connect} from 'react-redux'
 import LeftBar from './LeftBar'
 import Main from './Main'
+import InstLogin from './InstLogin'
 
 class App extends Component {
   constructor() {
