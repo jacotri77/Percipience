@@ -1,0 +1,7 @@
+#cLeftBarCont {
+
+  width: 200px;
+  height: 650px;
+  border: 1px solid #000;
+  float: left;
+}

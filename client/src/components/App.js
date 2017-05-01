@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import './App.css'
-import { addMessage } from './api/messaging'
+import '../assets/styles/App.css'
+import { addMessage } from '../api/messaging'
 import {connect} from 'react-redux'
+import LeftBar from './LeftBar'
+import Main from './Main'
 
 class App extends Component {
   constructor() {
@@ -28,6 +30,10 @@ class App extends Component {
   render() {
     return (
       <div>
+
+        <LeftBar />
+        <Main />
+
         <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleChange} name="message" placeholder="Send a message..." value={this.state.message} />
           <button type="submit">Send</button>
