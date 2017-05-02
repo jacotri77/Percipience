@@ -13,11 +13,35 @@ class InstLogin extends Component {
       <div
         id='InstLoginCont'>
 
+          <h1 
+            id='loginTitle'> 
+
+              Please Provide Your Login Information
+
+          </h1>
+
         <div
          id='loginBox'>
 
           <form
              id='loginForm'>
+
+
+                <div 
+                  id='usrNameLbl'>
+
+                  <label
+                    htmlFor='username'>
+
+                      Username:
+
+                  </label>
+
+                </div>
+
+                <input
+                  id='usrName' 
+
 
                 <div 
                   id='usrNameLbl'> 
@@ -33,6 +57,7 @@ class InstLogin extends Component {
 
                 <input
                   id='usrName'
+
                   type='text' 
                   name='username' 
                   value='usernameState'
@@ -52,7 +77,23 @@ class InstLogin extends Component {
 
                 </div>  
 
+
+                <div 
+                  id='pWordLbl'>
+
+                  <label
+                    htmlFor='username'>
+
+                      Password:
+
+                  </label>
+
+                </div>
+
+                  <input
+
                 <input
+
                   id='pWord'
                   type='password'
                   name='password'
@@ -61,10 +102,17 @@ class InstLogin extends Component {
                   autoComplete='off' />
 
                 <button
+
+                  id='loginButton'
+                  type='submit'>
+
+                    Submit
+
                   type='submit'
                   id='loginButton'>
 
                   Submit
+
 
                 </button>
 

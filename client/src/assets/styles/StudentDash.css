@@ -1,0 +1,46 @@
+#studentDashCont {
+
+  width: 800px;
+  height: 650px;
+  margin-left: 0px;
+  border: 1px solid #000;
+}
+
+#studentDashTitle{
+
+	text-align: center;
+}
+
+#studentDashForm{
+
+	margin: 150px auto;
+	width: 450px;
+	height: 250px;
+	border: 1px solid #000;
+}
+
+#rmName, #rmButton{
+	display: inline-block;
+	height: 60px;
+}
+
+#rmName{
+
+	margin:20px;
+	width: 250px;
+}
+
+#rmNameLbl{
+
+	text-align: center;
+
+}
+
+#clssNotesButton{
+
+	display: block;
+	margin: auto;
+	width: 150px;
+	height: 60px;
+}
+
