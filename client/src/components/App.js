@@ -4,7 +4,7 @@ import '../assets/styles/App.css'
 import {connect} from 'react-redux'
 // import LeftBar from './LeftBar'
 import Main from './Main'
-import PieChart from './charts/pieChart'
+// import PieChart from './charts/pieChart'
 
 
 class App extends Component {
@@ -29,10 +29,8 @@ class App extends Component {
       <div
         id='AppCont'>
 
-        
-
         <Main />
-        <PieChart />
+     
       </div>
 
     )
