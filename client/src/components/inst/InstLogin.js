@@ -14,25 +14,59 @@ class InstLogin extends Component {
         id='InstLoginCont'>
 
         <div
-         id='LoginBox'>
+         id='loginBox'>
 
           <form
-             id='LoginForm'>
+             id='loginForm'>
 
-                <input 
+                <div 
+                  id='usrNameLbl'> 
+
+                  <label 
+                    htmlFor='username'>
+
+                    Username:
+
+                  </label>
+
+                </div>    
+
+                <input
+                  id='usrName'
                   type='text' 
                   name='username' 
                   value='usernameState'
-                  placeholder='Username'/>
+                  placeholder='Username'
+                  autoComplete='off'/>
+
+                <div 
+                  id='pWordLbl'> 
+
+                  <label
+                    htmlFor='password'>
+
+                      Password:<br />
+                      password should be at least 6 characters
+
+                  </label>
+
+                </div>  
 
                 <input
+                  id='pWord'
                   type='password'
                   name='password'
                   value='passwordState'
-                  placeholder='Password' />
+                  placeholder='Password'
+                  autoComplete='off' />
 
                 <button
-                  type='submit' />
+                  type='submit'
+                  id='loginButton'>
+
+                  Submit
+
+                </button>
 
             </form>
 
