@@ -38,11 +38,25 @@
 
 #AddRoomCont {
 
-  width: 600px;
-  height: 60px;
+  width: 570px;
+  height: 85px;
   margin-top: 100px;
+  margin-left: 10px;
   display: flex;
   flex-direction: row;
+  background-color: #80bfff;
+  box-shadow: none;
+  transition: box-shadow 0.5s;
+  border-radius: 20px;
+}
+
+#AddRoomCont:hover {
+
+  cursor: pointer;
+  background-color: #6EB3FA;
+  box-shadow: 10px 5px 25px #111;
+  transition: box-shadow  0.5s;
+  
 }
 
 
@@ -59,11 +73,13 @@
 #AddNoteImg {
 
   margin-left: 20px;
+
 }
 
 #AddRoomImg {
 
   margin-left: 20px;
+  margin-top: 10px;
 }
 
 #AddRoomCont {
@@ -82,4 +98,5 @@
 .dashH2 {
 
   margin-left: 20px;
+  margin-top: 25px;
 }

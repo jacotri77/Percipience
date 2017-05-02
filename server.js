@@ -35,6 +35,18 @@ io.on('connection', function(socket) {
 
   })
 
+  socket.on('addRoomName', function(roomId) {
+
+    io.emit('addRoomName', roomId)
+
+  })
+
+  socket.on('addNewTopic', function(topic) {
+
+    io.emit('addNewTopic', topic)
+
+  })
+
 //>>
 })
 

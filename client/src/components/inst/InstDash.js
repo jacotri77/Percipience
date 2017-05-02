@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import '../../assets/styles/InstDash.css'
 import {connect} from 'react-redux'
+import {addRoomName} from '../../api/perci'
+
+// import { browserHistory } from 'react-router';
+// browserHistory.push('/some/path');
 
 
 class InstDash extends Component {
@@ -14,6 +18,11 @@ class InstDash extends Component {
       message: ''
 
     }
+  }
+
+  addRoomClick () {
+
+    addRoomName()
   }
 
 
@@ -34,12 +43,16 @@ class InstDash extends Component {
 
           
           <div
-            id='AddRoomCont'>
+            id='AddRoomCont'
+            onClick={this.addRoomClick}>
 
+            <div>
             <img
               id='AddRoomImg' 
               alt='Plus'
               src={require('../../assets/images/plus.png')} />
+
+            </div>
 
             <h2
               className='dashH2'>
@@ -47,6 +60,7 @@ class InstDash extends Component {
             </h2>
 
           </div>
+
 
           <div
             id='AddNoteCont'>

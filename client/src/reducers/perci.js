@@ -16,12 +16,14 @@ export default function perciReducer(state=initialState, action) {
 
         case 'ADD_MESSAGE':
 
-            return {...state, messages: [...state.messages, action.message]
+          return {
 
-            }
+            ...state, 
+            messages: [...state.messages, action.message]
 
+          }
 
-        case 'ADD_COMP_LVL':
+         case 'ADD_COMP_LVL':
 
             return {
 
@@ -29,6 +31,28 @@ export default function perciReducer(state=initialState, action) {
               user_scale: action.user_scale
 
             }
+
+          case 'ADD_ROOM_NAME':
+
+            return {
+
+              ...state, 
+              room: action.room
+
+            } 
+
+          case 'ADD_ROOM_TOPIC':
+
+            return {
+
+              ...state, 
+              topic: action.topic
+
+            }   
+
+
+
+            //
 
 
         default:
