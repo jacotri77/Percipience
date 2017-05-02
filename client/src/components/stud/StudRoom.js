@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
+import { addCompLvl } from '../../api/perci'
 
 
 class StudRoom extends Component {
@@ -10,8 +11,6 @@ class StudRoom extends Component {
     super()
 
     this.state = {
-
-      cNum: '0'
 
     }
   }
@@ -23,6 +22,16 @@ class StudRoom extends Component {
     document.getElementById('tstId').innerHTML = (c)
     
     document.getElementById('StudRoomSlide').value = (c)
+
+  }
+
+  submitClick() {
+
+
+    console.log('subClick')
+    var c = document.getElementById('StudRoomSlide').value
+
+    addCompLvl(c)
 
   }
 
@@ -39,7 +48,7 @@ class StudRoom extends Component {
 
           <h1
             id='StudRoomTopic'>
-            Topic
+            {this.props.topic}
           </h1>
 
         </div>
@@ -80,10 +89,24 @@ class StudRoom extends Component {
           </div>
 
           <div
-            id='StudRoomSbmtBtn'>
+            id='StudRoomSbmtBtn'
+            onClick={this.submitClick}>
             Submit
           </div>
 
+        </div>
+
+     
+
+        <div
+          id='StudRoomUserCont'>
+          {this.props.user}
+        </div>
+
+
+        <div
+          id='StudRoomRoomCont'>
+          {this.props.room}
         </div>
 
       </div>
@@ -96,9 +119,13 @@ class StudRoom extends Component {
 
 const mapStateToProps = function(appState) {
 
+  // console.log(appState)
+
   return {
 
-    messages: appState.messages
+    user: appState.user,
+    room: appState.room,
+    topic: appState.topic
 
   }
 

@@ -1,6 +1,6 @@
 import {createStore} from 'redux'
-import messagingReducer from './reducers/messaging'
+import perciReducer from './reducers/perci'
 
-const store = createStore(messagingReducer)
+const store = createStore(perciReducer)
 
 export default store

@@ -19,11 +19,25 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 //     })
 // })
 
-io.on('connection', function(socket){
-    socket.on('addMessage', function(message){
-        io.emit('newMessage', message)
-    })
+io.on('connection', function(socket) {
+
+
+  socket.on('addMessage', function(message) {
+
+    io.emit('newMessage', message)
+
+  })
+
+
+  socket.on('addCompLvl', function(score) {
+
+    io.emit('addCompLvl', score)
+
+  })
+
+//>>
 })
+
 
 server.listen(3001, function(){
     console.log('listening on port 3001')
