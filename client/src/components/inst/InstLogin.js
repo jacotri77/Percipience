@@ -26,23 +26,6 @@ class InstLogin extends Component {
           <form
              id='loginForm'>
 
-
-                <div 
-                  id='usrNameLbl'>
-
-                  <label
-                    htmlFor='username'>
-
-                      Username:
-
-                  </label>
-
-                </div>
-
-                <input
-                  id='usrName' 
-
-
                 <div 
                   id='usrNameLbl'> 
 
@@ -57,7 +40,6 @@ class InstLogin extends Component {
 
                 <input
                   id='usrName'
-
                   type='text' 
                   name='username' 
                   value='usernameState'
@@ -75,44 +57,22 @@ class InstLogin extends Component {
 
                   </label>
 
-                </div>  
-
-
-                <div 
-                  id='pWordLbl'>
-
-                  <label
-                    htmlFor='username'>
-
-                      Password:
-
-                  </label>
-
-                </div>
+                </div> 
 
                   <input
-
-                <input
-
-                  id='pWord'
-                  type='password'
-                  name='password'
-                  value='passwordState'
-                  placeholder='Password'
-                  autoComplete='off' />
+                    id='pWord'
+                    type='password'
+                    name='password'
+                    value='passwordState'
+                    placeholder='Password'
+                    autoComplete='off' />
 
                 <button
 
                   id='loginButton'
                   type='submit'>
-
-                    Submit
-
-                  type='submit'
-                  id='loginButton'>
-
+                
                   Submit
-
 
                 </button>
 

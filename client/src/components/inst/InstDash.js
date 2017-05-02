@@ -22,11 +22,7 @@ class InstDash extends Component {
     return (
 
       <div
-<<<<<<< HEAD
         id='cInsDashCont'>
-=======
-        id='InstDashCont'>
->>>>>>> 0eedbaa67493a1a9c50ed40e845af60494739fc9
 
         <h1
           id='InstDashHeader'>
@@ -76,12 +72,7 @@ class InstDash extends Component {
           </div>
 
         </div>
-<<<<<<< HEAD
 
-       
-=======
-         
->>>>>>> 0eedbaa67493a1a9c50ed40e845af60494739fc9
       </div>
 
     )
