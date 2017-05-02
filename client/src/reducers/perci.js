@@ -5,8 +5,14 @@ const initialState = {
     user: 'USERNAME',
     user_scale: 0,
     topic: 'TOPIC',
-    room: 'ROOM'
+    room: 'ROOM',
+    chartData: [
 
+    {   user:'USERNAME',
+        user_scale:0
+    }
+
+]
 
 }
 
@@ -32,6 +38,7 @@ export default function perciReducer(state=initialState, action) {
 
             }
 
+
           case 'ADD_ROOM_NAME':
 
             return {
@@ -50,11 +57,7 @@ export default function perciReducer(state=initialState, action) {
 
             }   
 
-
-
-            //
-
-
+            
         default:
 
             return state
