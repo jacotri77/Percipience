@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route} from 'react-router-dom'
 
 import InstLogin from './inst/InstLogin'
 import InstDash from './inst/InstDash'
+import StudentClassNotes from './student/StudentClassNotes'
 
 import StudentClassNotes from './stud/StudentClassNotes'
 import StudentDash from './stud/StudentDash'
@@ -55,8 +56,6 @@ class Main extends Component {
           <Route
             path='/studentClassNotes'
             component={StudentClassNotes} />
-
-
 
         </div>
 

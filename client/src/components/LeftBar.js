@@ -14,7 +14,32 @@ class LeftBar extends Component {
     return (
       <div
         id='cLeftBarCont'>
-       
+
+        <input
+          id='cNoteTitle'
+          name='classNoteTitle'
+          value='classnoteState' />
+
+        <div
+          id='notesCont'>
+
+            <ul>
+
+              <li>Note 1</li>
+              <li>Note 2</li>
+              <li>Note 3</li>
+
+            </ul>
+
+        </div>
+
+        <button 
+          id='backButton'>
+
+          Back to Dashboard
+
+        </button>
+      
       </div>
     )
   }
