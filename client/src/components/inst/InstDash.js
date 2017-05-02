@@ -72,7 +72,7 @@ class InstDash extends Component {
           </div>
 
         </div>
-         
+
       </div>
 
     )

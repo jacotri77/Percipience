@@ -21,6 +21,7 @@ class StudRoom extends Component {
     var c = document.getElementById('StudRoomSlide').value
 
     document.getElementById('tstId').innerHTML = (c)
+    
     document.getElementById('StudRoomSlide').value = (c)
 
   }

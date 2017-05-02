@@ -13,6 +13,13 @@ class InstLogin extends Component {
       <div
         id='InstLoginCont'>
 
+          <h1 
+            id='loginTitle'> 
+
+              Please Provide Your Login Information
+
+          </h1>
+
         <div
          id='loginBox'>
 
@@ -50,20 +57,21 @@ class InstLogin extends Component {
 
                   </label>
 
-                </div>  
+                </div> 
 
-                <input
-                  id='pWord'
-                  type='password'
-                  name='password'
-                  value='passwordState'
-                  placeholder='Password'
-                  autoComplete='off' />
+                  <input
+                    id='pWord'
+                    type='password'
+                    name='password'
+                    value='passwordState'
+                    placeholder='Password'
+                    autoComplete='off' />
 
                 <button
-                  type='submit'
-                  id='loginButton'>
 
+                  id='loginButton'
+                  type='submit'>
+                
                   Submit
 
                 </button>
