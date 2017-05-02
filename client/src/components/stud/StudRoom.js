@@ -15,24 +15,20 @@ class StudRoom extends Component {
     }
   }
 
+
   slideChange () {
 
     var c = document.getElementById('StudRoomSlide').value
 
     document.getElementById('tstId').innerHTML = (c)
     
-    document.getElementById('StudRoomSlide').value = (c)
-
   }
 
   submitClick() {
 
-
-    console.log('subClick')
     var c = document.getElementById('StudRoomSlide').value
 
     addCompLvl(c)
-
   }
 
 

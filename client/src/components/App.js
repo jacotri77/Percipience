@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../assets/styles/App.css'
 // import { addMessage } from '../api/messaging'
 import {connect} from 'react-redux'
-import LeftBar from './LeftBar'
+// import LeftBar from './LeftBar'
 import Main from './Main'
 
 
@@ -28,7 +28,7 @@ class App extends Component {
       <div
         id='AppCont'>
 
-        <LeftBar />
+        
 
         <Main />
         

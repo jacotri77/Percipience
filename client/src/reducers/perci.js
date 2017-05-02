@@ -23,8 +23,6 @@ export default function perciReducer(state=initialState, action) {
 
         case 'ADD_COMP_LVL':
 
-console.log(action)
-
             return {
 
               ...state, 
