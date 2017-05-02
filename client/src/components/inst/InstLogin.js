@@ -13,11 +13,18 @@ class InstLogin extends Component {
       <div
         id='InstLoginCont'>
 
+          <h1 
+            id='loginTitle'> 
+
+              Please Provide Your Login Information
+
+          </h1>
+
         <div
          id='LoginBox'>
 
           <form
-             id='LoginForm'>
+             id='loginForm'>
 
                 <div 
                   id='usrNameLbl'>
