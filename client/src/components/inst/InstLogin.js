@@ -19,20 +19,51 @@ class InstLogin extends Component {
           <form
              id='LoginForm'>
 
-                <input 
+                <div 
+                  id='usrNameLbl'>
+
+                  <label
+                    htmlFor='username'>
+
+                      Username:
+
+                  </label>
+
+                </div>
+
+                <input
+                  id='usrName' 
                   type='text' 
                   name='username' 
                   value='usernameState'
                   placeholder='Username'/>
 
-                <input
+                <div 
+                  id='pWordLbl'>
+
+                  <label
+                    htmlFor='username'>
+
+                      Password:
+
+                  </label>
+
+                </div>
+
+                  <input
+                  id='pWord'
                   type='password'
                   name='password'
                   value='passwordState'
                   placeholder='Password' />
 
                 <button
-                  type='submit' />
+                  id='loginButton'
+                  type='submit'>
+
+                    Submit
+
+                </button>
 
             </form>
 
