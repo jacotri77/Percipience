@@ -2,19 +2,27 @@ import React, { Component } from 'react'
 import '../../assets/styles/InstDash.css'
 import {connect} from 'react-redux'
 
+
 class InstDash extends Component {
 
   constructor() {
+
     super()
+
     this.state = {
+
       message: ''
+
     }
   }
 
+
   render() {
+
     return (
+
       <div
-        id='cInsDashCont'>
+        id='InstDashCont'>
 
         <h1
           id='InstDashHeader'>
@@ -65,11 +73,13 @@ class InstDash extends Component {
 
         </div>
 
-       
       </div>
+
     )
   }
 }
+
+
 
 const mapStateToProps = function(appState) {
 
@@ -80,6 +90,7 @@ const mapStateToProps = function(appState) {
   }
 
 }
+
 
 export default connect(mapStateToProps)(InstDash)
 

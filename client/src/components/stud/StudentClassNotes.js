@@ -11,8 +11,8 @@ class StudentClassNotes extends Component {
     return (
       <div>
        
-    	<div 
-    		id='classNotesCont'>
+      <div 
+        id='classNotesCont'>
 
        <h2 
         id='classNoteTitle'>
@@ -67,7 +67,7 @@ class StudentClassNotes extends Component {
         </div>
 
         </div>
-    	)
+      )
 
     }
     
