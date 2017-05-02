@@ -1,16 +1,50 @@
 import React, { Component } from 'react'
 import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
-
-
-
+import {Chart} from 'react-google-charts'
+import {addCompLvl} from '../../api/perci'
+   
 
 class PieChart extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      options: {
+        title: 'Not Pushing to Master',
+        legend: 'none'
+    
+      },
+
+
+     data:[
+     {
+      this.chartData
+
+    }]
+    
+
+    }
+   
+      addCompLvl()
+  }
+
 
 render(){
 	return(
 
+    <div 
+      id="chart_div">
 
+      <Chart
+        chartType="PieChart"
+        data={this.props.chartData}
+        options={this.state.options}
+        graph_id="PieChart"
+        width="100%"
+        height="400px"
+        legend_toggle />
+
+    </div>
 
 		)
 
@@ -31,46 +65,6 @@ render(){
 export default connect(mapStateToProps)(PieChart)
 
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-            <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript">
 
-      // Load the Visualization API and the corechart package.
-      google.charts.load('current', {'packages':['corechart']});
 
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-
-        // Create the data table.
-        var jsondata = $.ajax({
-          url: "db.json",
-          dataType: "json",
-          async: false,
-        }).responseText;
-
-        var data = new google.visualization.DataTable(jsonData);
-
-      
-
-        // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
-                       'width':400,
-                       'height':300};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-
-  <div id="chart_div"></div>
-
+   

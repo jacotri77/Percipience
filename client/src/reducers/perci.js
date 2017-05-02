@@ -5,8 +5,14 @@ const initialState = {
     user: 'USERNAME',
     user_scale: 0,
     topic: 'TOPIC',
-    room: 'ROOM'
+    room: 'ROOM',
+    chartData: [
 
+    {   user:'USERNAME',
+        user_scale:0
+    }
+
+]
 
 }
 
@@ -30,7 +36,15 @@ export default function perciReducer(state=initialState, action) {
 
             }
 
+        case 'GET_JSON':
 
+            return {
+
+              ...state, 
+              json: {...action.json}
+
+            }
+            
         default:
 
             return state
