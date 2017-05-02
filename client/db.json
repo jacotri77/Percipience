@@ -1,0 +1,29 @@
+{
+	"student": [
+
+		{
+			"id": 1,
+			"compLvl": 1
+
+	},
+
+		{
+			"id": 2,
+			"compLvl": 1
+
+	},
+
+		{
+			"id": 3,
+			"compLvl": 2
+
+	},
+
+		{
+			"id": 4,
+			"compLvl": 2
+
+	},
+]
+
+}
