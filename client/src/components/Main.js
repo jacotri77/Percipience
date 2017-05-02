@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import '../assets/styles/Main.css'
 import {connect} from 'react-redux'
 import { BrowserRouter as Router, Route} from 'react-router-dom'
+
+
+import LeftBar from './LeftBar'
+
+
 import InstLogin from './inst/InstLogin'
 import InstDash from './inst/InstDash'
 import StudentClassNotes from './stud/StudentClassNotes'
@@ -30,6 +35,8 @@ class Main extends Component {
     return (
 
       <Router>
+      <div>
+        <LeftBar />
 
         <div
           id='MainCont'>
@@ -58,6 +65,7 @@ class Main extends Component {
 
         </div>
 
+        </div>
       </Router>
 
     )

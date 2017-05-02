@@ -58,6 +58,7 @@ class StudentClassNotes extends Component {
           id='noteAdd'>
 
           <img 
+            alt='Plus'
             src={require('../../assets/images/plus.png')} />
 
         </button>
