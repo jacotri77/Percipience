@@ -12,7 +12,7 @@ class InstRoom extends Component {
 
     this.state = {
 
-      message: ''
+      messages: ''
 
     }
   }
