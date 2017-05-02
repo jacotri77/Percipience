@@ -1,0 +1,15 @@
+#studentDashCont {
+
+  width: 800px;
+  height: 650px;
+  margin-left: 0px;
+  border: 1px solid #000;
+}
+
+#studentDashForm{
+
+	margin: 150px auto;
+	width: 450px;
+	height: 350px;
+	border: 1px solid #000;
+}

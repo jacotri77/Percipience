@@ -3,6 +3,7 @@ import '../assets/styles/Main.css'
 import {connect} from 'react-redux'
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 import InstLogin from './inst/InstLogin'
+import StudentDash from './student/StudentDash'
 
 
 
@@ -32,6 +33,10 @@ class Main extends Component {
             exact={true} 
             path='/' 
             component={InstLogin} />
+            
+          <Route
+            path='/studentDash/'
+            component={StudentDash} />
 
         </div>
 
