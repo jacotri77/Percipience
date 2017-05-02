@@ -6,10 +6,39 @@
   border: 1px solid #000;
 }
 
+#studentDashTitle{
+
+	text-align: center;
+}
+
 #studentDashForm{
 
 	margin: 150px auto;
 	width: 450px;
 	height: 350px;
 	border: 1px solid #000;
+}
+
+#rmName, #rmButton{
+
+	display: inline-block;
+	height: 60px;
+}
+
+#rmName{
+
+	margin:0 auto 20px auto;
+	width: 250px;
+}
+
+#rmNameLbl{
+
+	text-align: center;
+
+}
+
+#clssNotesButton{
+
+	display: block;
+	margin: auto;
 }

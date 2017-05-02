@@ -1,5 +1,5 @@
-mport React, { Component } from 'react'
-import '../../assets/styles/InstLogin.css'
+import React, { Component } from 'react'
+import '../../assets/styles/StudentDash.css'
 import {connect} from 'react-redux'
 
 
@@ -27,48 +27,34 @@ class StudentDash extends Component {
              id='studentDashForm'>
 
                 <div 
-                  id='usrNameLbl'>
+                  id='rmNameLbl'>
 
                   <label
-                    htmlFor='username'>
+                    htmlFor='roomname'>
 
-                      Username:
+                      Room Name
 
                   </label>
 
                 </div>
 
                 <input
-                  id='usrName' 
+                  id='rmName' 
                   type='text' 
-                  name='username' 
-                  value='usernameState'
-                  placeholder='Username'/>
-
-                <div 
-                  id='pWordLbl'>
-
-                  <label
-                    htmlFor='username'>
-
-                      Password:
-
-                  </label>
-
-                </div>
-
-                  <input
-                  id='pWord'
-                  type='password'
-                  name='password'
-                  value='passwordState'
-                  placeholder='Password' />
+                  name='roomname' 
+                  placeholder='Room Name'/>
 
                 <button
-                  id='loginButton'
-                  type='submit'>
+                  id='rmButton' >
 
-                    Submit
+                    Enter Room
+
+                </button>
+
+                <button
+                  id='clssNotesButton' >
+
+                     Class Notes Link
 
                 </button>
 
