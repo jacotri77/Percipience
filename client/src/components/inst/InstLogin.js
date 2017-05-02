@@ -1,18 +1,17 @@
 import React, { Component } from 'react'
-import '../assets/styles/Main.css'
+import '../../assets/styles/InstLogin.css'
 import {connect} from 'react-redux'
-import LeftBar from './LeftBar'
+
 
 class InstLogin extends Component {
 
 
   render() {
+
     return (
 
       <div
         id='InstLoginCont'>
-
-      <LeftBar />
 
         <div
          id='LoginBox'>
