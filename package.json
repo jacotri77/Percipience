@@ -13,7 +13,11 @@
     "express": "^4.15.2",
     "jquery": "^3.2.1",
     "nodemon": "^1.11.0",
+<<<<<<< HEAD
     "react-google-charts": "^1.5.4-alpha.1",
+=======
+    "shortid": "^2.2.8",
+>>>>>>> master
     "socket.io": "^1.7.3"
   },
   "boilerplate": {

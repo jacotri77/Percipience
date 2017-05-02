@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../../assets/styles/InstRoom.css'
 import {connect} from 'react-redux'
+import {addNewTopic} from '../../api/perci'
 
 
 class InstRoom extends Component {
@@ -17,59 +18,44 @@ class InstRoom extends Component {
   }
 
 
+
+  setNewTopic() {
+
+    var c = document.getElementById('InstRoomAddTopicInp').value
+
+    addNewTopic(c)
+
+    document.getElementById('InstRoomAddTopicInp').value = ''
+
+  }
+
   render() {
 
     return (
 
       <div
-        id='InstDashCont'>
+        id='InstRoomCont'>
 
         <h1
-          id='InstDashHeader'>
-          Dashboard
+          id='InstRoomCurrTopic'>
+          {this.props.topic}
         </h1>
 
+        <h4
+          id='InstRoomName'>
+          {this.props.room}
+        </h4>
+
+        <input 
+          id='InstRoomAddTopicInp'
+          type='text' 
+          name='roomname'
+          placeholder='Topic'/>
+
         <div
-          id='InstDashFrame'>
-
-          <div
-            id='AddRoomCont'>
-
-            <img
-              id='AddRoomImg' 
-              alt='Plus'
-              src={require('../../assets/images/plus.png')} />
-
-            <h2
-              className='dashH2'>
-              Create Room
-            </h2>
-
-          </div>
-
-          <div
-            id='AddNoteCont'>
-
-
-            <img
-              id='AddNoteImg' 
-              alt='Plus'
-              src={require('../../assets/images/plus.png')} />
-
-            
-            <h2
-              className='dashH2'>
-              Create Class Notes
-            </h2>
-
-            <input 
-              id='AddNoteInp'
-              type='text' 
-              name='roomname'
-              placeholder='Class Note Name'/>
-
-          </div>
-
+          id='SetTopicBtn'
+          onClick={this.setNewTopic}>
+        Set Topic
         </div>
 
       </div>
@@ -84,9 +70,13 @@ const mapStateToProps = function(appState) {
 
   return {
 
-    messages: appState.messages
+    user: appState.user,
+    room: appState.room,
+    topic: appState.topic
 
   }
+
+  
 
 }
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../../assets/styles/InstLogin.css'
 import {connect} from 'react-redux'
-
+//
 
 class InstLogin extends Component {
 
