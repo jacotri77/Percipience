@@ -5,3 +5,39 @@
   margin-left: 0px;
   border: 1px solid #000;
 }
+
+#loginBox{
+
+	width: 400px;
+	height: 350px;
+	border: 1px solid #000;
+	margin: 150px auto;
+
+}
+
+#loginButton{
+
+	display: block;
+	margin:20px auto;
+	width: 150px;
+	height:60px;
+}
+
+#usrName, #pWord{
+
+	display: block;
+	margin:0 auto 20px auto;
+	width: 300px;
+	height: 60px;
+}
+
+#usrNameLbl, #pWordLbl{
+
+	margin:auto;
+	text-align: center;
+}
+
+#usrNameLbl{
+
+	margin-top: 20px;
+}
