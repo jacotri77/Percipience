@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../../assets/styles/LeftBar.css'
+import '../../assets/styles/InstDash.css'
 import {connect} from 'react-redux'
 
 class InstDash extends Component {
@@ -15,6 +15,56 @@ class InstDash extends Component {
     return (
       <div
         id='cInsDashCont'>
+
+        <h1
+          id='InstDashHeader'>
+          Dashboard
+        </h1>
+
+        <div
+          id='InstDashFrame'>
+
+          
+          <div
+            id='AddRoomCont'>
+
+            <img
+              id='AddRoomImg' 
+              alt='Plus'
+              src={require('../../assets/images/plus.png')} />
+
+            <h2
+              className='dashH2'>
+              Create Room
+            </h2>
+
+          </div>
+
+          <div
+            id='AddNoteCont'>
+
+
+            <img
+              id='AddNoteImg' 
+              alt='Plus'
+              src={require('../../assets/images/plus.png')} />
+
+            
+            <h2
+              className='dashH2'>
+              Create Class Notes
+            </h2>
+
+            <input 
+              id='AddNoteInp'
+              type='text' 
+              name='roomname'
+              placeholder='Class Note Name'/>
+
+          </div>
+
+        </div>
+
        
       </div>
     )
