@@ -3,6 +3,7 @@ import '../assets/styles/Main.css'
 import {connect} from 'react-redux'
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 import LeftBar from './LeftBar'
+import TypeSel from './TypeSel'
 
 
 import InstLogin from './inst/InstLogin'
@@ -12,6 +13,7 @@ import InstRoom from './inst/InstRoom'
 import StudentClassNotes from './stud/StudentClassNotes'
 import StudentDash from './stud/StudentDash'
 import StudRoom from './stud/StudRoom'
+import StudLogIn from './stud/StudLogIn'
 
 
 
@@ -41,9 +43,15 @@ class Main extends Component {
         <div
           id='MainCont'>
           
+
           <Route 
             exact={true} 
             path='/' 
+            component={TypeSel} />
+
+          <Route 
+            exact={true} 
+            path='/instLogin' 
             component={InstLogin} />
             
           <Route
@@ -67,6 +75,11 @@ class Main extends Component {
             path='/studentClassNotes'
             component={StudentClassNotes} />
 
+          <Route
+            path='/studLogIn'
+            component={StudLogIn} />
+
+          
 
 
         </div>
