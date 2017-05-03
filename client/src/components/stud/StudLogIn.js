@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../../assets/styles/InstLogin.css'
+import '../../assets/styles/StudLogIn.css'
 import {connect} from 'react-redux'
 
 
@@ -11,38 +11,41 @@ class StudLogIn extends Component {
     return (
 
       <div
-        id='InstLoginCont'>
+        id='StudLoginCont'>
 
-          <h1 
-            id='loginTitle'> 
-
-              Student Log In
-
-          </h1>
+        <h1 
+          id='StudLogInTitle'> 
+          Student Log In
+        </h1>
 
         <div
-         id='loginBox'>
+         id='StudLogInBox'>
 
-        
+        <div
+          id='StudInpWrap'>
 
           <div 
-            id='usrNameLbl'> 
+            id='StudLog'> 
 
             <label 
-              htmlFor='username'>
-              Username:
+              id='StudUsrNameLab'
+              htmlFor='StudUsrName'>
+              <p>Username:</p>
             </label>
 
           </div>    
 
-                <input
-                  id='usrName'
-                  type='text' 
-                  name='username' 
-                  placeholder='Student Name'
-                  autoComplete='off'/>
+            <input
+              id='StudUsrName'
+              type='text' 
+              placeholder='Student Name'
+              autoComplete='off'/>
 
-            
+        </div>
+            <div
+              id='StudUsrSubBtn'>
+            Submit
+            </div>
 
          </div>
 
