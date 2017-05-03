@@ -103,10 +103,10 @@ class LeftBar extends Component {
               <li>
                 
                 <Link
-                  to={'/studentClassNotes/'}>
+                  to={'/studLogIn/'}>
               
                   <p>
-                    Student Notes
+                    Student LogIn
                   </p>
 
                 </Link>
