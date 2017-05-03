@@ -43,39 +43,44 @@ class TypeSel extends Component {
     id='TypeSelCont'>
 
     <h1 
-      id='loginTitle'> 
+      id='TypeSelTitle'> 
       User Selection
     </h1>
 
     <div
-      id='SelRadioCont'>
+      id='TypeSelBtnCont'>
 
-      <div>
+      <div
+        id='SelRadioCont'>
 
-        <Link
-          to={'/instLogin/'}>
+        <div>
+
+          <Link
+            to={'/instLogin/'}>
         
-          <div
-            id='TypeSelSubBtn'>
-            Instructor
-          </div>
+            <div
+              className='TypeSelSubBtn'>
+              Instructor
+            </div>
                 
-        </Link>
+          </Link>
       
-      </div>
+        </div>
 
-      <div>
+        <div>
 
-        <Link
-          to={'/studLogIn/'}>
+          <Link
+            to={'/studLogIn/'}>
         
-          <div
-            id='TypeSelSubBtn'>
-            Student
-          </div>
+            <div
+              className='TypeSelSubBtn'>
+              Student
+            </div>
                 
-        </Link>
+          </Link>
           
+        </div>
+
       </div>
 
     </div>
