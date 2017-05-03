@@ -12,34 +12,21 @@ class PieChart extends Component{
     this.state = {
 
       options: {
-        title: 'Not Pushing to Master',
-        legend: 'none'
+        title: 'Current Topic Votes',
+        legend: 'toggle',
+        is3D: false,
+        legent: 'left'
     
     },
 
-    rows:[
+    data:[
 
-       ['8', 12],
-        ['4', 5.5],
-        ['11', 14],
+       ['student', 'votes'],
+        ['4', 7],
+        ['10', 3],
         ['4', 5],
-        ['3', 3.5],
-        ['6.5', 7],
-
-    ],
-
-    columns:[
-
-    { 
-      type: 'string',
-      label: 'Id'
-    },
-
-      {
-        type: 'number',
-        label: 'Comp Level'
-
-      },
+        ['3', 3],
+        ['6', 12],
 
     ],
 
@@ -54,8 +41,7 @@ render(){
 
       <Chart
         chartType="PieChart"
-        rows={this.state.rows}
-        columns={this.state.columns}
+        data={this.state.data}
         options={this.state.options}
         graph_id="PieChart"
         width="100%"
