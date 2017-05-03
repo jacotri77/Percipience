@@ -2,25 +2,10 @@ import io from 'socket.io-client'
 import store from '../store'
 import shortid from 'shortid'
 
-// 10.68.0.107
 const socket = io.connect('http://localhost:3001')
-
-export function addMessage(message) {
-    socket.emit('addMessage', message)
-}
-
-socket.on('newMessage', function(message){
-    store.dispatch({
-        type: 'ADD_MESSAGE',
-        message
-    })
-})
-
-
 // 10.68.0.107. 192.168.1.10
 // const socket = io.connect('http://10.68.0.107:3001')
-const socket = io.connect('http://192.168.1.10:3001')
-
+// const socket = io.connect('http://192.168.1.10:3001')
 
 
 //------------
