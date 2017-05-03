@@ -41,9 +41,15 @@ io.on('connection', function(socket) {
 
   })
 
-  socket.on('addNewTopic', function(topic) {
+  socket.on('addNewTopic', function(curr_topic) {
 
-    io.emit('addNewTopic', topic)
+    io.emit('addNewTopic', curr_topic)
+
+  })
+
+  socket.on('addUserName', function(user) {
+
+    io.emit('addUserName', user)
 
   })
 

@@ -1,10 +1,21 @@
 import React, { Component } from 'react'
 import '../../assets/styles/StudLogIn.css'
 import {connect} from 'react-redux'
+import { Link } from 'react-router-dom'
+
+import {addUserName} from '../../api/perci'
 
 
 class StudLogIn extends Component {
 
+
+  studLogInSubmit() {
+
+    var c = document.getElementById('StudUsrName').value
+
+    addUserName(c) 
+
+  }
 
   render() {
 
@@ -21,19 +32,21 @@ class StudLogIn extends Component {
         <div
          id='StudLogInBox'>
 
-        <div
-          id='StudInpWrap'>
+          <div
+            id='StudInpWrap'>
 
-          <div 
-            id='StudLog'> 
+            <div 
+              id='StudLog'> 
 
-            <label 
-              id='StudUsrNameLab'
-              htmlFor='StudUsrName'>
-              <p>Username:</p>
-            </label>
+              <label 
+                id='StudUsrNameLab'
+                htmlFor='StudUsrName'>
 
-          </div>    
+                <p>Username:</p>
+
+              </label>
+
+            </div>    
 
             <input
               id='StudUsrName'
@@ -42,10 +55,18 @@ class StudLogIn extends Component {
               autoComplete='off'/>
 
         </div>
-            <div
-              id='StudUsrSubBtn'>
-            Submit
-            </div>
+
+            
+            <Link
+              to={'/studentDash/'}>
+      
+              <div
+                onClick={this.studLogInSubmit}
+                id='StudUsrSubBtn'>
+                Submit
+              </div>
+                
+          </Link>
 
          </div>
 

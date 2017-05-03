@@ -3,19 +3,23 @@
   width: 800px;
   height: 650px;
   margin-left: 0px;
+  background-color: #00284d;
   border: 1px solid #000;
 }
 
 #studentDashTitle{
 
 	text-align: center;
+  color: #FFF;
 }
 
 #studentDashForm{
 
 	margin: 150px auto;
-	width: 450px;
+	width: 600px;
 	height: 250px;
+  border-radius: 15px;
+  background-color: #80bfff;
 	border: 1px solid #000;
 }
 
@@ -27,7 +31,7 @@
 #rmName{
 
 	margin:20px;
-	width: 250px;
+	width: 150px;
 }
 
 #rmNameLbl{
@@ -44,3 +48,13 @@
 	height: 60px;
 }
 
+#StudDashEnterBtn {
+
+  width: 350px;
+}
+
+#StudDashLogCont {
+
+  display: flex;
+  flex-direction: row;
+}
