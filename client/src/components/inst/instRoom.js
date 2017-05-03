@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../../assets/styles/InstRoom.css'
 import {connect} from 'react-redux'
 import {addNewTopic} from '../../api/perci'
+import PieChart from '../charts/pieChart'
 
 
 class InstRoom extends Component {
@@ -57,6 +58,8 @@ class InstRoom extends Component {
           onClick={this.setNewTopic}>
         Set Topic
         </div>
+
+          <PieChart />
 
       </div>
 
