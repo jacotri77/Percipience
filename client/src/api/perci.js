@@ -19,7 +19,7 @@ socket.on('newMessage', function(message){
 
 // 10.68.0.107. 192.168.1.10
 // const socket = io.connect('http://10.68.0.107:3001')
-const socket = io.connect('http://192.168.1.10:3001')
+// const socket = io.connect('http://192.168.1.10:3001')
 
 
 

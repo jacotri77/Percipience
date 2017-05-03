@@ -59,6 +59,13 @@ class InstRoom extends Component {
         Set Topic
         </div>
 
+        <div
+          id='currUser'>
+
+          {this.props.user}
+
+        </div>
+
           <PieChart />
 
       </div>
