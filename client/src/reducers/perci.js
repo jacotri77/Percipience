@@ -7,13 +7,13 @@ const initialState = {
     curr_topic: 'TOPIC',
     room: 'ROOM',
 
-    chartData: [
+//     chartData: [
 
-    {   user:'USERNAME',
-        user_scale:0
-    }
+//     {   user:'USERNAME',
+//         user_scale:0
+//     }
 
-]
+// ]
 
 }
 

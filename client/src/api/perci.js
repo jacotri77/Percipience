@@ -80,7 +80,7 @@ export function addUserName(user) {
 
 
 socket.on('addUserName', function(user) {
-
+  console.log(user, 'user')
   store.dispatch( {
 
     type: 'ADD_USR_NAME',

@@ -1,32 +1,19 @@
 import React, { Component } from 'react'
 import '../../assets/styles/InstLogin.css'
 import {connect} from 'react-redux'
-//
+import {addUserName} from '../../api/perci'
+import {Link} from 'react-router-dom'
+
 
 class InstLogin extends Component {
-  constructor(){
-    super()
-    this.state ={
-      username: '',
-      password: ''
-    }
-  }
 
-handleChange =(e) =>{
-    
-    this.setState({
-      
-      [e.name.value] : e.target.value
+  handleSubmit() {
 
-  })
+    var i = document.getElementById('usrName').value
+
+    addUserName(i) 
 
   }
-
-handleSubmit = (e) =>{
-  e.preventDefault()
-  this.props.history.push('/instRoom')
-
-}
  
   render() {
 
@@ -43,35 +30,24 @@ handleSubmit = (e) =>{
           </h1>
 
         <div
-         id='loginBox'>
+          id='loginBox'>
 
-          <form
-             id='loginForm'
-              onSubmit={this.handleSubmit}>
-
-                <div 
-                  id='usrNameLbl'> 
-
-                  <label 
-                    htmlFor='username'>
-                    
+              <label 
+                  htmlFor='username'>                   
 
                     Username:
 
-                  </label>
+              </label>
 
-                </div>    
+          </div>  
 
                 <input
                   id='usrName'
                   type='text' 
-                  name='username' 
-                  value='usernameState'
-                  
-                  autoComplete='off'
-                  onChange={this.handleChange} />
+                  placeholder='username' 
+                  autoComplete='off' />
 
-                <div 
+              <div 
                   id='pWordLbl'> 
 
                   <label
@@ -82,38 +58,35 @@ handleSubmit = (e) =>{
 
                   </label>
 
-                </div> 
+              </div> 
 
                   <input
                     id='pWord'
-                    type='password'
-                    name='password'
-                    value='passwordState'
-                    
-                    autoComplete='off' 
-                    onChange={this.handleChange}/>
+                    type='password'                    
+                    autoComplete='off' />
 
-                <button
+                 <Link
+                    to={'/instDash/'}>
 
-                  id='loginButton'
-                  type='submit'>
-                
+                <div
+                  onClick={this.handleSubmit}
+                  id='loginButton'>
+
                   Submit
 
-                </button>
+                </div>
 
-            </form>
+            </Link>
 
          </div>
 
-      </div>
+    
 
       )
 
     }
 }
     
-
 
 const mapStateToProps = function(appState) {
   return {
