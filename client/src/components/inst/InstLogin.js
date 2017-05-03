@@ -4,8 +4,30 @@ import {connect} from 'react-redux'
 //
 
 class InstLogin extends Component {
+  constructor(){
+    super()
+    this.state ={
+      username: '',
+      password: ''
+    }
+  }
 
+handleChange =(e) =>{
+    
+    this.setState({
+      
+      [e.name.value] : e.target.value
 
+  })
+
+  }
+
+handleSubmit = (e) =>{
+  e.preventDefault()
+  this.props.history.push('/instRoom')
+
+}
+ 
   render() {
 
     return (
@@ -24,13 +46,15 @@ class InstLogin extends Component {
          id='loginBox'>
 
           <form
-             id='loginForm'>
+             id='loginForm'
+              onSubmit={this.handleSubmit}>
 
                 <div 
                   id='usrNameLbl'> 
 
                   <label 
                     htmlFor='username'>
+                    
 
                     Username:
 
@@ -43,8 +67,9 @@ class InstLogin extends Component {
                   type='text' 
                   name='username' 
                   value='usernameState'
-                  placeholder='Username'
-                  autoComplete='off'/>
+                  
+                  autoComplete='off'
+                  onChange={this.handleChange} />
 
                 <div 
                   id='pWordLbl'> 
@@ -64,8 +89,9 @@ class InstLogin extends Component {
                     type='password'
                     name='password'
                     value='passwordState'
-                    placeholder='Password'
-                    autoComplete='off' />
+                    
+                    autoComplete='off' 
+                    onChange={this.handleChange}/>
 
                 <button
 
@@ -85,8 +111,9 @@ class InstLogin extends Component {
       )
 
     }
-    
 }
+    
+
 
 const mapStateToProps = function(appState) {
   return {

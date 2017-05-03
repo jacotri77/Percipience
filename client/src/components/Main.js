@@ -8,7 +8,7 @@ import TypeSel from './TypeSel'
 
 import InstLogin from './inst/InstLogin'
 import InstDash from './inst/InstDash'
-import InstRoom from './inst/InstRoom'
+import InstRoom from './inst/instRoom'
 
 import StudentClassNotes from './stud/StudentClassNotes'
 import StudentDash from './stud/StudentDash'
