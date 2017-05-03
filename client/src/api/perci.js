@@ -2,27 +2,10 @@ import io from 'socket.io-client'
 import store from '../store'
 import shortid from 'shortid'
 
-// 10.68.0.107
 const socket = io.connect('http://localhost:3001')
-
-export function addMessage(message) {
-    socket.emit('addMessage', message)
-}
-
-socket.on('newMessage', function(message){
-    store.dispatch({
-        type: 'ADD_MESSAGE',
-        message
-    })
-})
-
-
 // 10.68.0.107. 192.168.1.10
 // const socket = io.connect('http://10.68.0.107:3001')
 // const socket = io.connect('http://192.168.1.10:3001')
-
-
-
 //------------
 
 export function addCompLvl(score) {
@@ -63,23 +46,69 @@ socket.on('addRoomName', function(roomId) {
 })
 
 //------------ 
+
 //------------
 
-export function addNewTopic(topic) {
+export function addNewTopic(curr_topic) {
 
-  socket.emit('addNewTopic', topic)
+  socket.emit('addNewTopic', curr_topic)
 
 }
 
 
-socket.on('addNewTopic', function(topic) {
+socket.on('addNewTopic', function(curr_topic) {
 
   store.dispatch( {
 
     type: 'ADD_ROOM_TOPIC',
-    topic
+    curr_topic
 
   })
 })
+
+//------------
+
+//------------
+
+export function addUserName(user) {
+
+  socket.emit('addUserName', user)
+
+}
+
+
+socket.on('addUserName', function(user) {
+
+  store.dispatch( {
+
+    type: 'ADD_USR_NAME',
+    user
+
+  })
+})
+
+//------------
+
+//------------
+
+export function addUserType(is_inst) {
+
+
+  socket.emit('addUserType', is_inst)
+
+}
+
+
+socket.on('addUserType', function(is_inst) {
+
+  store.dispatch( {
+
+    type: 'ADD_USR_TYP',
+    is_inst
+
+  })
+})
+
+//------------
 
 

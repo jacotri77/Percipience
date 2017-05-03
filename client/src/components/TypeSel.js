@@ -1,16 +1,9 @@
 import React, { Component } from 'react'
 import '../assets/styles/TypeSel.css'
 import {connect} from 'react-redux'
-// import {addNewTopic} from '../api/perci'
-
 import { Link } from 'react-router-dom'
 
-
-
-
-
-
-
+import {addUserType} from '../api/perci'
 
 class TypeSel extends Component {
 
@@ -28,9 +21,17 @@ class TypeSel extends Component {
 
 //instLogin
 
-  setLogInType() {
+  setLogInType(c) {
 
-    // code
+    if (c === 's') {
+
+      addUserType(false)
+
+    } else {
+
+      addUserType(true)
+
+    }
   }
 
 
@@ -59,6 +60,7 @@ class TypeSel extends Component {
             to={'/instLogin/'}>
         
             <div
+              onClick={this.setLogInType('i')}
               className='TypeSelSubBtn'>
               Instructor
             </div>
@@ -73,6 +75,7 @@ class TypeSel extends Component {
             to={'/studLogIn/'}>
         
             <div
+              onClick={this.setLogInType('s')}
               className='TypeSelSubBtn'>
               Student
             </div>

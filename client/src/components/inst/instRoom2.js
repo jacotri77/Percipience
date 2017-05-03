@@ -39,7 +39,7 @@ class InstRoom extends Component {
 
         <h1
           id='InstRoomCurrTopic'>
-          {this.props.curr_topic}
+          {this.props.topic}
         </h1>
 
         <h4
@@ -59,13 +59,6 @@ class InstRoom extends Component {
         Set Topic
         </div>
 
-        <div
-          id='currUser'>
-
-          {this.props.user}
-
-        </div>
-
           <PieChart />
 
       </div>
@@ -82,7 +75,7 @@ const mapStateToProps = function(appState) {
 
     user: appState.user,
     room: appState.room,
-    curr_topic: appState.curr_topic
+    topic: appState.topic
 
   }
 
