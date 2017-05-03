@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../../assets/styles/StudentDash.css'
 import {connect} from 'react-redux'
+import { Link } from 'react-router-dom'
 
 
 class StudentDash extends Component {
@@ -29,14 +30,18 @@ class StudentDash extends Component {
                 <div 
                   id='rmNameLbl'>
 
-                  <label
+                  <p
                     htmlFor='roomname'>
 
-                      Room Name
+                      
+                      {`Welcome ${this.props.user}`}
 
-                  </label>
+                  </p>
 
                 </div>
+
+                <div
+                    id='StudDashLogCont'>
 
                 <input
                   id='rmName' 
@@ -44,19 +49,23 @@ class StudentDash extends Component {
                   name='roomname' 
                   placeholder='Room Name'/>
 
-                <button
-                  id='rmButton' >
+                <div
+                  id='StudDashEnterBtn' 
+                  className='bluBtnGen'>
+                  Enter Room
+                </div>
 
-                    Enter Room
+                </div>
 
-                </button>
-
-                <button
-                  id='clssNotesButton' >
-
-                     Class Notes Link
-
-                </button>
+                <Link
+                  to={'/'}>
+      
+                  <div
+                    className='bluBtnGen'>
+                    View Class Notes
+                  </div>
+                
+                </Link>
 
             </form>
 
@@ -76,8 +85,11 @@ class StudentDash extends Component {
 }
 
 const mapStateToProps = function(appState) {
+
   return {
-    messages: appState.messages
+
+    user: appState.user
+
   }
 }
 

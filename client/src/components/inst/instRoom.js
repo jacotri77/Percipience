@@ -39,7 +39,7 @@ class InstRoom extends Component {
 
         <h1
           id='InstRoomCurrTopic'>
-          {this.props.topic}
+          {this.props.curr_topic}
         </h1>
 
         <h4
@@ -75,7 +75,7 @@ const mapStateToProps = function(appState) {
 
     user: appState.user,
     room: appState.room,
-    topic: appState.topic
+    curr_topic: appState.curr_topic
 
   }
 
