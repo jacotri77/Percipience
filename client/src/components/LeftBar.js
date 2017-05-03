@@ -29,7 +29,7 @@ class LeftBar extends Component {
         <input
           id='cNoteTitle'
           name='classNoteTitle'
-          value='classnoteState' />
+           />
 
         <div
           id='notesCont'>

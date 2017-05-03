@@ -31,7 +31,7 @@ class InstRoom extends Component {
   }
 
   render() {
-
+    
     return (
 
       <div
@@ -77,9 +77,8 @@ class InstRoom extends Component {
 
 
 const mapStateToProps = function(appState) {
-
+console.log(appState, 'appState')
   return {
-
     user: appState.user,
     room: appState.room,
     curr_topic: appState.curr_topic

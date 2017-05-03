@@ -9,16 +9,6 @@ import {addRoomName} from '../../api/perci'
 
 class InstDash extends Component {
 
-  constructor() {
-
-    super()
-
-    this.state = {
-
-      message: ''
-
-    }
-  }
 
   addRoomClick () {
 
@@ -27,7 +17,6 @@ class InstDash extends Component {
 
 
   render() {
-
     return (
 
       <div
@@ -37,6 +26,12 @@ class InstDash extends Component {
           id='InstDashHeader'>
           Dashboard
         </h1>
+        <div
+          id='currUser'>
+
+         <p> {`Welcome ${this.props.user} ! `}</p> 
+
+        </div>
 
         <div
           id='InstDashFrame'>
@@ -99,7 +94,7 @@ const mapStateToProps = function(appState) {
 
   return {
 
-    messages: appState.messages
+     user: appState.user
 
   }
 
