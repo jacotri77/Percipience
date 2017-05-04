@@ -40,7 +40,9 @@ class Main extends Component {
       <div>
 
 
+
         <LeftBar />
+
 
         <div
           id='MainCont'>
@@ -88,8 +90,9 @@ class Main extends Component {
 
 
         </div>
-
+   <LeftBar />
         </div>
+      
       </Router>
 
     )

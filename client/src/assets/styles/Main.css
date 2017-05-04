@@ -1,7 +1,6 @@
 #MainCont {
-
-  width: 800px;
+margin: auto;
+  width: 90%;
   height: 650px;
-  margin-left: 200px;
   border: 1px solid #000;
 }
