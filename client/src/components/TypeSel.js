@@ -3,7 +3,6 @@ import '../assets/styles/TypeSel.css'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import '../Parker.js'
 import {addUserType} from '../api/perci'
 
 class TypeSel extends Component {
