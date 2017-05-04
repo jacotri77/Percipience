@@ -3,7 +3,7 @@ import '../../assets/styles/InstDash.css'
 import {connect} from 'react-redux'
 import {addRoomName} from '../../api/perci'
 
-import { browserHistory, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // browserHistory.push('/some/path');
 
 

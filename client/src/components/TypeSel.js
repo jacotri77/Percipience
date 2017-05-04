@@ -19,8 +19,6 @@ class TypeSel extends Component {
   }
 
 
-//instLogin
-
   setLogInType(c) {
 
     if (c === 's') {
@@ -37,11 +35,12 @@ class TypeSel extends Component {
 
   render() {
 
-
     return (
 
   <div
     id='TypeSelCont'>
+
+
 
     <h1 
       id='TypeSelTitle'> 
@@ -107,6 +106,8 @@ const mapStateToProps = function(appState) {
   }
 
   
+
+
 
 }
 

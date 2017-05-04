@@ -5,10 +5,9 @@ import { BrowserRouter as Router, Route} from 'react-router-dom'
 import LeftBar from './LeftBar'
 import TypeSel from './TypeSel'
 
-
 import InstLogin from './inst/InstLogin'
 import InstDash from './inst/InstDash'
-import InstRoom from './inst/instRoom'
+import InstRoom from './inst/InstRoom'
 
 import StudentClassNotes from './stud/StudentClassNotes'
 import StudentDash from './stud/StudentDash'
@@ -37,12 +36,20 @@ class Main extends Component {
     return (
 
       <Router>
+      
       <div>
-       
+
+
+
+        <LeftBar />
+
 
         <div
           id='MainCont'>
-          
+        
+          <div
+            id='ParkerBg'>
+          </div>
 
           <Route 
             exact={true} 
