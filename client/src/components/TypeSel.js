@@ -3,6 +3,7 @@ import '../assets/styles/TypeSel.css'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 
+import '../Parker.js'
 import {addUserType} from '../api/perci'
 
 class TypeSel extends Component {
@@ -18,8 +19,6 @@ class TypeSel extends Component {
     }
   }
 
-
-//instLogin
 
   setLogInType(c) {
 
@@ -37,11 +36,12 @@ class TypeSel extends Component {
 
   render() {
 
-
     return (
 
   <div
     id='TypeSelCont'>
+
+
 
     <h1 
       id='TypeSelTitle'> 
@@ -107,6 +107,8 @@ const mapStateToProps = function(appState) {
   }
 
   
+
+
 
 }
 

@@ -23,12 +23,12 @@
 	border: 1px solid #000;
 }
 
-#rmName, #rmButton{
+#StudDashRoom, #rmButton{
 	display: inline-block;
 	height: 60px;
 }
 
-#rmName{
+#StudDashRoom{
 
 	margin:20px;
 	width: 150px;
