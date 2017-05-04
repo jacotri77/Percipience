@@ -1,74 +1,82 @@
 import React, { Component } from 'react'
 import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
-import {Chart} from 'react-google-charts'
+import {Bar} from 'react-chartjs-2'
 
-   
-
-class PieChart extends Component{
-  constructor(props){
-    super(props)
-
-    this.state = {
-
-      options: {
-        title: 'Current Topic Votes',
-        legend: 'toggle',
-        is3D: true,
-        legent: 'left',
-        hAxis: { title: 'comprehension level', minValue: 0, maxValue: 10},
-        vAxis: { title: 'votes', minValue: 0, maxValue: 30 }
-    
-    },
-
-    data:[
-
-       ['comprehension level', 'votes'],
-        [1, 4],
-        [10, 10],
-        [7, 4],
-        [4, 8],
-        [6, 5],
+const data = {
+  labels: [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+  ],
+  datasets: [{
+    label: '# of votes',
+    data: [300, 50, 100, 20, 40, 100, 35, 65],
+    backgroundColor: [
+    '#FF6384',
+    '#36A2EB',
+    '#FFCE56',
+    '#FREE56',
+    '#FFCE47',
+    '#FFCE12',
+    '#EECE56',
+    '#AACE56',
+    '#RRCE56',
+    '#FFCE56',
+    '#FFCE56',
 
     ],
-
-  }
+    hoverBackgroundColor: [
+    '#FF6384',
+    '#36A2EB',
+    '#FFCE56'
+    ]
+  }]
 }
+
+class PieChart extends Component{
+  
 
 render(){
 	return(
-
-    <div 
-      id="chart_div">
-
-      <Chart
-        chartType="ColumnChart"
-        data={this.state.data}
-        options={this.state.options}
-        graph_id="PieChart"
-        width="100%"
-        height="400px"
-        legend_toggle />
-
-    </div>
-
+   <div>
+       
+        <Bar
+          data={data} 
+          width={350}
+          height={350}
+          options={{
+             maintainAspectRatio: false,
+             title: {
+              display: true,
+              text: 'Custom Chart Title'
+             }
+           }}/>
+      </div>
 		)
 
 	}
 }
 
-	const mapStateToProps = function(appState) {
+// 	const mapStateToProps = function(appState) {
 
-  		return {
+//   		return {
 
-    		user: appState.user
+//     		user: appState.user
 
-  }
+//   }
 
-}
+// }
 
 
-export default connect(mapStateToProps)(PieChart)
+export default PieChart
 
 
 
