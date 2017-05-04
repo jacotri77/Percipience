@@ -14,19 +14,21 @@ class PieChart extends Component{
       options: {
         title: 'Current Topic Votes',
         legend: 'toggle',
-        is3D: false,
-        legent: 'left'
+        is3D: true,
+        legent: 'left',
+        hAxis: { title: 'comprehension level', minValue: 0, maxValue: 10},
+        vAxis: { title: 'votes', minValue: 0, maxValue: 30 }
     
     },
 
     data:[
 
-       ['student', 'votes'],
-        ['4', 7],
-        ['10', 3],
-        ['4', 5],
-        ['3', 3],
-        ['6', 12],
+       ['comprehension level', 'votes'],
+        [1, 4],
+        [10, 10],
+        [7, 4],
+        [4, 8],
+        [6, 5],
 
     ],
 
@@ -40,7 +42,7 @@ render(){
       id="chart_div">
 
       <Chart
-        chartType="PieChart"
+        chartType="ColumnChart"
         data={this.state.data}
         options={this.state.options}
         graph_id="PieChart"
@@ -59,7 +61,7 @@ render(){
 
   		return {
 
-    		messages: appState.messages
+    		user: appState.user
 
   }
 

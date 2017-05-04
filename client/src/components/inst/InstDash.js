@@ -3,7 +3,7 @@ import '../../assets/styles/InstDash.css'
 import {connect} from 'react-redux'
 import {addRoomName} from '../../api/perci'
 
-// import { browserHistory } from 'react-router';
+import { browserHistory, Link } from 'react-router-dom';
 // browserHistory.push('/some/path');
 
 
@@ -36,7 +36,9 @@ class InstDash extends Component {
         <div
           id='InstDashFrame'>
 
-          
+          <Link
+            to='/instRoom'>
+
           <div
             id='AddRoomCont'
             onClick={this.addRoomClick}>
@@ -55,12 +57,13 @@ class InstDash extends Component {
             </h2>
 
           </div>
-
+          </Link>
 
           <div
             id='AddNoteCont'>
 
-
+            <Link
+              to='/StudentClassNotes/'>
             <img
               id='AddNoteImg' 
               alt='Plus'
@@ -77,6 +80,8 @@ class InstDash extends Component {
               type='text' 
               name='roomname'
               placeholder='Class Note Name'/>
+
+            </Link>
 
           </div>
 
