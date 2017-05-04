@@ -2,25 +2,43 @@ import React, { Component } from 'react'
 import '../../assets/styles/StudentDash.css'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
-import store from '../../store'
 
 
 class StudentDash extends Component {
 
-  studDashSubClick(c) {
 
-    console.log(c)
+  constructor(props) {
+
+    super()
+
+    this.state = {
+
+      room: ''
+
+    }
   }
 
-  handleRoomType(e) {
+  studDashSubClick(p) {
 
-    // code
+
+  }
+
+  handleRoomType = (e) => {
+
+    if (this.props.room === e.target.value) {
+
+      // alert("Match") 
+
+    }
   }
 
   render() {
 
 
+    // console.log('HandleRoom ', this.props)
+
     return (
+
 
     	<div
         id='studentDashCont'>
@@ -33,7 +51,7 @@ class StudentDash extends Component {
         <div
          id='studentDashBox'>
 
-          <form
+          <div
             id='studentDashForm'>
 
             <div 
@@ -49,13 +67,13 @@ class StudentDash extends Component {
               id='StudDashLogCont'>
 
               <input
+                onChange={this.handleRoomType}
                 id='StudDashRoom' 
                 type='text' 
                 name='roomname' 
                 placeholder='Room Name'/>
 
               <div
-                onClick={this.studDashSubClick(this.state.tRoom)}
                 id='StudDashEnterBtn' 
                 className='bluBtnGen'>
                 Enter Room
@@ -74,7 +92,7 @@ class StudentDash extends Component {
                 
             </Link>
 
-          </form>
+          </div>
 
         </div>
 
@@ -88,13 +106,6 @@ class StudentDash extends Component {
 
 
 const mapStateToProps = function(appState) {
-
-
-  this.state = {
-
-      tRoom: appState.room,
-
-    }
 
   return {
 
