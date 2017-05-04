@@ -47,6 +47,11 @@ class InstRoom extends Component {
           {this.props.room}
         </h4>
 
+        <h4
+          id='InstRoomName'>
+          {'Score List ' + this.props.comp_list}
+        </h4>
+
         <input 
           id='InstRoomAddTopicInp'
           type='text' 
@@ -70,11 +75,16 @@ class InstRoom extends Component {
 
 
 const mapStateToProps = function(appState) {
-console.log(appState, 'appState')
+
+// console.log(appState, 'appState')
+
   return {
+
     user: appState.user,
     room: appState.room,
-    curr_topic: appState.curr_topic
+    curr_topic: appState.curr_topic,
+    comp_list: appState.comp_list
+
 
   }
 

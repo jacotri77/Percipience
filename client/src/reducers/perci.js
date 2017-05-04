@@ -4,6 +4,7 @@ const initialState = {
     is_inst: false,
     user: 'USERNAME',
     user_scale: 0,
+    comp_list: [],
     curr_topic: 'TOPIC',
     room: 'ROOM',
 
@@ -37,11 +38,14 @@ export default function perciReducer(state=initialState, action) {
             return {
 
               ...state, 
-              user_scale: action.user_scale
+              user_scale: action.user_scale,
+              comp_list: [...state.comp_list, action.user_scale]
 
             }
 
 //--------------------------
+
+
 
           case 'ADD_ROOM_NAME':
 
