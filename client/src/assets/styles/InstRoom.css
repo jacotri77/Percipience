@@ -1,5 +1,8 @@
 
-
+#InstRoomCont{
+	float: right;
+	width: 80%
+}
 #SetTopicBtn {
 
   width: 80px;
@@ -8,4 +11,8 @@
   text-align: center;
   border: 1px solid #000;
   border-radius: 15px;  
+}
+
+#InstRoomCurrTopic{
+	text-align: center;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
 import { addCompLvl } from '../../api/perci'
+import {postVotes} from '../../api/perci'
 
 
 class StudRoom extends Component {
@@ -25,10 +26,13 @@ class StudRoom extends Component {
   }
 
   submitClick() {
+  
 
     var c = document.getElementById('StudRoomSlide').value
 
     addCompLvl(c)
+    
+   
   }
 
 
@@ -121,7 +125,8 @@ const mapStateToProps = function(appState) {
 
     user: appState.user,
     room: appState.room,
-    topic: appState.topic
+    topic: appState.curr_topic,
+    vote: appState.vote
 
   }
 
