@@ -7,9 +7,9 @@ import {Bar} from 'react-chartjs-2'
 class PieChart extends Component{
   constructor(props){
     super(props)
-     this.setState ={
+     this.state ={
 
-    data: [1],
+    data: [],
    
   }
 }
