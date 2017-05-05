@@ -7,6 +7,7 @@ const initialState = {
     comp_list: [],
     curr_topic: 'TOPIC',
     room: 'ROOM',
+    vote: 0,
 
 //     chartData: [
 
@@ -90,6 +91,16 @@ export default function perciReducer(state=initialState, action) {
               curr_topic: action.curr_topic
 
             }   
+
+//--------------------------
+      
+          case 'POST_VOTE':
+
+            return{
+
+              ...state, vote: [...state.vote, action.vote]
+              
+            }
 
 //--------------------------
             

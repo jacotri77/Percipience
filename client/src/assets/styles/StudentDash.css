@@ -1,6 +1,7 @@
 #studentDashCont {
 
-  width: 90%;
+	float: right;
+  width: 80%;
   height: 650px;
   margin-left: 0px;
   background-color: #00284d;
@@ -17,7 +18,7 @@
 
 	margin: 150px auto;
 	width: 600px;
-	height: 250px;
+	height: 275px;
   border-radius: 15px;
   background-color: #80bfff;
 	border: 1px solid #000;

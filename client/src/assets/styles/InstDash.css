@@ -1,6 +1,6 @@
 #InstDashCont {
-  
-  width: 90%;
+  float:right;
+  width: 80%;
   height: 100%;
   background-color: #00284d;
   margin-top: 0px;
@@ -27,7 +27,7 @@
 
 
 #AddNoteInp {
-
+  align-content: center;
   width: 200px;
   height: 30px;
   margin-top: 10px;
@@ -36,11 +36,11 @@
 }
 
 
-#AddRoomCont {
+#AddRoomCont, #AddNoteCont {
 
   width: 570px;
   height: 85px;
-  margin-top: 100px;
+  margin-top: 85px;
   margin-left: 10px;
   display: flex;
   flex-direction: row;
@@ -50,7 +50,7 @@
   border-radius: 20px;
 }
 
-#AddRoomCont:hover {
+#AddRoomCont:hover, #AddNoteCont:hover{
 
   cursor: pointer;
   background-color: #6EB3FA;
@@ -59,32 +59,11 @@
   
 }
 
-
-#AddNoteCont {
-
-  width: 600px;
-  height: 60px;
-  display: flex;
-  flex-direction: row;
-  margin-top: 60px;
-}
-
-
-#AddNoteImg {
-
-  margin-left: 20px;
-
-}
-
-#AddRoomImg {
-
+#AddRoomImg,#AddNoteImg  {
+  height: 65px;
+  width:65px;
   margin-left: 20px;
   margin-top: 10px;
-}
-
-#AddRoomCont {
-
-
 }
 
 #InstGradBGImg {

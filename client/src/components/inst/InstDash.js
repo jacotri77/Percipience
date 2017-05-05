@@ -19,6 +19,7 @@ class InstDash extends Component {
   render() {
     return (
 
+
       <div
         id='InstDashCont'>
 
@@ -59,11 +60,13 @@ class InstDash extends Component {
           </div>
           </Link>
 
+         
+          <Link
+            to='/StudentClassNotes/'>
+
           <div
             id='AddNoteCont'>
-
-            <Link
-              to='/StudentClassNotes/'>
+          
             <img
               id='AddNoteImg' 
               alt='Plus'
@@ -81,9 +84,9 @@ class InstDash extends Component {
               name='roomname'
               placeholder='Class Note Name'/>
 
-            </Link>
-
-          </div>
+            </div>
+            
+           </Link>
 
         </div>
 
