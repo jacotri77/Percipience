@@ -1,27 +1,63 @@
 import React, { Component } from 'react'
 import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
-import {Bar} from 'react-chartjs-2'
+import {Line} from 'react-chartjs-2'
+// updateGrph
+import {updateGrph} from '../../api/perci'
+
+
+
+// 
+
+setInterval(function(){ updateGrph(); }, 3000);
+
+var cdata: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+          }]
+        }
 
 
 class PieChart extends Component{
+
   constructor(props){
     super(props)
      this.state ={
 
-    data: [10],
+    cdata: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+          }]
+        } 
    
   }
 }
-     
+
+
+
+ 
+
+
+
 
 render(){
  
+  console.log(this.props.gdata)
+  
+
+
+  
+
 	return(
+
    <div>
        
-        <Bar
-          data={10}
+        <Line
+          data={this.props.gdata}
           width={350}
           height={350}
           options={{
@@ -30,7 +66,8 @@ render(){
               display: true,
               text: 'Topic Average Comprehension'
              }
-           }}/>
+
+           }} />
       </div>
 		)
 
@@ -41,7 +78,7 @@ render(){
 
   		return {
 
-    		comp_list: appState.comp_list
+    		gdata: appState.gdata
 
   }
 

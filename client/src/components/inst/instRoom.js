@@ -5,6 +5,10 @@ import {addNewTopic} from '../../api/perci'
 import PieChart from '../charts/pieChart'
 
 
+
+
+
+
 class InstRoom extends Component {
 
   constructor() {

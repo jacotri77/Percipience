@@ -92,6 +92,11 @@ socket.on('addUserName', function(user) {
 
 //------------
 
+
+
+// UPDATE_GRPH
+
+
 //------------
 
 export function addUserType(is_inst) {
@@ -114,6 +119,33 @@ socket.on('addUserType', function(is_inst) {
 
 //------------
 
+//------------
+
+export function updateGrph(gd) {
+
+
+  socket.emit('updateGrph', gd)
+
+}
+
+
+socket.on('updateGrph', function(gd) {
+
+  store.dispatch( {
+
+    type: 'UPDATE_GRPH',
+    gd
+
+  })
+})
+
+//------------
+
+
+
+
+
+
 export function postVotes(vote) {
   axios.post('http://localhost:3001/votes',vote).then(resp=>{
     store.dispatch({
@@ -123,5 +155,10 @@ export function postVotes(vote) {
     })
   })
 }
+
+
+
+
+
 
 
