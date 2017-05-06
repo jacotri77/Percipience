@@ -9,7 +9,7 @@ class PieChart extends Component{
     super(props)
      this.state ={
 
-    data: [],
+    data: [10],
    
   }
 }
@@ -21,7 +21,7 @@ render(){
    <div>
        
         <Bar
-          data={this.props.comp_list} 
+          data={10}
           width={350}
           height={350}
           options={{
