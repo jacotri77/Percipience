@@ -48,7 +48,9 @@ class TypeSel extends Component {
     id='TypeSelCont'>
 
 
- 
+ <div
+      className='aniDiv'>
+    </div>
 
     <h1 
       id='TypeSelTitle'> 
@@ -68,8 +70,9 @@ class TypeSel extends Component {
         
             <div
               onClick={this.setLogInType('i')}
-              className='TypeSelSubBtn'>
-              Instructor
+              id='TypeSelInstBtn'
+              className='bluBtnGen'>
+              <p>Instructor</p>
             </div>
                 
           </Link>
@@ -83,7 +86,8 @@ class TypeSel extends Component {
         
             <div
               onClick={this.setLogInType('s')}
-              className='TypeSelSubBtn'>
+              id='TypeSelStudBtn'
+              className='bluBtnGen'>
               Student
             </div>
                 
@@ -94,8 +98,6 @@ class TypeSel extends Component {
       </div>
 
     </div>
-
-
 
   </div>
 

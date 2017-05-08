@@ -16,9 +16,9 @@
 
 #studentDashForm{
 
-	margin: 150px auto;
+	margin: auto;
 	width: 600px;
-	height: 275px;
+	height: 325px;
   border-radius: 15px;
   background-color: #80bfff;
 	border: 1px solid #000;
@@ -47,11 +47,14 @@
 	margin: auto;
 	width: 150px;
 	height: 60px;
+
 }
 
 #StudDashEnterBtn {
 
   width: 350px;
+  background-color: #80bfff;
+  font-size: 28px;
 }
 
 #StudDashLogCont {
