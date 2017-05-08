@@ -21,7 +21,7 @@ class StudRoom extends Component {
 
     var c = document.getElementById('StudRoomSlide').value
 
-    document.getElementById('tstId').innerHTML = (c)
+    document.getElementById('StudRoomSlideNum').innerHTML = (c)
     
   }
 
@@ -57,9 +57,9 @@ class StudRoom extends Component {
           id='StudRoomForm'>
 
           <h2
-            id='StudRoomRateH2'>Rate your comprehension</h2>
+            id='StudRoomRateH2'>Rate your comprehension of the above topic.</h2>
 
-          <p id='tstId'></p>
+          <p id='StudRoomSlideNum'>10</p>
 
           <div
             id='StudRoomSlideCont'>
@@ -89,7 +89,8 @@ class StudRoom extends Component {
           </div>
 
           <div
-            id='StudRoomSbmtBtn'
+            
+            className='bluBtnGen'
             onClick={this.submitClick}>
             Submit
           </div>

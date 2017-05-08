@@ -12,13 +12,15 @@
   text-align: center;
   padding-top: 20px;
   margin-top: 0px;
+  font-family: 'Baloo', cursive;
+  font-size: 50px;
 }
 
 
 #StudLogInBox {
 
   width: 600px;
-  height: 150px;
+  height: 220px;
   border: 1px solid #000;
   border-radius: 15px;
   background-color: #80bfff;
@@ -41,7 +43,10 @@
 #StudUsrNameLab {
 
   margin-left: 20px;
-  margin-top: -0px;
+  line-height: 20px;
+  color: #00284d;
+  font-family: 'Baloo', cursive;
+  font-size: 30px;
 
 }
 

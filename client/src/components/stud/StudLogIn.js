@@ -62,7 +62,8 @@ class StudLogIn extends Component {
       
               <div
                 onClick={this.studLogInSubmit}
-                id='StudUsrSubBtn'>
+                
+                className='bluBtnGen'>
                 Submit
               </div>
                 

@@ -1,4 +1,8 @@
 
+a {
+  text-decoration: none;
+}
+
 #AppCont {
   display: block;
   height: 100%;
@@ -36,16 +40,20 @@
 
 .bluBtnGen {
 
-  width: 570px;
+  width: 550px;
   height: 85px;
   line-height: 85px;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin: auto;
+  margin-top: 25px;
   background-color: #80bfff;
   box-shadow: none;
   transition: box-shadow 0.5s;
   border-radius: 20px;
   padding-left: 10px;
+  color: #00284d;
+  font-family: 'Baloo', cursive;
+  font-size: 40px;
+  text-align: center;
 }
 
 .bluBtnGen:hover { 
