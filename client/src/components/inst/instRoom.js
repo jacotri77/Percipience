@@ -17,7 +17,7 @@ class InstRoom extends Component {
         datasets: [{
           data:  props.user_scale,
           label: 'My First dataset',
-          backgroundColor: 'rgba(255,99,132,0.2)',
+          backgroundColor: 'rgba(255,99,132,.2)',
           borderColor: 'rgba(255,99,132,1)',
           borderWidth: 1,
           hoverBackgroundColor: 'rgba(255,99,132,0.4)',
@@ -71,6 +71,9 @@ class InstRoom extends Component {
       <div
         id='InstRoomCont'>
 
+        <div 
+          id='InstTopicCont'>
+
         <h1
           id='InstRoomCurrTopic'>
           {this.props.curr_topic}
@@ -82,8 +85,8 @@ class InstRoom extends Component {
         </h4>
 
         <h4
-          id='InstRoomName'>
-          {'Score List ' + this.props.comp_list}
+          id='InstRoomComp'>
+          {'Comprehension ' + this.props.comp_list}
         </h4>
 
         <input 
@@ -98,6 +101,7 @@ class InstRoom extends Component {
         Set Topic
         </div>
 
+        </div>
 
         <div>
        
@@ -109,7 +113,8 @@ class InstRoom extends Component {
                maintainAspectRatio: false,
                title: {
                 display: true,
-                text: 'Topic Average Comprehension'
+                text: 'Topic Average Comprehension',
+  
                }
              }} redraw/>
         </div>
