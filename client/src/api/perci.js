@@ -22,7 +22,8 @@ socket.on('addCompLvl', function(score) {
   store.dispatch( {
 
     type: 'ADD_COMP_LVL',
-    user_scale: score
+    user_scale: score,
+    
 
   })
 })

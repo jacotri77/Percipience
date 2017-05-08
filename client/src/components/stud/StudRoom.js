@@ -32,7 +32,7 @@ class StudRoom extends Component {
 
     addCompLvl(c)
     
-   
+  
   }
 
 
@@ -48,7 +48,7 @@ class StudRoom extends Component {
 
           <h1
             id='StudRoomTopic'>
-            {this.props.topic}
+            {this.props.curr_topic}
           </h1>
 
         </div>
@@ -125,7 +125,7 @@ const mapStateToProps = function(appState) {
 
     user: appState.user,
     room: appState.room,
-    topic: appState.curr_topic,
+    curr_topic: appState.curr_topic,
     vote: appState.vote
 
   }

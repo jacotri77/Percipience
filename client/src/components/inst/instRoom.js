@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../../assets/styles/InstRoom.css'
 import {connect} from 'react-redux'
 import {addNewTopic} from '../../api/perci'
-import PieChart from '../charts/pieChart'
+import {Bar} from 'react-chartjs-2'
 
 
 
@@ -11,17 +11,51 @@ import PieChart from '../charts/pieChart'
 
 class InstRoom extends Component {
 
-  constructor() {
+  constructor(props) {
 
-    super()
+    super(props)
 
-    this.state = {
+     this.state = {
+      data: {
+        labels: ['bob', 'steve', 'alan', 'caleb'],
+        datasets: [{
+          data:  props.user_scale,
+          label: 'My First dataset',
+          backgroundColor: 'rgba(255,99,132,.2)',
+          borderColor: 'rgba(255,99,132,1)',
+          borderWidth: 1,
+          hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+          hoverBorderColor: 'rgba(255,99,132,1)',
 
-      messages: ''
+            }
 
+          ] 
+
+        }
+
+      }
+     
     }
-  }
 
+  componentWillMount(){
+    this.setState({ 
+      data: {
+        labels: ['bob', 'steve', 'alan', 'caleb'],
+        datasets: [{
+          data: [this.props.user_scale],
+          label: 'Current Topic Comprehension',
+          backgroundColor: 'rgba(255,99,132,0.2)',
+          borderColor: 'rgba(255,99,132,1)',
+          borderWidth: 1,
+          hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+          hoverBorderColor: 'rgba(255,99,132,1)',
+
+        }
+
+        ] 
+      }
+    })
+  }
 
 
   setNewTopic() {
@@ -41,6 +75,9 @@ class InstRoom extends Component {
       <div
         id='InstRoomCont'>
 
+        <div 
+          id='InstTopicCont'>
+
         <h1
           id='InstRoomCurrTopic'>
           {this.props.curr_topic}
@@ -52,8 +89,8 @@ class InstRoom extends Component {
         </h4>
 
         <h4
-          id='InstRoomName'>
-          {'Score List ' + this.props.comp_list}
+          id='InstRoomComp'>
+          {'Comprehension ' + this.props.comp_list}
         </h4>
 
         <input 
@@ -68,8 +105,24 @@ class InstRoom extends Component {
         Set Topic
         </div>
 
-          <PieChart />
+        </div>
 
+        <div>
+       
+          <Bar
+            data={this.state.data} 
+            width={350}
+            height={350}
+            options={{
+               maintainAspectRatio: false,
+               title: {
+                display: true,
+                text: 'Topic Average Comprehension',
+  
+               }
+             }} redraw/>
+        </div>
+        
       </div>
 
     )
@@ -80,19 +133,19 @@ class InstRoom extends Component {
 
 const mapStateToProps = function(appState) {
 
-// console.log(appState, 'appState')
+
 
   return {
 
     user: appState.user,
     room: appState.room,
     curr_topic: appState.curr_topic,
-    comp_list: appState.comp_list
+    comp_list: appState.comp_list,
+    user_scale:appState.user_scale
 
 
   }
 
-  
 
 }
 
