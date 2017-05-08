@@ -9,6 +9,7 @@ import InstLogin from './inst/InstLogin'
 import InstDash from './inst/InstDash'
 import InstRoom from './inst/InstRm'
 
+
 import StudentClassNotes from './stud/StudentClassNotes'
 import StudentDash from './stud/StudentDash'
 import StudRoom from './stud/StudRoom'

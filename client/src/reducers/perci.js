@@ -1,5 +1,8 @@
 
+
 const initialState = {
+
+
 
     is_inst: false,
     user: 'USERNAME',
@@ -9,6 +12,7 @@ const initialState = {
     tpc_list: [],
     room: 'ROOM',
     vote: 0,
+    users: [],
 
     gdata: {
 
@@ -22,15 +26,6 @@ const initialState = {
 
         }]
       }
-
-
-//     chartData: [
-
-//     {   user:'USERNAME',
-//         user_scale:0
-//     }
-
-// ]
 
 }
 
@@ -76,12 +71,20 @@ export default function perciReducer(state=initialState, action) {
 
               ...state,
 
+             
+
               gdata: { 
 
                 labels: state.tpc_list,
                 datasets: [{
-                  label: '# of Votes',
-                  data: state.comp_list
+                  label: 'Avg of Votes',
+                  data: state.comp_list,
+                  pointBackgroundColor: 'white',
+                  backgroundColor: 'rgba(128,191,255,0.2)',
+                  borderColor: 'white',
+                  borderWidth: 1,
+                  hoverBorderColor: 'red'
+                  
                 }]
               } 
 
@@ -148,11 +151,15 @@ export default function perciReducer(state=initialState, action) {
 
 //--------------------------
       
-          case 'POST_VOTE':
+          case 'ADD_USERS':
 
             return{
 
-              ...state, vote: [...state.vote, action.vote]
+              ...state, 
+
+              users: []
+               
+              
               
             }
 
