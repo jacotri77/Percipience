@@ -4,8 +4,8 @@ import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 
 
-class StudentDash extends Component {
 
+class StudentDash extends Component {
 
   constructor(props) {
 
@@ -13,32 +13,41 @@ class StudentDash extends Component {
 
     this.state = {
 
-      room: ''
+      isRoom: false
+
 
     }
-  }
-
-  studDashSubClick(p) {
-
-
   }
 
   handleRoomType = (e) => {
 
     if (this.props.room === e.target.value) {
+      
+      this.setState({
 
-      // alert("Match") 
+        isRoom: true
+
+      }) 
+
+    } else {
+
+      this.setState({
+
+        isRoom: false
+
+      }) 
 
     }
+
+    // console.log(isRoom) 
   }
 
-  render() {
 
+  render() {
 
     // console.log('HandleRoom ', this.props)
 
     return (
-
 
     	<div
         id='studentDashCont'>
@@ -73,17 +82,22 @@ class StudentDash extends Component {
                 name='roomname' 
                 placeholder='Room Name'/>
 
-              <div
-                id='StudDashEnterBtn' 
-                className='bluBtnGen'>
-                Enter Room
-              </div>
 
+              <Link    
+                to={this.state.isRoom === true ? '/studRoom/' : '/studentDash/'}>
+
+                <div
+                  id='StudDashEnterBtn'
+                  className='bluBtnGen'>
+                  {this.state.isRoom === true ? `Enter Room` : 'Please Enter Room Name'}
+                </div>
+
+              </Link>
                 
             </div>
 
             <Link
-              to={'/'}>
+              to={'studentClassNotes'}>
       
               <div
                 className='bluBtnGen'>
@@ -100,8 +114,7 @@ class StudentDash extends Component {
 
     )
 
-    }
-    
+  }    
 }
 
 
