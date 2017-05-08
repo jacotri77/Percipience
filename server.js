@@ -53,6 +53,12 @@ io.on('connection', function(socket) {
 
   })
 
+  socket.on('updateGrph', function(gd) {
+
+    io.emit('updateGrph', gd)
+
+  })
+
 //>>
 })
 

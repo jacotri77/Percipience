@@ -8,6 +8,19 @@ a {
   width: 90%;
   height: 650px;
   background-color: #00284d;
+
+  position: relative;
+}
+
+.aniDiv {
+  width: 50px;
+  height: 600px;
+  left: 320px;
+  bottom: 0px;
+
+  opacity: 0.3;
+  background-color: #FFF;
+  position: absolute;
 }
 
 #TypeSelTitle {

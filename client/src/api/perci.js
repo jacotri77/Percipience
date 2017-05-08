@@ -3,9 +3,9 @@ import store from '../store'
 import shortid from 'shortid'
 import axios from 'axios'
 
-const socket = io.connect('http://localhost:3001')
+// const socket = io.connect('http://localhost:3001')
 // 10.68.0.107. 192.168.1.10
-// const socket = io.connect('http://10.68.0.107:3001')
+const socket = io.connect('http://10.68.0.107:3001')
 // const socket = io.connect('http://192.168.1.10:3001')
 // const socket =io.connect('http://10.68.0.60:3001')
 
@@ -93,6 +93,11 @@ socket.on('addUserName', function(user) {
 
 //------------
 
+
+
+// UPDATE_GRPH
+
+
 //------------
 
 export function addUserType(is_inst) {
@@ -115,6 +120,33 @@ socket.on('addUserType', function(is_inst) {
 
 //------------
 
+//------------
+
+export function updateGrph(gd) {
+
+
+  socket.emit('updateGrph', gd)
+
+}
+
+
+socket.on('updateGrph', function(gd) {
+
+  store.dispatch( {
+
+    type: 'UPDATE_GRPH',
+    gd
+
+  })
+})
+
+//------------
+
+
+
+
+
+
 export function postVotes(vote) {
   axios.post('http://localhost:3001/votes',vote).then(resp=>{
     store.dispatch({
@@ -124,5 +156,10 @@ export function postVotes(vote) {
     })
   })
 }
+
+
+
+
+
 
 

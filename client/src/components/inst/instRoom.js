@@ -5,6 +5,10 @@ import {addNewTopic} from '../../api/perci'
 import {Bar} from 'react-chartjs-2'
 
 
+
+
+
+
 class InstRoom extends Component {
 
   constructor(props) {

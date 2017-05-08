@@ -32,8 +32,15 @@ class TypeSel extends Component {
     }
   }
 
+  // setTimeout(function() {}, 2000);
+
+
 
   render() {
+
+
+
+
 
     return (
 
@@ -41,6 +48,7 @@ class TypeSel extends Component {
     id='TypeSelCont'>
 
 
+ 
 
     <h1 
       id='TypeSelTitle'> 
@@ -86,6 +94,8 @@ class TypeSel extends Component {
       </div>
 
     </div>
+
+
 
   </div>
 

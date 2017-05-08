@@ -6,8 +6,23 @@ const initialState = {
     user_scale: 0,
     comp_list: [],
     curr_topic: 'TOPIC',
+    tpc_list: [],
     room: 'ROOM',
     vote: 0,
+
+    gdata: {
+
+        labels: [],
+
+        datasets: [{
+
+            label: 'Comp Level',
+
+            data: []
+
+        }]
+      }
+
 
 //     chartData: [
 
@@ -18,6 +33,11 @@ const initialState = {
 // ]
 
 }
+
+
+
+
+
 
 export default function perciReducer(state=initialState, action) {
 
@@ -40,11 +60,43 @@ export default function perciReducer(state=initialState, action) {
 
               ...state, 
               user_scale: action.user_scale,
-              comp_list: [...state.comp_list, action.user_scale]
+              comp_list: [...state.comp_list, action.user_scale],
+
+              
 
             }
 
 //--------------------------
+
+//--------------------------
+
+         case 'UPDATE_GRPH':
+
+            return {
+
+              ...state,
+
+              gdata: { 
+
+                labels: state.tpc_list,
+                datasets: [{
+                  label: '# of Votes',
+                  data: state.comp_list
+                }]
+              } 
+
+              
+
+            }
+
+//--------------------------
+
+
+
+/*
+
+
+*/
 
 
 
@@ -88,7 +140,9 @@ export default function perciReducer(state=initialState, action) {
             return {
 
               ...state, 
-              curr_topic: action.curr_topic
+              curr_topic: action.curr_topic,
+              tpc_list: [...state.tpc_list, action.curr_topic],
+              
 
             }   
 
