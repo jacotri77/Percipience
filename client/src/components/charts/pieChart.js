@@ -17,32 +17,25 @@ setInterval(function(){ updateGrph(); }, 1000);
 class PieChart extends Component{
 
 
-    // constructor(props){
-    //   super(props)
-     
-  //       let values = this.props.gdata.datasets.map(data =>(
-  //         data.data))
-  //           if(values.length > 0){
-  //             return values.length
-  //           }else{
-  //             return 0
-  //           }
+  //        let values = this.props.gdata.datasets.map(data =>(
+  //          data.data))
+  //        let sum = values[0].reduce(( previous, current) => Number(current) + Number(previous))
+  //        let avg = (sum / values.length)
+         
+                
+  //        console.log(values[0])
 
-  //       let sum = values[0].reduce(( previous, current) => Number(current) + Number(previous))
-  //       let avg = (sum / values.length)
-  //       console.log(values[0])
-
-  //             console.log(values, 'from constructor')  
-  //             console.log(avg, "from constructor")
+  //              console.log(values, 'from constructor')  
+  //              console.log(avg, "from constructor")
 
 
-  //            this.state ={
-  //           data: {
-  //             labels: [this.props.gdata.labels],
-  //             datasets: [{
-  //             data:  avg,
+  //             this.state ={
+  //            data: {
+  //              labels: [this.props.gdata.labels],
+  //              datasets: [{
+  //              data:  avg,
              
-  //               backgroundColor: 'rgba(255,99,132,.2)',
+  //                backgroundColor: 'rgba(255,99,132,.2)',
   //               borderColor: 'rgba(255,99,132,1)',
   //               borderWidth: 1,
   //               hoverBackgroundColor: 'rgba(255,99,132,0.4)',
@@ -51,7 +44,7 @@ class PieChart extends Component{
   //              }]
   //   }
   // }
-  // }
+  
   render(){
  
   console.log(this.props.gdata, "render")
