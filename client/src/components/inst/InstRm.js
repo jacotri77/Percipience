@@ -2,13 +2,8 @@ import React, { Component } from 'react'
 import '../../assets/styles/InstRoom.css'
 import {connect} from 'react-redux'
 import {addNewTopic} from '../../api/perci'
-<<<<<<< HEAD:client/src/components/inst/instRoom.js
 import PieChart from '../charts/pieChart'
 
-=======
-// import {Bar} from 'react-chartjs-2'
-import PieChart from '../charts/pieChart'
->>>>>>> master:client/src/components/inst/InstRm.js
 
 
 
@@ -61,14 +56,6 @@ class InstRoom extends Component {
         </div>
 
         </div>
-
-<<<<<<< HEAD:client/src/components/inst/instRoom.js
-=======
-        <div>
-       
-          <PieChart />
-        </div>
->>>>>>> master:client/src/components/inst/InstRm.js
         
         <PieChart />
       </div>
