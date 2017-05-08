@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import '../../assets/styles/InstRoom.css'
 import {connect} from 'react-redux'
 import {addNewTopic} from '../../api/perci'
-import {Bar} from 'react-chartjs-2'
-
+// import {Bar} from 'react-chartjs-2'
+import PieChart from '../charts/pieChart'
 
 
 
@@ -109,18 +109,7 @@ class InstRoom extends Component {
 
         <div>
        
-          <Bar
-            data={this.state.data} 
-            width={350}
-            height={350}
-            options={{
-               maintainAspectRatio: false,
-               title: {
-                display: true,
-                text: 'Topic Average Comprehension',
-  
-               }
-             }} redraw/>
+          <PieChart />
         </div>
         
       </div>
