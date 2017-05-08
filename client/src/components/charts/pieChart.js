@@ -74,7 +74,7 @@ class PieChart extends Component{
               display: true,
               text: 'Topic Average Comprehension',
               fontColor:'rgb(128,191,255)',
-              fontSise: 18
+              fontSize: 18
              },
 
              scales: {
