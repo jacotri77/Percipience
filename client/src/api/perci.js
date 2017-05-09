@@ -1,7 +1,6 @@
 import io from 'socket.io-client'
 import store from '../store'
 import shortid from 'shortid'
-import axios from 'axios'
 
 const socket = io.connect('http://localhost:3001')
 // 10.68.0.107. 192.168.1.10
@@ -142,20 +141,27 @@ socket.on('updateGrph', function(gd) {
 
 //------------
 
+export function addUsers(users) {
 
 
+  socket.emit('addUsers', users)
 
-
-
-export function postVotes(vote) {
-  axios.post('http://localhost:3001/votes',vote).then(resp=>{
-    store.dispatch({
-      type: 'POST_VOTE',
-      vote: vote,
-
-    })
-  })
 }
+
+
+socket.on('addUsers', function(users) {
+
+  store.dispatch( {
+
+    type: 'ADD_USERS',
+    users
+
+  })
+})
+
+
+
+
 
 
 

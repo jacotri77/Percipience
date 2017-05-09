@@ -7,22 +7,32 @@ const initialState = {
     is_inst: false,
     user: 'USERNAME',
     user_scale: 0,
-    comp_list: [],
+    comp_list: [0],
     curr_topic: 'TOPIC',
     tpc_list: [],
     room: 'ROOM',
     vote: 0,
-    users: [],
+    users: [
+      {
+
+        user: ''
+
+      }
+
+    ],
 
     gdata: {
 
-        labels: [],
+        labels: [''],
 
         datasets: [{
 
             label: 'Comp Level',
 
-            data: []
+            data: [
+            0
+              
+            ]
 
         }]
       }
@@ -157,7 +167,8 @@ export default function perciReducer(state=initialState, action) {
 
               ...state, 
 
-              users: []
+              user: action.user,
+              users: [...state.users, action.user]
                
               
               

@@ -5,13 +5,14 @@
 	width: 100%;
   height: 800px;
 	background-color: #00284d;
+  font-family: 'Baloo', cursive;
 	color:white;
 }
 #SetTopicBtn {
 
   display: inline-block;
-  width: 80px;
-  height: 50px;
+  width: 100px;
+  height: 52px;
   line-height: 50px;
   margin: 0 20px;
   text-align: center;
@@ -19,6 +20,7 @@
   background-color: #80bfff;
   border-radius: 15px;  
   text-decoration: none;
+  font-family: 'Baloo', cursive;
   color: #000;
   box-shadow: none;
   transition: box-shadow 0.5s;
@@ -37,12 +39,13 @@
 #InstRoomCurrTopic{
 
 	text-align: center;
+  font-family: 'Baloo', cursive;
 }
 
 #InstRoomAddTopicInp{
   height: 50px;
-  width: 160px;
-  border-radius: 15px;
+  width: 200px;
+  outline: 0px;
 }
 
 #InstTopicCont{
@@ -50,11 +53,21 @@
   margin: auto;
 	width:100%;
 	height:200px;
+  font-family: 'Baloo', cursive;
 
 }
 
-#InstRoomName, #InstRoomComp{
-
+#InstRoomName{
+  
   display: inline-block;
   margin:20px;
+}
+
+#topicCont{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  width: 600px;
 }
