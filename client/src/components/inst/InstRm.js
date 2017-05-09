@@ -38,22 +38,27 @@ class InstRoom extends Component {
           {this.props.curr_topic}
         </h1>
 
-        <h4
-          id='InstRoomName'>
-          {this.props.room}
-        </h4>
+        <div 
+          id="topicCont">
 
-        <input 
-          id='InstRoomAddTopicInp'
-          type='text' 
-          name='roomname'
-          placeholder='Topic'/>
+            <h3
+              id='InstRoomName'>
+              {this.props.room}
+            </h3>
 
-        <div
-          id='SetTopicBtn'
-          onClick={this.setNewTopic}>
-        Set Topic
-        </div>
+            <input 
+              id='InstRoomAddTopicInp'
+              type='text' 
+              name='roomname'
+              placeholder='Topic'/>
+
+            <div
+              id='SetTopicBtn'
+              onClick={this.setNewTopic}>
+            Set Topic
+            </div>
+
+          </div>
 
         </div>
         

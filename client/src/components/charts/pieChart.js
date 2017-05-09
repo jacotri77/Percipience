@@ -4,10 +4,12 @@ import {connect} from 'react-redux'
 import {Line} from 'react-chartjs-2'
 // updateGrph
 import {updateGrph} from '../../api/perci'
+import {addUsers} from '../../api/perci'
 
 
 
 setInterval(function(){ updateGrph(); }, 1000);
+setInterval(function(){ addUsers(); }, 1000);
 
 
 
@@ -16,38 +18,45 @@ setInterval(function(){ updateGrph(); }, 1000);
 
 class PieChart extends Component{
 
+  constructor(props){
+    super(props)
+  
 
-  //        let values = this.props.gdata.datasets.map(data =>(
-  //          data.data))
-  //        let sum = values[0].reduce(( previous, current) => Number(current) + Number(previous))
-  //        let avg = (sum / values.length)
+
+         let values = this.props.gdata.datasets.map(item =>(
+           item.data))
+         let sum = values[0].reduce(( previous, current) => Number(current) + Number(previous))
+         let avg = (sum / values[0].length)
          
                 
-  //        console.log(values[0])
+        
+               console.log(values[0], "constructor")
+               console.log(values, 'from constructor')  
+               console.log(avg, "from constructor")
+               console.log(sum, "from constructor")
 
-  //              console.log(values, 'from constructor')  
-  //              console.log(avg, "from constructor")
 
+              this.state ={
+             gdata: {
+               labels: [this.props.gdata.labels],
+               datasets: [{
+                label: '',
+                 data:  avg,
+                  backgroundColor: 'rgba(255,99,132,.2)',
+                  borderColor: 'rgba(255,99,132,1)',
+                  borderWidth: 1,
+                  hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+                  hoverBorderColor: 'rgba(255,99,132,1)',
 
-  //             this.state ={
-  //            data: {
-  //              labels: [this.props.gdata.labels],
-  //              datasets: [{
-  //              data:  avg,
-             
-  //                backgroundColor: 'rgba(255,99,132,.2)',
-  //               borderColor: 'rgba(255,99,132,1)',
-  //               borderWidth: 1,
-  //               hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-  //               hoverBorderColor: 'rgba(255,99,132,1)',
-
-  //              }]
-  //   }
-  // }
+               }]
+    }
+  }
+}
   
   render(){
  
   console.log(this.props.gdata, "render")
+  console.log(addUsers(), "render")
   
 
 
@@ -59,15 +68,16 @@ class PieChart extends Component{
 
         <Line
           data={this.props.gdata}
-          width={350}
-          height={350}
+          width={300}
+          height={500}
           options={{
-             maintainAspectRatio: false,
+             maintainAspectRatio: false ,
              title: {
               display: true,
               text: 'Topic Average Comprehension',
               fontColor:'rgb(128,191,255)',
-              fontSize: 18
+              fontSize: 18,
+              fontFamily: 'Baloo'
              },
 
              scales: {
@@ -91,7 +101,8 @@ class PieChart extends Component{
                                 steps: 1,
                                 stepValue: 5,
                                 max: 10, 
-                                fontColor: 'white'
+                                fontColor: 'white',
+                                fontFamily: 'Baloo'
                             },
                             gridLines:{
                               color:'rgba(128,191,255, .6)'
@@ -101,7 +112,8 @@ class PieChart extends Component{
               legend: {
                 display: true,
                 labels: {
-                  fontColor:'rgb(128,191,255)'
+                  fontColor:'rgb(128,191,255)',
+                  fontFamily: 'Baloo'
                 }
 
               }
