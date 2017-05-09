@@ -6,6 +6,16 @@
   margin-top: 0px;
 }
 
+@media(max-width:375px){
+  #StudLoginCont {
+
+  width: 375;
+  height: 667px;
+  background-color: #00284d;
+  margin-top: 0px;
+  }
+}
+
 #StudLogInTitle {
 
   color: #FFF;
