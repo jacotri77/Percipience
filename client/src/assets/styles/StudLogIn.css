@@ -6,10 +6,19 @@
   margin-top: 0px;
 }
 
-@media(max-width:375px){
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   #StudLoginCont {
 
-  width: 375;
+  width: 100%;
+  height: 667px;
+  background-color: #00284d;
+  margin-top: 0px;
+  }
+}
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  #StudLoginCont {
+
+  width: 100%;
   height: 667px;
   background-color: #00284d;
   margin-top: 0px;
@@ -26,7 +35,7 @@
   font-size: 50px;
 }
 
-@media(max-width:375px){
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 #StudLogInTitle {
 
   color: #FFF;
@@ -38,6 +47,17 @@
 }
 }
 
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+#StudLogInTitle {
+
+  color: #FFF;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 0px;
+  font-family: 'Baloo', cursive;
+  font-size: 20px;
+}
+}
 #StudLogInBox {
 
   width: 600px;
@@ -51,10 +71,24 @@
   
 }
 
-@media(max-width:375px){
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   #StudLogInBox {
 
-  width: 375px;
+  width: 100%;
+  height: 120px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  background-color: #80bfff;
+  margin: auto;
+  margin-top: 30px;
+  padding-top: 30px;
+  
+}
+}
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  #StudLogInBox {
+
+  width:100%;
   height: 120px;
   border: 1px solid #000;
   border-radius: 15px;
@@ -75,10 +109,22 @@
   justify-content: space-around;
 }
 
-@media(max-width:375px){
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   #StudUsrNameLab {
 
-  margin-left: 20px;
+  margin-left: 10px;
+  line-height: 20px;
+  color: #00284d;
+  font-family: 'Baloo', cursive;
+  font-size: 30px;
+
+}
+}
+
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  #StudUsrNameLab {
+
+  margin-left: 10px;
   line-height: 20px;
   color: #00284d;
   font-family: 'Baloo', cursive;
@@ -111,7 +157,28 @@
   margin-left: 20px;
 }
 
-#StudUsrSubBtn {
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  #StudUsrName {
+
+  width: 30%;
+  height: 30px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+}
+
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  #StudUsrName {
+
+  width: 30%;
+  height: 30px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+}
+
+
+.bluBtnGen {
 
   width: 570px;
   height: 85px;
@@ -125,7 +192,40 @@
   padding-left: 10px;
 }
 
-#StudUsrSubBtn:hover {
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  .bluBtnGen {
+  width: 100%;
+  height: 85px;
+  line-height: 85px;
+  margin-top: 10px;
+  margin-left: 0px;
+  background-color: #80bfff;
+  box-shadow: none;
+  transition: box-shadow 0.5s;
+  border-radius: 20px;
+  padding-left: 0px;
+}
+}
+
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  .bluBtnGen {
+  width: 100%;
+  height: 85px;
+  line-height: 85px;
+  margin-top: 10px;
+  margin-left: 0px;
+  background-color: #80bfff;
+  box-shadow: none;
+  transition: box-shadow 0.5s;
+  border-radius: 20px;
+  padding-left: 0px;
+}
+}
+
+
+.bluBtnGen:hover {
 
   cursor: pointer;
   background-color: #6EB3FA;

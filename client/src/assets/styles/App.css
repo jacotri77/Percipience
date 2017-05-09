@@ -11,6 +11,28 @@ a {
   margin-top: 20px;
 }
 
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  #AppCont {
+  display: block;
+  height: 1500px;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+}
+}
+
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  #AppCont {
+  display: block;
+  height: 1500px;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+}
+}
+
 .App {
   text-align: center;
 }
