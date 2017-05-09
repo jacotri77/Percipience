@@ -26,6 +26,17 @@
   font-size: 50px;
 }
 
+@media(max-width:375px){
+#StudLogInTitle {
+
+  color: #FFF;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 0px;
+  font-family: 'Baloo', cursive;
+  font-size: 20px;
+}
+}
 
 #StudLogInBox {
 
@@ -40,6 +51,20 @@
   
 }
 
+@media(max-width:375px){
+  #StudLogInBox {
+
+  width: 375px;
+  height: 120px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  background-color: #80bfff;
+  margin: auto;
+  margin-top: 30px;
+  padding-top: 30px;
+  
+}
+}
 
 #StudInpWrap {
 
@@ -50,7 +75,19 @@
   justify-content: space-around;
 }
 
-#StudUsrNameLab {
+@media(max-width:375px){
+  #StudUsrNameLab {
+
+  margin-left: 20px;
+  line-height: 20px;
+  color: #00284d;
+  font-family: 'Baloo', cursive;
+  font-size: 30px;
+
+}
+}
+
+ #StudUsrNameLab {
 
   margin-left: 20px;
   line-height: 20px;
