@@ -9,7 +9,7 @@ const socket = io.connect('http://localhost:3001')
 // const socket = io.connect('http://192.168.1.10:3001')
 // const socket =io.connect('http://10.68.0.60:3001')
 
-const socket =io.connect('http://10.68.0.60:3001')
+//const socket =io.connect('http://10.68.0.60:3001')
 
 //------------
 
@@ -121,7 +121,23 @@ socket.on('addUserType', function(is_inst) {
 })
 
 //------------
+export function updateTime(ut) {
 
+
+  socket.emit('updateTime', ut)
+
+}
+
+
+socket.on('updateTime', function(ut) {
+
+  store.dispatch( {
+
+    type: 'UPDATE_TIME',
+    ut
+
+  })
+})
 //------------
 
 export function updateGrph(gd) {
