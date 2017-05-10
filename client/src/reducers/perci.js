@@ -8,6 +8,7 @@ const initialState = {
     user: 'USERNAME',
     user_scale: 0,
     comp_list: [0],
+    curr_comp_list: [0],
     curr_topic: 'TOPIC',
     curr_avg: 0,
     tpc_list: [],

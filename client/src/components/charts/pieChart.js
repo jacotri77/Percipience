@@ -55,8 +55,10 @@ class PieChart extends Component{
   
   render(){
  
+
   // console.log(this.props.gdata, "render")
   // console.log(addUsers(), "render")
+
   
 
 

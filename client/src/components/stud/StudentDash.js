@@ -96,16 +96,6 @@ class StudentDash extends Component {
                 
             </div>
 
-            <Link
-              to={'studentClassNotes'}>
-      
-              <div
-                className='bluBtnGen'>
-                View Class Notes
-              </div>
-                
-            </Link>
-
           </div>
 
         </div>
