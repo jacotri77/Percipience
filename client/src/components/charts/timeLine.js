@@ -21,13 +21,13 @@ class TimeLine extends Component{
 
     this.state ={
 
-        data: {
-          labels: [this.props.gdata.labels],
+        tdata: {
+          labels: [moment()],
           title: {
               text: "Date Time Formatting"
                 },
                 datasets: [{
-                    label:"Topics",
+                    label:" ",
                     data: [this.props.tpc_list],
                     borderColor: "rgb(248,169,113)",
                     backgroundColor: "rgba(248,169,113, .4)",
@@ -54,7 +54,7 @@ class TimeLine extends Component{
        
 
         <Line
-          data={this.state.data}
+          data={this.state.tdata}
           width={300}
           height={150}
           options={{
@@ -82,17 +82,17 @@ class TimeLine extends Component{
                         unit: "second",
                         round: false,
                          displayFormats: {
-                                        max: moment().startOf('year'),
-                                        min: moment().endOf('year'),
-                                        'millisecond': 'SSS [ms]',
-                                        'second': 'h:mm:ss a', // 11:20:01 AM
-                                        'minute': 'h:mm:ss a', // 11:20:01 AM
-                                        'hour': 'MMM D, hA', // Sept 4, 5PM
-                                        'day': 'MMM Do', // Sep 4 2015
-                                        'week': 'll', // Week 46, or maybe "[W]WW - YYYY" ?
-                                        'month': 'MMM YYYY', // Sept 2015
-                                        'quarter': '[Q]Q - YYYY', // Q3
-                                        'year': 'YYYY', // 2015
+                                max: moment().startOf('year'),
+                                min: moment().endOf('year'),
+                                'millisecond': 'SSS [ms]',
+                                'second': 'h:mm:ss a', // 11:20:01 AM
+                                'minute': 'h:mm:ss a', // 11:20:01 AM
+                                'hour': 'MMM D, hA', // Sept 4, 5PM
+                                'day': 'MMM Do', // Sep 4 2015
+                                'week': 'll', // Week 46, or maybe "[W]WW - YYYY" ?
+                                'month': 'MMM YYYY', // Sept 2015
+                                'quarter': '[Q]Q - YYYY', // Q3
+                                'year': 'YYYY', // 2015
                                     },
                           
                       
@@ -108,12 +108,12 @@ class TimeLine extends Component{
             }],
             yAxes: [{
               id: 'y-axis-1',
-              display:false,
+              display:true,
               type: 'linear',
               ticks: {
                 min: 0,
-                max: 0,
-                maxTicksLimit:0,
+                max: 1,
+                maxTicksLimit:1,
                 stepsSize: 1,
                 beginAtZero: true,
                 userCallback: function(label, index, labels) {
@@ -128,7 +128,11 @@ class TimeLine extends Component{
                           labelString: 'Topic Name',
                           fontColor: 'white',
                           fontFamily: 'Baloo'
-                          }
+                          },
+
+            gridLines :{
+                              color:'rgba(128,191,255, .8)'
+                  },
 
             }]
           },

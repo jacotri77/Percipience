@@ -115,11 +115,11 @@ export default function perciReducer(state=initialState, action) {
 
              
 
-              gdata: { 
+              tdata: { 
 
                 labels: state.curr_topic,
                 datasets: [{
-                  label: 'Avg of Votes',
+                  label: 'Topics',
                   data: state.tpc_list,
                   pointBackgroundColor: 'white',
                   backgroundColor: 'rgba(128,191,255,0.2)',
