@@ -113,19 +113,21 @@ and (max-device-width : 480px) {
 #StudRoomUserCont {
 
   position: absolute;
+  color: white;
   width: 150px;
   bottom: 2px;
-  border: 1px solid #000;
+  border: 1px solid white;
   text-align: center;
 }
 
 #StudRoomRoomCont {
 
   position: absolute;
+  color:white;
   width: 150px;
   bottom: 2px;
   left: 155px;
-  border: 1px solid #000;
+  border: 1px solid white;
   text-align: center;
 }
 

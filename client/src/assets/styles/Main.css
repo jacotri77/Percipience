@@ -1,5 +1,22 @@
-#MainCont {
-margin: auto;
+html {
+  box-sizing: border-box;
+}
+
+{
+  box-sizing: inherit;
+}
+body, html{
+  margin-top:0px;
+  padding-top:0px;
+
+ }
+
+ h1{
+	margin-top: 0px;
+
+ }
+ #MainCont {
+	margin: 0px auto;
   width: 100%;
   height: 100%;
   border: 1px solid #000;
