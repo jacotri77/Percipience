@@ -9,7 +9,7 @@ const socket = io.connect('http://localhost:3001')
 // const socket = io.connect('http://192.168.1.10:3001')
 // const socket =io.connect('http://10.68.0.60:3001')
 
-const socket =io.connect('http://10.68.0.60:3001')
+//const socket =io.connect('http://10.68.0.60:3001')
 
 //------------
 

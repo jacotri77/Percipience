@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
 import {Line} from 'react-chartjs-2'
+import moment from 'moment'
 // updateGrph
-import {updateGrph} from '../../api/perci'
-import {addUsers} from '../../api/perci'
+
 
 
 
@@ -18,27 +18,28 @@ class TimeLine extends Component{
     super(props)
 
 
-              this.state ={
-  data: {
-    labels: ['labels'],
-    title: {
-        text: "Date Time Formatting"
-          },
-          datasets: [{
-              label: this.props.curr_topic,
-              data: [this.props.tpc_list],
-              tension: 0,
-              borderColor: "rgb(248,169,113)",
-              backgroundColor: "rgba(0,0,0,0)",
-              radius: 0,
-              borderWidth: 1,
-              pointHitRadius: 5
-    }]
-}
-               
-            
-  }
-}
+    this.state ={
+
+        data: {
+          labels: [this.props.curr_topic],
+          title: {
+              text: "Date Time Formatting"
+                },
+                datasets: [{
+                    label: this.props.curr_topic,
+                    data: [this.props.tpc_list],
+                    tension: 0,
+                    borderColor: "rgb(248,169,113)",
+                    backgroundColor: "rgba(0,0,0,0)",
+                    radius: 0,
+                    borderWidth: 1,
+                    pointHitRadius: 5
+                  }]
+
+              }
+        }
+   
+    }
   
   render(){
   console.log(this.props.curr_topic, "render")
@@ -58,7 +59,7 @@ class TimeLine extends Component{
           width={300}
           height={500}
           options={{
-             maintainAspectRatio: false ,
+             maintainAspectRatio: false,
              title: {
               display: true,
               text: 'Topic TimeLine',
@@ -67,18 +68,47 @@ class TimeLine extends Component{
               fontFamily: 'Baloo'
              },
           scales: {
+
               xAxes: [{
                   title: "time",
+                  gridLines :{
+                              color:'rgba(128,191,255, .8)'
+                  },
+                  scaleLabel: {
+                                display: true,
+                  },
                   type: 'time',
                   time: {
                       unitStepSize: 1,
-                      displayFormats: {
-                          day: 'LTS',
+
+                      displayFormats:{ 
+                          min: moment(),
                           
                       }
+                      
+                  },
+                  ticks: {
+                    beginAtZero: false,
+                    min: 1,
+                    fontColor: 'white',
+                    fontFamily: 'Baloo'
+
                   }
+            }],
+            yAxes: [{
+              display:true,
+              ticks: {
+                min: 0,
+                max: 0,
+                beginAtZero: true,
+                fontColor: 'white',
+                fontFamily: 'Baloo'
+              }
+
             }]
-      }
+          },
+    
+      
     }}
             />
 
