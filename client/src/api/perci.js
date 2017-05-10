@@ -121,7 +121,23 @@ socket.on('addUserType', function(is_inst) {
 })
 
 //------------
+export function updateTime(ut) {
 
+
+  socket.emit('updateTime', ut)
+
+}
+
+
+socket.on('updateTime', function(ut) {
+
+  store.dispatch( {
+
+    type: 'UPDATE_TIME',
+    ut
+
+  })
+})
 //------------
 
 export function updateGrph(gd) {

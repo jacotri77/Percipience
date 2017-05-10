@@ -107,7 +107,32 @@ export default function perciReducer(state=initialState, action) {
 
 //--------------------------
 
+  case 'UPDATE_TIME':
 
+            return {
+
+              ...state,
+
+             
+
+              gdata: { 
+
+                labels: state.curr_topic,
+                datasets: [{
+                  label: 'Avg of Votes',
+                  data: state.tpc_list,
+                  pointBackgroundColor: 'white',
+                  backgroundColor: 'rgba(128,191,255,0.2)',
+                  borderColor: 'white',
+                  borderWidth: 1,
+                  hoverBorderColor: 'red'
+                  
+                }]
+              } 
+
+              
+
+            }
 
 /*
 

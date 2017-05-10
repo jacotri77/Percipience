@@ -79,6 +79,11 @@ io.on('connection', function(socket) {
 
   })
 
+  socket.on('updateTime', function(ut) {
+
+    io.emit('updateTime', ut)
+  })
+
 //>>
 })
 

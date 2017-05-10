@@ -3,6 +3,7 @@ import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
 import {Line} from 'react-chartjs-2'
 import moment from 'moment'
+import {updateTime} from '../../api/perci'
 // updateGrph
 
 
@@ -21,17 +22,15 @@ class TimeLine extends Component{
     this.state ={
 
         data: {
-          labels: [this.props.curr_topic],
+          labels: [this.props.gdata.labels],
           title: {
               text: "Date Time Formatting"
                 },
                 datasets: [{
-                    label: this.props.curr_topic,
+                    label:"Topics",
                     data: [this.props.tpc_list],
-                    tension: 0,
                     borderColor: "rgb(248,169,113)",
-                    backgroundColor: "rgba(0,0,0,0)",
-                    radius: 0,
+                    backgroundColor: "rgba(248,169,113, .4)",
                     borderWidth: 1,
                     pointHitRadius: 5
                   }]
@@ -57,7 +56,7 @@ class TimeLine extends Component{
         <Line
           data={this.state.data}
           width={300}
-          height={500}
+          height={150}
           options={{
              maintainAspectRatio: false,
              title: {
@@ -70,7 +69,7 @@ class TimeLine extends Component{
           scales: {
 
               xAxes: [{
-                  title: "time",
+          
                   gridLines :{
                               color:'rgba(128,191,255, .8)'
                   },
@@ -79,7 +78,6 @@ class TimeLine extends Component{
                   },
                   type: 'time',
                   time: {
-                      unitStepSize: 1,
                         parser: false,
                         unit: "second",
                         round: false,
@@ -109,14 +107,28 @@ class TimeLine extends Component{
                   }
             }],
             yAxes: [{
-              display:true,
+              id: 'y-axis-1',
+              display:false,
+              type: 'linear',
               ticks: {
                 min: 0,
                 max: 0,
+                maxTicksLimit:0,
+                stepsSize: 1,
                 beginAtZero: true,
+                userCallback: function(label, index, labels) {
+                     if (Math.floor(label) === label) {
+                         return label
+                    }},
                 fontColor: 'white',
                 fontFamily: 'Baloo'
-              }
+              },
+              scaleLabel: {
+                          display: true,
+                          labelString: 'Topic Name',
+                          fontColor: 'white',
+                          fontFamily: 'Baloo'
+                          }
 
             }]
           },

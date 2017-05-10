@@ -31,8 +31,6 @@ class InstRoom extends Component {
       <div
         id='InstRoomCont'>
 
-        <TimeLine />
-
         <div 
           id='InstTopicCont'>
 
@@ -62,6 +60,8 @@ class InstRoom extends Component {
 
         
         <PieChart />
+
+         <TimeLine />
       </div>
 
     )
