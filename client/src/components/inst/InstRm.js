@@ -3,6 +3,7 @@ import '../../assets/styles/InstRoom.css'
 import {connect} from 'react-redux'
 import {addNewTopic} from '../../api/perci'
 import PieChart from '../charts/pieChart'
+import TimeLine from '../charts/timeLine'
 
 
 
@@ -29,6 +30,8 @@ class InstRoom extends Component {
 
       <div
         id='InstRoomCont'>
+
+         <TimeLine />
 
         <div 
           id='InstTopicCont'>

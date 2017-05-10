@@ -5,6 +5,18 @@
   background-color: #00284d;
 }
 
+@media only screen and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+#StudRoomCont {
+
+  width: 100%;
+  height: 667px;
+  background-color: #00284d;
+  
+  }
+}
+
 #StudRoomTopBar {
 
   height: 100px;
@@ -21,6 +33,20 @@
   font-size: 40px;
 }
 
+@media only screen and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+#StudRoomTopic {
+
+  color: #FFF;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 10px;
+  font-family: 'Baloo', cursive;
+  font-size: 30px;
+  }
+}
+
 #StudRoomForm {
 
   width: 600px;
@@ -30,6 +56,22 @@
   border-radius: 15px;
   background-color: #80bfff;
   border: 1px solid #000;
+}
+
+@media only screen and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+#StudRoomForm {
+
+  width: 95%;
+  height: 300px;
+  margin: auto;
+  margin-top: 80px;
+  border-radius: 15px;
+  background-color: #80bfff;
+  border: 1px solid #000;
+
+ }
 }
 
 #StudRoomSbmtBtn {
@@ -71,19 +113,21 @@
 #StudRoomUserCont {
 
   position: absolute;
+  color: white;
   width: 150px;
   bottom: 2px;
-  border: 1px solid #000;
+  border: 1px solid white;
   text-align: center;
 }
 
 #StudRoomRoomCont {
 
   position: absolute;
+  color:white;
   width: 150px;
   bottom: 2px;
   left: 155px;
-  border: 1px solid #000;
+  border: 1px solid white;
   text-align: center;
 }
 

@@ -45,12 +45,6 @@ class Main extends Component {
           id='MainCont'>
         
 
-          
-
-          <div
-            id='ParkerBg'>
-          </div>
-
           <Route 
             exact={true} 
             path='/' 
