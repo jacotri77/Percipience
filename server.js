@@ -19,8 +19,26 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 //     })
 // })
 
+
+
+
 io.on('connection', function(socket) {
 
+
+
+  socket.on('getNumStud', function() {
+
+
+    var nspSockets = io.of('/').sockets;
+
+    var studCnt = Object.keys(nspSockets).length
+
+    // console.log('STUD COUNT ', studCnt)
+
+    io.emit('getNumStud', studCnt)
+
+
+  })
 
   socket.on('addMessage', function(message) {
 
@@ -34,6 +52,8 @@ io.on('connection', function(socket) {
     io.emit('addCompLvl', score)
 
   })
+
+
 
   socket.on('addRoomName', function(roomId) {
 

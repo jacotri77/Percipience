@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
-import { addCompLvl } from '../../api/perci'
+import { addCompLvl, getAvgForTopic } from '../../api/perci'
 // import {postVotes} from '../../api/perci'
 
 
@@ -30,7 +30,9 @@ class StudRoom extends Component {
 
     var c = document.getElementById('StudRoomSlide').value
 
+    getAvgForTopic(3)
     addCompLvl(c)
+
     
   
   }
