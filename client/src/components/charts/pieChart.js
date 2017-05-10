@@ -30,10 +30,10 @@ class PieChart extends Component{
          
                 
         
-               console.log(values[0], "constructor")
-               console.log(values, 'from constructor')  
-               console.log(avg, "from constructor")
-               console.log(sum, "from constructor")
+               // console.log(values[0], "constructor")
+               // console.log(values, 'from constructor')  
+               // console.log(avg, "from constructor")
+               // console.log(sum, "from constructor")
 
 
               this.state ={
@@ -55,8 +55,8 @@ class PieChart extends Component{
   
   render(){
  
-  console.log(this.props.gdata, "render")
-  console.log(addUsers(), "render")
+  // console.log(this.props.gdata, "render")
+  // console.log(addUsers(), "render")
   
 
 
