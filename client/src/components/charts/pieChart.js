@@ -70,7 +70,7 @@ class PieChart extends Component{
 
         <Line
           data={this.props.gdata}
-          width={300}
+          width={200}
           height={500}
           options={{
              maintainAspectRatio: false ,
