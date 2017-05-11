@@ -19,8 +19,8 @@ h1{
 
   display: inline-block;
   width: 575px;
-  height: 52px;
-  line-height: 50px;
+  height: 75px;
+  line-height: 75px;
   margin: 0 20px;
   text-align: center;
   background-color: #80bfff;
@@ -71,7 +71,7 @@ h1{
   font-family: 'Baloo', cursive;
   color:#00284d;
   font-size: 24px;
-  margin-bottom: 150px;
+  margin-bottom: 175px;
 
 }
 
@@ -94,7 +94,7 @@ h1{
   justify-content: space-around;
   margin: 0px auto 150px auto;
   width: 600px;
-  height: 200px;
+  height: 250px;
   border-radius: 15px;
   background-color: #80bfff;
   border: 1px solid #000;
