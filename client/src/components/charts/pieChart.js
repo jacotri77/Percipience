@@ -71,10 +71,13 @@ class PieChart extends Component{
 
         <Line
           data={this.props.gdata}
+          id='PieChart'
           width={200}
           height={450}
           options={{
              maintainAspectRatio: false ,
+             responsive: true,
+             marginTop:150,
              title: {
               display: true,
               text: 'Topic Average Comprehension',

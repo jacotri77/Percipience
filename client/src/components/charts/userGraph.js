@@ -76,6 +76,7 @@ class UserGraph extends Component {
             height={450}
             options={{
                maintainAspectRatio: false,
+               responsive: true,
                title: {
                 display: true,
                 text: 'User Votes',
