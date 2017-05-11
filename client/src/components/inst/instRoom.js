@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {addNewTopic} from '../../api/perci'
 import PieChart from '../charts/pieChart'
 import UserGraph from '../charts/userGraph'
+import Clock from '../charts/clock'
 
 
 
@@ -34,6 +35,8 @@ class InstRoom extends Component {
 
       <div
         id='InstRoomCont'>
+
+        <Clock />
 
         <div 
           id='InstTopicCont'>
