@@ -36,7 +36,8 @@ socket.on('addCompLvl', function(score) {
 
 export function addRoomName() {
 
-  const roomId = shortid.generate()
+  var roomId = shortid.generate()
+  roomId = roomId.toUpperCase()
   socket.emit('addRoomName', roomId)
 }
 
