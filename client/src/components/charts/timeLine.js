@@ -22,10 +22,11 @@ class TimeLine extends Component{
     this.state ={
 
         tdata: {
-          labels: [moment()],
+          labels: [this.props.curr_topic],
                 datasets: [{
                     label: '',
                     data: [this.props.curr_topic],
+                    data: [this.props.tpc_list],
                     backgroundColor: 'rgba(255,99,132,.2)',
                     borderColor: 'rgba(255,99,132,1)',
                     borderWidth: 1,
@@ -68,7 +69,8 @@ class TimeLine extends Component{
           scales: {
 
               xAxes: [{
-          
+                  stacked: true,
+
                   gridLines :{
                       color:'rgba(128,191,255, .8)'
                   },
@@ -155,7 +157,8 @@ class TimeLine extends Component{
 
     		gdata: appState.gdata,
         curr_topic: appState.curr_topic,
-        tpc_list: appState.tpc_list
+        tpc_list: appState.tpc_list,
+        
 
   }
 

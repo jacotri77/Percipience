@@ -18,40 +18,40 @@ setInterval(function(){ addUsers(); }, 1000);
 
 class PieChart extends Component{
 
-  constructor(props){
-    super(props)
+  //constructor(props){
+    //super(props)
   
 
 
-         let values = this.props.gdata.datasets.map(item =>(
-           item.data))
-         let sum = values[0].reduce(( previous, current) => Number(current) + Number(previous))
-         let avg = (sum / values[0].length)
+    //      let values = this.props.gdata.datasets.map(item =>(
+    //        item.data))
+    //      let sum = values[0].reduce(( previous, current) => Number(current) + Number(previous))
+    //      let avg = (sum / values[0].length)
          
                 
         
-               // console.log(values[0], "constructor")
-               // console.log(values, 'from constructor')  
-               // console.log(avg, "from constructor")
-               // console.log(sum, "from constructor")
+    //            console.log(values[0], "constructor")
+    //            console.log(values, 'from constructor')  
+    //            console.log(avg, "from constructor")
+    //            console.log(sum, "from constructor")
 
 
-              this.state ={
-             gdata: {
-               labels: [this.props.gdata.labels],
-               datasets: [{
-                label: '',
-                 data:  avg,
-                  backgroundColor: 'rgba(255,99,132,.2)',
-                  borderColor: 'rgba(255,99,132,1)',
-                  borderWidth: 1,
-                  hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-                  hoverBorderColor: 'rgba(255,99,132,1)',
+    //           this.state ={
+    //          gdata: {
+    //            labels: [this.props.gdata.labels],
+    //            datasets: [{
+    //             label: '',
+    //              data:  sum,
+    //               backgroundColor: 'rgba(255,99,132,.2)',
+    //               borderColor: 'rgba(255,99,132,1)',
+    //               borderWidth: 1,
+    //               hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+    //               hoverBorderColor: 'rgba(255,99,132,1)',
 
-               }]
-    }
-  }
-}
+    //            }]
+    // }
+  //}
+//}
   
   render(){
  

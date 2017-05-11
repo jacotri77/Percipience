@@ -3,7 +3,7 @@ import '../../assets/styles/InstRoom.css'
 import {connect} from 'react-redux'
 import {addNewTopic} from '../../api/perci'
 import PieChart from '../charts/pieChart'
-import TimeLine from '../charts/timeLine'
+import UserGraph from '../charts/userGraph'
 
 
 
@@ -73,7 +73,7 @@ class InstRoom extends Component {
         
         <PieChart />
 
-       <TimeLine />
+      <UserGraph />
        
       </div>
 
