@@ -24,6 +24,7 @@ class UserGraph extends Component {
         datasets: [{
           data:  props.user_scale,
           label: 'My First dataset',
+          fontColor:'rgb(128,191,255)',
           backgroundColor: 'rgba(255,99,132,.2)',
           borderColor: 'rgba(255,99,132,1)',
           borderWidth: 1,
@@ -47,11 +48,13 @@ class UserGraph extends Component {
         datasets: [{
           data: [this.props.user_scale],
           label: 'Current Topic Comprehension',
+          fontColor:'rgb(128,191,255)',
           pointBackgroundColor: 'white',
-                  backgroundColor: 'rgba(128,191,255,0.2)',
-                  borderColor: 'white',
-                  borderWidth: 1,
-                  hoverBorderColor: 'red',
+          backgroundColor: 'rgba(128,191,255,0.2)',
+          borderColor: 'white',
+          borderWidth: 1,
+          hoverBorderColor: 'red',
+          hoverBackgroundColor: 'red'
 
         }
 
@@ -77,10 +80,18 @@ class UserGraph extends Component {
             options={{
                maintainAspectRatio: false,
                responsive: true,
+               tooltips: {
+
+                  enabled: true,
+                  titleFontFamily:'Baloo',
+                  titleFontColor: 'rgb(128,191,255)',
+
+
+               },
                title: {
                 display: true,
                 text: 'User Votes',
-               fontColor:'rgb(128,191,255)',
+                fontColor:'rgb(128,191,255)',
                 fontSize: 18,
                 fontFamily: 'Baloo'
       
@@ -91,7 +102,8 @@ class UserGraph extends Component {
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: 'Topic'
+                    
+                                 
                             },
                             gridLines :{
                               color:'rgba(128,191,255, .8)'
@@ -123,7 +135,8 @@ class UserGraph extends Component {
                                 fontColor:'rgb(128,191,255)',
                                 fontFamily: 'Baloo'
                               }
-                          }}
+                          }
+                        }
              }}/>
         </div>
         

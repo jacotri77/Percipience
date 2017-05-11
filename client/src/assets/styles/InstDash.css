@@ -18,12 +18,13 @@
   margin-top: 0px;
   color: #fff;
   line-height: 100px;
+  font-family: 'Baloo', cursive;
 }
 
 #InstDashFrame {
 
   width: 600px;
-  height: 200px;
+  height: 300px;
   border: 1px solid #000;
   border-radius: 15px;
   background-color: #80bfff;
@@ -82,8 +83,11 @@
 
 .dashH2 {
 
-  margin-left: 20px;
+  margin-left: 50px;
   margin-top: 25px;
+  line-height: 45px;
+  font-family: 'Baloo', cursive;
+
 }
 
 #currUser > p{
@@ -93,4 +97,38 @@
   color:#FFF;
   margin-left: 20px;
   margin-top: 25px;
+  font-family: 'Baloo', cursive;
+}
+
+.bluBtnGen {
+
+  width: 550px;
+  height: 85px;
+  line-height: 85px;
+  margin: auto;
+  margin-top: 25px;
+  background-color: #80bfff;
+  box-shadow: none;
+  transition: box-shadow 0.5s;
+  border-radius: 20px;
+  padding-left: 10px;
+  color: #00284d;
+  font-family: 'Baloo', cursive;
+  font-size: 40px;
+  text-align: center;
+}
+
+.bluBtnGen:hover { 
+
+  cursor: pointer;
+  background-color: #6EB3FA;
+  box-shadow: 10px 5px 25px #111;
+  transition: box-shadow  0.5s;
+}
+
+#linkDiv{
+  height:120px;
+  width: 602px;
+  margin: auto;
+
 }

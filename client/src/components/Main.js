@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import '../assets/styles/Main.css'
 import {connect} from 'react-redux'
 import { BrowserRouter as Router, Route} from 'react-router-dom'
-import LeftBar from './LeftBar'
 import TypeSel from './TypeSel'
 
 import InstLogin from './inst/InstLogin'
@@ -80,11 +79,9 @@ class Main extends Component {
             path='/studLogIn'
             component={StudLogIn} />
 
-          
-
 
         </div>
-   <LeftBar />
+  
         </div>
       
       </Router>
