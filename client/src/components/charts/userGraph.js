@@ -47,11 +47,11 @@ class UserGraph extends Component {
         datasets: [{
           data: [this.props.user_scale],
           label: 'Current Topic Comprehension',
-          backgroundColor: 'rgba(128,191,255,0.2)',
-          borderColor: 'rgba(128,191,255,1)',
-          borderWidth: 1,
-          hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-          hoverBorderColor: 'rgba(255,99,132,1)',
+          pointBackgroundColor: 'white',
+                  backgroundColor: 'rgba(128,191,255,0.2)',
+                  borderColor: 'white',
+                  borderWidth: 1,
+                  hoverBorderColor: 'red',
 
         }
 
@@ -73,13 +73,16 @@ class UserGraph extends Component {
           <Bar
             data={this.state.data} 
             width={350}
-            height={350}
+            height={450}
             options={{
                maintainAspectRatio: false,
                title: {
                 display: true,
-                text: 'Topic Average Comprehension',
-  
+                text: 'User Votes',
+               fontColor:'rgb(128,191,255)',
+                fontSize: 18,
+                fontFamily: 'Baloo'
+      
                },
 
                scales: {
@@ -88,7 +91,15 @@ class UserGraph extends Component {
                             scaleLabel: {
                                 display: true,
                                 labelString: 'Topic'
-                            }
+                            },
+                            gridLines :{
+                              color:'rgba(128,191,255, .8)'
+                            },
+                            ticks: {
+                                fontColor: 'white',
+                                fontFamily: 'Baloo'
+
+                              }
                         }],
                     yAxes: [{
                             display: true,
@@ -96,10 +107,22 @@ class UserGraph extends Component {
                                 beginAtZero: true,
                                 steps: 1,
                                 stepValue: 5,
-                                max: 10
+                                max: 10,
+                                fontColor: 'white',
+                                fontFamily: 'Baloo'
+                            },
+                            gridLines :{
+                              color:'rgba(128,191,255, .8)'
                             }
-                            }]
-                          }
+                            }],
+
+                            legend: {
+                              display: true,
+                              labels: {
+                                fontColor:'rgb(128,191,255)',
+                                fontFamily: 'Baloo'
+                              }
+                          }}
              }}/>
         </div>
         
