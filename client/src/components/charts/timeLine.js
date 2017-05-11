@@ -23,12 +23,9 @@ class TimeLine extends Component{
 
         tdata: {
           labels: [moment()],
-          title: {
-              text: "Date Time Formatting"
-                },
                 datasets: [{
-                    label:" ",
-                    data: [this.props.tpc_list],
+                    label: '',
+                    data: [this.props.curr_topic],
                     backgroundColor: 'rgba(255,99,132,.2)',
                     borderColor: 'rgba(255,99,132,1)',
                     borderWidth: 1,
@@ -106,7 +103,8 @@ class TimeLine extends Component{
                     beginAtZero: false,
                     min: 1,
                     fontColor: 'white',
-                    fontFamily: 'Baloo'
+                    fontFamily: 'Baloo',
+
 
                   }
             }],

@@ -68,7 +68,7 @@ class LeftBar extends Component {
               <li>
                 
                 <Link
-                  to={'/instRoom/'}>
+                  to={'/instRm/'}>
               
                   <p>
                     Inst Room
