@@ -1,3 +1,9 @@
+#instDashLink{
+  text-decoration: none;
+  color: #00284d;
+
+  }
+
 #InstDashCont {
   float:right;
   width: 100%;
@@ -17,7 +23,7 @@
 #InstDashFrame {
 
   width: 600px;
-  height: 400px;
+  height: 200px;
   border: 1px solid #000;
   border-radius: 15px;
   background-color: #80bfff;
@@ -40,7 +46,7 @@
 
   width: 570px;
   height: 85px;
-  margin-top: 85px;
+  margin-top: 55px;
   margin-left: 10px;
   display: flex;
   flex-direction: row;
@@ -81,6 +87,8 @@
 }
 
 #currUser > p{
+  align-content: center;
+  text-align: center;
   font-size: 24px;
   color:#FFF;
   margin-left: 20px;

@@ -29,6 +29,9 @@ class InstLogin extends Component {
 
           </h1>
 
+      <div
+        id='loginForm'>
+
         <div
           id='loginBox'>
 
@@ -43,8 +46,7 @@ class InstLogin extends Component {
 
                 <input
                   id='usrName'
-                  type='text' 
-                  placeholder='username' 
+                  type='text'  
                   autoComplete='off' />
 
               <div 
@@ -54,7 +56,7 @@ class InstLogin extends Component {
                     htmlFor='password'>
 
                       Password:<br />
-                      password should be at least 6 characters
+                      
 
                   </label>
 
@@ -66,7 +68,8 @@ class InstLogin extends Component {
                     autoComplete='off' />
 
                  <Link
-                    to={'/instDash/'}>
+                    to={'/instDash/'}
+                    id='instDashLink'>
 
                 <div
                   onClick={this.handleSubmit}
@@ -77,6 +80,8 @@ class InstLogin extends Component {
                 </div>
 
             </Link>
+
+          </div>
 
          </div>
 

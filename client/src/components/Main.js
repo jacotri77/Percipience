@@ -65,7 +65,7 @@ class Main extends Component {
             component={InstDash} />
 
             <Route
-            path='/instRoom'
+            path='/instRm'
             component={InstRoom} />
 
             <Route 

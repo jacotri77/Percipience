@@ -38,7 +38,8 @@ class InstDash extends Component {
           id='InstDashFrame'>
 
           <Link
-            to='/instRoom'>
+            to='/instRm'
+            id='instDashLink'>
 
           <div
             id='AddRoomCont'
@@ -58,35 +59,8 @@ class InstDash extends Component {
             </h2>
 
           </div>
-          </Link>
-
-         
-          <Link
-            to='/StudentClassNotes/'>
-
-          <div
-            id='AddNoteCont'>
           
-            <img
-              id='AddNoteImg' 
-              alt='Plus'
-              src={require('../../assets/images/plus.png')} />
-
-            
-            <h2
-              className='dashH2'>
-              Create Class Notes
-            </h2>
-
-            <input 
-              id='AddNoteInp'
-              type='text' 
-              name='roomname'
-              placeholder='Class Note Name'/>
-
-            </div>
-            
-           </Link>
+          </Link>
 
         </div>
 
