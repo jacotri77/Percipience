@@ -29,7 +29,7 @@ and (max-device-width : 480px) {
 
 	margin: auto;
 	width: 600px;
-	height: 325px;
+	height: 280px;
   border-radius: 15px;
   background-color: #80bfff;
 	border: 1px solid #000;
@@ -55,7 +55,7 @@ and (max-device-width : 480px) {
 
 #StudDashRoom{
 
-	margin:20px;
+	margin:auto;
 	width: 250px;
 }
 
@@ -68,8 +68,8 @@ and (max-device-width : 480px) {
 
 #StudDashEnterBtn {
 
-  width: 350px;
   background-color: #80bfff;
+  margin-top: 30px;
   font-size: 28px;
 }
 
