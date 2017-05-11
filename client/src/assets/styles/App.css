@@ -21,19 +21,9 @@ body, html{
   height: 1500px;
   width: 1368px;
   margin: 0px auto;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
- @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-
-  #AppCont {
-  display: block;
-  height: 667px;
-  width: 100%;
-  margin: auto;
-  margin-top: 20px;
-}
-}
 
  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
@@ -42,7 +32,7 @@ body, html{
   height: 1500px;
   width: 100%;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 }
 

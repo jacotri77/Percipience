@@ -44,6 +44,13 @@ class InstRoom extends Component {
           id="topicCont">
 
             <h3
+              id='instRoomPl'>
+
+              Room Name:
+
+            </h3>
+
+              <h3
               id='InstRoomName'>
               {this.props.room}
             </h3>

@@ -1,4 +1,10 @@
-#InstLoginCont {
+#instDashLink{
+  text-decoration: none;
+  color: #00284d;
+
+  }
+
+  #InstLoginCont {
 
   width: 100%;
   height: 800px;
@@ -8,12 +14,15 @@
 }
 
 #loginForm{
- border: 1px solid #000;
+  width: 600px;
+  height: 350px;
+  border: 1px solid #000;
   border-radius: 15px;
   background-color: #80bfff;
   margin: auto;
   margin-top: 50px;
   padding-top: 50px;
+  font-family: 'Baloo', cursive;
 }
 
 #usrName, #pWord{
@@ -22,6 +31,8 @@
 	margin:0 auto 20px auto;
 	width: 250px;
 	height: 60px;
+  font-family: 'Baloo', cursive;
+  color:white;
 }
 
 #loginButton{
@@ -46,6 +57,7 @@
   text-align: center;
   padding-top: 20px;
   margin-top: 0px;
+  font-family: 'Baloo', cursive;
 }
 
 
@@ -62,6 +74,7 @@
   transition: box-shadow 0.5s;
   border-radius: 20px;
   padding-left: 10px;
+  font-family: 'Baloo', cursive;
 }
 
 #loginButton:hover {
@@ -80,14 +93,18 @@
 	height: 60px;
 }
 
-#usrNameLbl, #pWordLbl{
+#loginBox, #pWordLbl{
 
 	margin:auto;
 	text-align: center;
+  color: #00284d;
+  font-family: 'Baloo', cursive;
+  font-size: 30px;
 }
 
 #usrNameLbl{
 
 	margin-top: 20px;
 }
+
 

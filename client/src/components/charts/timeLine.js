@@ -29,9 +29,11 @@ class TimeLine extends Component{
                 datasets: [{
                     label:" ",
                     data: [this.props.tpc_list],
-                    borderColor: "rgb(248,169,113)",
-                    backgroundColor: "rgba(248,169,113, .4)",
+                    backgroundColor: 'rgba(255,99,132,.2)',
+                    borderColor: 'rgba(255,99,132,1)',
                     borderWidth: 1,
+                    hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+                    hoverBorderColor: 'rgba(255,99,132,1)',
                     pointHitRadius: 5
                   }]
 
@@ -71,11 +73,13 @@ class TimeLine extends Component{
               xAxes: [{
           
                   gridLines :{
-                              color:'rgba(128,191,255, .8)'
+                      color:'rgba(128,191,255, .8)'
                   },
+                  
                   scaleLabel: {
-                                display: true,
+                      display: true,
                   },
+
                   type: 'time',
                   time: {
                         parser: false,
@@ -124,14 +128,14 @@ class TimeLine extends Component{
                 fontFamily: 'Baloo'
               },
               scaleLabel: {
-                          display: true,
-                          labelString: 'Topic Name',
-                          fontColor: 'white',
-                          fontFamily: 'Baloo'
-                          },
+                    display: true,
+                    labelString: 'Topic Name',
+                    fontColor: 'white',
+                    fontFamily: 'Baloo'
+                    },
 
-            gridLines :{
-                              color:'rgba(128,191,255, .8)'
+              gridLines :{
+                    color:'rgba(128,191,255, .8)'
                   },
 
             }]
