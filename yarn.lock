@@ -265,6 +265,10 @@ chokidar@^1.4.3:
   optionalDependencies:
     fsevents "^1.0.0"
 
+clockwise@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/clockwise/-/clockwise-1.0.0.tgz#a708281a8728bdcddcb7d3a9d64415b8f0d581b1"
+
 co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"

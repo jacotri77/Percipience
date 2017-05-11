@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import '../assets/styles/App.css'
-// import { addMessage } from '../api/messaging'
 import {connect} from 'react-redux'
-// import LeftBar from './LeftBar'
 import Main from './Main'
-// import PieChart from './charts/pieChart'
+
 
 
 class App extends Component {
