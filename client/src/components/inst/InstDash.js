@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import '../../assets/styles/InstDash.css'
 import {connect} from 'react-redux'
 import {addRoomName} from '../../api/perci'
-
 import { Link } from 'react-router-dom';
 // browserHistory.push('/some/path');
 
@@ -25,8 +24,11 @@ class InstDash extends Component {
 
         <h1
           id='InstDashHeader'>
-          Dashboard
+
+          Instructor Dashboard
+
         </h1>
+
         <div
           id='currUser'>
 
@@ -62,7 +64,27 @@ class InstDash extends Component {
           
           </Link>
 
+       
+
+        <div
+          id='linkDiv'>
+
+          <Link
+            to='/'
+            id='instDashLink'>
+
+             <div
+                className='bluBtnGen'>
+
+                  Logout
+
+            </div>
+
+        </Link>
+
         </div>
+
+       </div>
 
       </div>
 

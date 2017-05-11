@@ -25,6 +25,9 @@ class InstRoom extends Component {
 
   }
 
+
+
+
   render() {
     
     return (
@@ -64,7 +67,19 @@ class InstRoom extends Component {
 
         <UserGraph />
 
-        
+        <Link
+            to='/instRm'
+            id='instDashLink'>
+
+             <div
+                className='bluBtnGen'>
+
+                  End Class
+
+            </div>
+
+        </Link>
+
       </div>
 
     )

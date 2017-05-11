@@ -77,7 +77,14 @@ class PieChart extends Component{
           options={{
              maintainAspectRatio: false ,
              responsive: true,
-             marginTop:150,
+             tooltips: {
+
+                  enabled: true,
+                  titleFontFamily:'Baloo',
+                  titleFontColor: 'rgb(128,191,255)',
+
+
+               },
              title: {
               display: true,
               text: 'Topic Average Comprehension',

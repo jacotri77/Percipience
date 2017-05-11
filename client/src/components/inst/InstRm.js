@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {addNewTopic} from '../../api/perci'
 import PieChart from '../charts/pieChart'
 import UserGraph from '../charts/userGraph'
+import {Link} from 'react-router-dom'
 
 
 
@@ -74,6 +75,24 @@ class InstRoom extends Component {
         <PieChart />
 
       <UserGraph />
+
+      <div
+        id='linkDiv'>
+
+          <Link
+            to='/instDash'
+            id='instDashLink'>
+
+             <div
+                className='bluBtnGen'>
+
+                  End Class
+
+            </div>
+
+        </Link>
+
+        </div>
        
       </div>
 

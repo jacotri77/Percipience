@@ -12,6 +12,10 @@ body, html{
 
  }
 
+ body {
+  background: linear-gradient(to bottom, rgba(0,44,77, .60) 0%,rgba(0,40,77, .60)0%),url('../images/kazuend-71543.jpg');
+ }
+
   a {
   text-decoration: none;
 }
