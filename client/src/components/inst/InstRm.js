@@ -39,6 +39,13 @@ class InstRoom extends Component {
         <div 
           id='InstTopicCont'>
 
+          <div
+          id='activeUsers'>
+          {this.props.user}
+
+        </div>
+
+
 
         <h1
           id='InstRoomCurrTopic'>
