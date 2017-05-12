@@ -132,3 +132,13 @@ h1{
   margin: auto;
 
 }
+
+
+#activeUsers{
+  float: right;
+  color: white;
+  width:25%;
+  height: 100%;
+
+
+}

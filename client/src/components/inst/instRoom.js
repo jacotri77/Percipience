@@ -38,6 +38,13 @@ class InstRoom extends Component {
 
         <Clock />
 
+        <div
+          id='activeUsers'>
+          {this.props.user}
+
+        </div>
+
+
         <div 
           id='InstTopicCont'>
 
