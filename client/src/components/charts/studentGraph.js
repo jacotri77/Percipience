@@ -19,7 +19,7 @@ class StudentGraph extends Component {
 
      this.state = {
       data: {
-        labels: props.user,
+        labels: props.stud_user,
         datasets: [{
           data:  props.user_scale,
           label: 'My First dataset',
@@ -43,7 +43,7 @@ class StudentGraph extends Component {
   componentWillMount(){
     this.setState({ 
       data: {
-        labels: [this.props.user],
+        labels: [this.props.stud_user],
         datasets: [{
           data: [this.props.user_scale],
           label: 'Current Topic Comprehension',
@@ -154,6 +154,7 @@ const mapStateToProps = function(appState) {
   return {
 
     user: appState.user,
+    stud_user: appState.stud_user,
     room: appState.room,
     curr_topic: appState.curr_topic,
     comp_list: appState.comp_list,

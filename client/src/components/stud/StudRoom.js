@@ -7,23 +7,35 @@ import StudentGraph from '../charts/studentGraph'
 
 class StudRoom extends Component {
 
-  constructor() {
+  constructor(props) {
 
-    super()
+    super(props)
 
     this.state = {
 
+      user: '',
+
+      value: 0
+
+
     }
+    this.slideChange = this.slideChange.bind(this)
   }
 
 
-  slideChange () {
+  slideChange (event) {
 
     var c = document.getElementById('StudRoomSlide').value
 
     document.getElementById('StudRoomSlideNum').innerHTML = (c)
     
+    this.setState({
+      value: event.target.value
+
+    })
+
   }
+
 
 
   rtd = setInterval( ()=> { 
@@ -68,7 +80,7 @@ class StudRoom extends Component {
           <h2
             id='StudRoomRateH2'>Rate your comprehension of the above topic.</h2>
 
-          <p id='StudRoomSlideNum'>10</p>
+          <p id='StudRoomSlideNum'>0</p>
 
           <div
             id='StudRoomSlideCont'>
@@ -85,7 +97,8 @@ class StudRoom extends Component {
               type="range" 
               min="0" 
               max="10" 
-              step="1" />
+              step="1"
+              value={this.state.value} />
 
             <div>
 
