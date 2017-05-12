@@ -67,7 +67,7 @@ class StudentDash extends Component {
               id='rmNameLbl'>
 
               <p>
-                {`Welcome, ${this.props.user}. Please enter the Room Name to join.`}
+                {`Welcome, ${this.props.stud_user}. Please enter the Room Name to join.`}
               </p>
 
             </div>
@@ -113,7 +113,8 @@ const mapStateToProps = function(appState) {
   return {
 
     room: appState.room,
-    user: appState.user
+    user: appState.user,
+    stud_user: appState.stud_user
 
   }
 }
