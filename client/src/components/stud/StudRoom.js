@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
-import { addCompLvl, getAvgForTopic } from '../../api/perci'
+import { gathData } from '../../api/perci'
 import StudentGraph from '../charts/studentGraph'
 
 
@@ -25,20 +25,27 @@ class StudRoom extends Component {
     
   }
 
-  submitClick() {
+
+  rtd = setInterval( ()=> { 
+
+    var c = Number(document.getElementById('StudRoomSlide').value)
+
+
+      gathData({
+        user: this.props.user,
+        comp: c,
+        topic: this.props.curr_topic
+
+      })
+
+  }, 1000);
+
   
-
-    var c = document.getElementById('StudRoomSlide').value
-
-    getAvgForTopic(3)
-    addCompLvl(c)
-
-    
-  
-  }
-
 
   render() {
+
+
+    
 
     return (
 
@@ -88,13 +95,7 @@ class StudRoom extends Component {
 
           </div>
 
-          <div
-            
-            className='bluBtnGen'
-            onClick={this.submitClick}>
-            Submit
-
-          </div>
+          
 
         </div>
 
@@ -127,15 +128,11 @@ class StudRoom extends Component {
 
 const mapStateToProps = function(appState) {
 
-  // console.log(appState)
-
   return {
 
-    user: appState.user,
+    user: appState.stud_user,
     room: appState.room,
-    curr_topic: appState.curr_topic,
-    vote: appState.vote
-
+    curr_topic: appState.curr_topic
   }
 
 }
