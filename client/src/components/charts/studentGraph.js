@@ -2,15 +2,14 @@ import React, { Component } from 'react'
 import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
 import {Bar} from 'react-chartjs-2'
-// updateGrph
 import {updateGrph} from '../../api/perci'
-import {addUsers} from '../../api/perci'
+
 
 
 setInterval(function(){ updateGrph(); }, 1000);
-setInterval(function(){ addUsers(); }, 1000);
 
-class UserGraph extends Component {
+
+class StudentGraph extends Component {
 
   
 
@@ -20,7 +19,7 @@ class UserGraph extends Component {
 
      this.state = {
       data: {
-        labels: [this.props.user],
+        labels: props.user,
         datasets: [{
           data:  props.user_scale,
           label: 'My First dataset',
@@ -75,11 +74,11 @@ class UserGraph extends Component {
        
           <Bar
             data={this.state.data} 
-            width={350}
-            height={450}
+            width={250}
+            height={350}
             options={{
                maintainAspectRatio: false,
-               responsive: true,
+               responsive: false,
                tooltips: {
 
                   enabled: true,
@@ -167,5 +166,5 @@ const mapStateToProps = function(appState) {
 }
 
 
-export default connect(mapStateToProps)(UserGraph)
+export default connect(mapStateToProps)(StudentGraph)
 

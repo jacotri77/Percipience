@@ -1,9 +1,27 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
+// import moment from 'moment'
 
+const styles = {
+		fontSize: 40,
+		padding: 20,
+	
+}
+// const dateTime ='2016-05-02T00:00:00'
 
 class ClockTime extends Component {
+	constructor (){
+		super()
 
+		this.state= {
+	 
+	 // moment: moment(dateTime).format('LTS')
+
+		}
+	}
+	
+	
+	
 
   componentDidMount() {
     $(document).ready(function(){
@@ -39,11 +57,17 @@ class ClockTime extends Component {
 
   }
   render() {
-    return <div className="head row">
-      <div id="finalCountdown">
+  	
+
+    return (
+
+    	<div className="headRow">
+      <div id="finalCountdown" style={styles}>
+    
         
       </div>
     </div>
+    )
   }
 }
 
