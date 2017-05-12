@@ -33,9 +33,11 @@ io.on('connection', function(socket) {
 
     var studCnt = Object.keys(nspSockets).length
 
-    // console.log('STUD COUNT ', studCnt)
+      var userId = socket.client.conn.id
 
-    io.emit('getNumStud', studCnt)
+    console.log('STUD COUNT ', studCnt, userId)
+
+    io.emit('getNumStud', studCnt, userId)
 
 
   })
@@ -68,8 +70,9 @@ io.on('connection', function(socket) {
   })
 
   socket.on('addUserName', function(user) {
-
-    io.emit('addUserName', user)
+    var userId = socket.client.conn.id
+ console.log('addUserName ', user, userId)
+    io.emit('addUserName', user, userId)
 
   })
 

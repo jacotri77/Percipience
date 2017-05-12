@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
 import { addCompLvl, getAvgForTopic } from '../../api/perci'
-// import {postVotes} from '../../api/perci'
+import StudentGraph from '../charts/studentGraph'
 
 
 class StudRoom extends Component {
@@ -66,8 +66,6 @@ class StudRoom extends Component {
           <div
             id='StudRoomSlideCont'>
 
-
-            
             <div>
 
               <p>0</p>
@@ -95,22 +93,29 @@ class StudRoom extends Component {
             className='bluBtnGen'
             onClick={this.submitClick}>
             Submit
+
           </div>
 
         </div>
 
      
-
         <div
-          id='StudRoomUserCont'>
-          {this.props.user}
-        </div>
+          id='userRoomCont'>
+
+            <div
+              id='StudRoomUserCont'>
+              Username: {this.props.user}
+            </div>
 
 
-        <div
-          id='StudRoomRoomCont'>
-          {this.props.room}
-        </div>
+            <div
+              id='StudRoomRoomCont'>
+              Room Name:  {this.props.room}
+            </div>
+
+          </div>
+
+        <StudentGraph />
 
       </div>
 
