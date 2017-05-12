@@ -19,11 +19,98 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 //     })
 // })
 
+var studList = []
+var compList = []
+
+var masList = []
+
+var roomName = ''
+
+var cObj = {
+
+  topic: '',
+  avg: 0,
+  sList: [],
+  cList: [],
+
+}
 
 
 
 io.on('connection', function(socket) {
 
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$
+//$$$$$$$$$$$$$$$$$$$$$$$$
+//$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+  socket.on('gathTopDat', function(rtData) {
+
+    // console.log('rt ', rtData)
+
+    if (cObj.topic !== rtData.topic) {
+
+      cObj.topic = rtData.topic
+        
+        if(cObj.sList.indexOf(rtData.user) === -1) {
+
+          cObj.sList.push(rtData.user)
+          cObj.cList.push(rtData.comp)
+
+        } else {
+
+          // console.log(cObj.sList.indexOf(rtData.user))
+
+        }
+        
+        // cObj.topic = rtData.topic
+
+      
+    // if topic
+    } else {
+
+      if(cObj.sList.indexOf(rtData.user) === -1) {
+
+          cObj.sList.push(rtData.user)
+          cObj.cList.push(rtData.comp)
+
+          // console.log("USER ", cObj.sList, cObj.cList)
+
+        } else {
+
+          // console.log(cObj.sList.indexOf(rtData.user))
+          var indx = cObj.sList.indexOf(rtData.user)
+          cObj.cList[indx] = rtData.comp
+        }
+
+    }
+
+    function getSum(total, num) {
+          
+            return total + num;
+          
+          }
+        
+          cObj.avg = (cObj.cList.reduce(getSum) / cObj.sList.length).toFixed(0)
+    
+          // console.log("USER ", cObj.avg)
+
+    io.emit('gathTopDat', cObj)
+
+  })
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$
+//$$$$$$$$$$$$$$$$$$$$$$$$
+//$$$$$$$$$$$$$$$$$$$$$$$$
+
+  socket.on('addCompLvl', function(score) {
+
+    io.emit('addCompLvl', score)
+
+  })
 
 
   socket.on('getNumStud', function() {
@@ -59,7 +146,9 @@ io.on('connection', function(socket) {
 
   socket.on('addRoomName', function(roomId) {
 
-    io.emit('addRoomName', roomId)
+    roomName = roomId
+
+    io.emit('addRoomName', roomName)
 
   })
 

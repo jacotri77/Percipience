@@ -3,7 +3,7 @@ import '../../assets/styles/StudLogIn.css'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import {addUserName} from '../../api/perci'
+import {addStudName} from '../../api/perci'
 
 
 class StudLogIn extends Component {
@@ -13,7 +13,7 @@ class StudLogIn extends Component {
 
     var c = document.getElementById('StudUsrName').value
 
-    addUserName(c) 
+    addStudName(c) 
 
   }
 

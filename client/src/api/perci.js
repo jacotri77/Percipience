@@ -1,11 +1,12 @@
 import io from 'socket.io-client'
 import store from '../store'
 import shortid from 'shortid'
+import moment from 'moment'
 
 
-const socket = io.connect('http://localhost:3001')
+// const socket = io.connect('http://localhost:3001')
 // 10.68.0.107. 192.168.1.10
-// const socket = io.connect('http://10.68.0.107:3001')
+const socket = io.connect('http://10.68.0.107:3001')
 // const socket = io.connect('http://192.168.1.10:3001')
 // const socket =io.connect('http://10.68.0.60:3001')
 
@@ -79,22 +80,99 @@ socket.on('addNewTopic', function(curr_topic) {
 
 export function addUserName(user) {
 
-  socket.emit('addUserName', user)
-
-}
-
-
-socket.on('addUserName', function(user) {
-  console.log(user, 'user')
   store.dispatch( {
 
     type: 'ADD_USR_NAME',
     user
 
   })
-})
+}
 
 //------------
+
+//------------
+
+export function addStudName(user) {
+
+  store.dispatch( {
+
+    type: 'ADD_STUD_NAME',
+    user
+
+  })
+}
+
+//------------
+
+
+//###########################
+//###########################
+//###########################
+
+
+export function gathData(rtData) {
+
+  // console.log(rtData)
+
+  socket.emit('gathTopDat', rtData)
+
+}
+
+
+socket.on('gathTopDat', function(cObj) {
+
+
+
+  // console.log('cObj', cObj)
+  
+  var mmnt = moment().format('LTS');  // 1:23:41 PM
+
+  var gTop = mmnt
+
+  var gTopList = store.getState().tpc_list
+
+  gTopList.splice(0, 1)
+
+  gTopList.push(gTop)
+
+  var gAvgList = store.getState().avg_list
+
+  console.log(gAvgList)
+
+  gAvgList.splice(0, 1)
+
+  gAvgList.push(Number(cObj.avg))
+
+  
+  store.dispatch( {
+    type: 'GATH_AVG_DATA',
+    gAvgList
+  })
+
+  store.dispatch( {
+    type: 'GATH_TOP_DATA',
+    gTop
+  })
+
+  store.dispatch( {
+    type: 'UPDATE_GRPH',
+    gTopList
+  })
+
+
+
+
+
+  
+
+
+})
+
+// gathTopDat
+//###########################
+//###########################
+//###########################
+
 
 
 
@@ -144,20 +222,17 @@ socket.on('updateTime', function(ut) {
 export function updateGrph(gd) {
 
 
-  socket.emit('updateGrph', gd)
-
-}
-
-
-socket.on('updateGrph', function(gd) {
-
   store.dispatch( {
 
     type: 'UPDATE_GRPH',
     gd
 
-  })
-})
+    })
+
+}
+
+
+
 
 //------------
 
