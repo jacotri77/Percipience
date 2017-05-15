@@ -6,13 +6,29 @@ import moment from 'moment'
 
 // const socket = io.connect('http://localhost:3001')
 // 10.68.0.107. 192.168.1.10
-// const socket = io.connect('http://10.68.0.107:3001')
+const socket = io.connect('http://10.68.0.107:3001')
 // const socket = io.connect('http://192.168.1.10:3001')
-const socket =io.connect('http://10.68.0.60:3001')
+// const socket =io.connect('http://10.68.0.60:3001')
 
-//const socket =io.connect('http://10.68.0.60:3001')
 
-//------------
+
+export function getRoomName() {
+
+  socket.emit('getRoomName')
+
+}
+
+socket.on('getRoomName', function(roomId) {
+
+  store.dispatch({
+
+    type: 'ADD_ROOM_NAME',
+    roomId
+
+  })
+})
+
+
 
 export function addCompLvl(score) {
 
@@ -22,24 +38,24 @@ export function addCompLvl(score) {
 
 socket.on('addCompLvl', function(score) {
 
-  store.dispatch( {
+  store.dispatch({
 
     type: 'ADD_COMP_LVL',
     user_scale: score,
-    
 
   })
 })
 
-//------------
 
-//------------
 
 export function addRoomName() {
 
   var roomId = shortid.generate()
+
   roomId = roomId.toUpperCase()
+
   socket.emit('addRoomName', roomId)
+
 }
 
 
@@ -53,9 +69,6 @@ socket.on('addRoomName', function(roomId) {
   })
 })
 
-//------------ 
-
-//------------ 
 
 export function addNewTopic(curr_topic) {
 
@@ -74,9 +87,6 @@ socket.on('addNewTopic', function(curr_topic) {
   })
 })
 
-//------------
-
-//------------
 
 export function addUserName(user) {
 
@@ -88,9 +98,6 @@ export function addUserName(user) {
   })
 }
 
-//------------
-
-//------------
 
 export function addStudName(user) {
 
@@ -102,17 +109,8 @@ export function addStudName(user) {
   })
 }
 
-//------------
-
-
-//###########################
-//###########################
-//###########################
-
 
 export function gathData(rtData) {
-
-  // console.log(rtData)
 
   socket.emit('gathTopDat', rtData)
 
@@ -120,12 +118,8 @@ export function gathData(rtData) {
 
 
 socket.on('gathTopDat', function(cObj) {
-
-
-
-  // console.log('cObj', cObj)
   
-  var mmnt = moment().format('LTS');  // 1:23:41 PM
+  var mmnt = moment().format('LTS')
 
   var gTop = mmnt
 
@@ -137,18 +131,15 @@ socket.on('gathTopDat', function(cObj) {
 
   var gAvgList = store.getState().avg_list
 
-  // console.log(gAvgList)
-
   gAvgList.splice(0, 1)
 
   gAvgList.push(Number(cObj.avg))
 
   var csList = cObj.cList
+
   var ssList = cObj.sList
 
-  
 
-  console.log(csList, "api")
   store.dispatch( {
     type: 'GATH_AVG_DATA',
     gAvgList
@@ -174,47 +165,25 @@ socket.on('gathTopDat', function(cObj) {
     gTopList
   })
 
-  
-
-
-
-
-
-  
-
-
 })
 
-// gathTopDat
-//###########################
-//###########################
-//###########################
+
+// export function addUserType(is_inst) {
+
+//   socket.emit('addUserType', is_inst)
+
+// }
 
 
+// socket.on('addUserType', function(is_inst) {
 
+//   store.dispatch( {
 
-// UPDATE_GRPH
+//     type: 'ADD_USR_TYP',
+//     is_inst
 
-
-//------------
-
-export function addUserType(is_inst) {
-
-
-  socket.emit('addUserType', is_inst)
-
-}
-
-
-socket.on('addUserType', function(is_inst) {
-
-  store.dispatch( {
-
-    type: 'ADD_USR_TYP',
-    is_inst
-
-  })
-})
+//   })
+// })
 
 //------------
 // export function updateUserGraph(rtData) {
@@ -243,68 +212,60 @@ socket.on('addUserType', function(is_inst) {
 // })
 //------------
 
-export function updateGrph(gd) {
+
+// export function updateGrph(gd) {
+
+//   store.dispatch( {
+
+//     type: 'UPDATE_GRPH',
+//     gd
+
+//     })
+// }
 
 
-  store.dispatch( {
+// export function addUsers(users) {
 
-    type: 'UPDATE_GRPH',
-    gd
+//   socket.emit('addUsers', users)
 
-    })
-
-}
+// }
 
 
+// socket.on('addUsers', function(users) {
 
+//   store.dispatch( {
 
-//------------
+//     type: 'ADD_USERS',
+//     users
 
-export function addUsers(users) {
-
-
-  socket.emit('addUsers', users)
-
-}
-
-
-socket.on('addUsers', function(users) {
-
-  store.dispatch( {
-
-    type: 'ADD_USERS',
-    users
-
-  })
-})
+//   })
+// })
 
 
 //------------
 
-export function getAvgForTopic() {
+// export function getAvgForTopic() {
 
   
 
-  // var avg = 12
+//   // var avg = 12
 
-  socket.emit('getNumStud')
+//   socket.emit('getNumStud')
 
-  // socket.emit('getAvgForTopic', avg)
+//   // socket.emit('getAvgForTopic', avg)
 
-}
+// }
 
 
-socket.on('getNumStud', function(studCnt) {
+// socket.on('getNumStud', function(studCnt) {
 
-  // console.log('API ', studCnt)
+//   store.dispatch( {
 
-  store.dispatch( {
+//     type: 'GET_AVG_SCORE',
+//     studCnt
 
-    type: 'GET_AVG_SCORE',
-    studCnt
-
-  })
-})
+//   })
+// })
 
 //------------
 

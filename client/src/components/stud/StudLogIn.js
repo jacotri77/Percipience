@@ -2,12 +2,10 @@ import React, { Component } from 'react'
 import '../../assets/styles/StudLogIn.css'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
-
 import {addStudName} from '../../api/perci'
 
 
 class StudLogIn extends Component {
-
 
   studLogInSubmit() {
 
@@ -54,7 +52,7 @@ class StudLogIn extends Component {
               placeholder='Student Name'
               autoComplete='off'/>
 
-        </div>
+          </div>
 
             
             <Link
@@ -62,7 +60,6 @@ class StudLogIn extends Component {
       
               <div
                 onClick={this.studLogInSubmit}
-                
                 className='bluBtnGen'>
                 Submit
               </div>
@@ -72,11 +69,8 @@ class StudLogIn extends Component {
          </div>
 
       </div>
-
-      )
-
-    }
-    
+    )
+  }  
 }
 
 const mapStateToProps = function(appState) {

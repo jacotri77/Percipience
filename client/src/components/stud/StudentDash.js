@@ -3,6 +3,7 @@ import '../../assets/styles/StudentDash.css'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 
+// import { getRoomName } from '../../api/perci'
 
 
 class StudentDash extends Component {
@@ -14,8 +15,6 @@ class StudentDash extends Component {
     this.state = {
 
       isRoom: false
-
-
     }
   }
 
@@ -38,14 +37,16 @@ class StudentDash extends Component {
       }) 
 
     }
-
-    // console.log(isRoom) 
   }
+
+   // componentWillMount = () => {
+
+   //  getRoomName()
+    
+   // }
 
 
   render() {
-
-    // console.log('HandleRoom ', this.props)
 
     return (
 
@@ -101,9 +102,7 @@ class StudentDash extends Component {
         </div>
 
       </div>
-
     )
-
   }    
 }
 
@@ -113,7 +112,6 @@ const mapStateToProps = function(appState) {
   return {
 
     room: appState.room,
-    user: appState.user,
     stud_user: appState.stud_user
 
   }

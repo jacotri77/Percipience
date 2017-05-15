@@ -14,11 +14,9 @@ class StudRoom extends Component {
     this.state = {
 
       user: '',
-
       value: 0
-
-
     }
+
     this.slideChange = this.slideChange.bind(this)
   }
 
@@ -30,6 +28,7 @@ class StudRoom extends Component {
     document.getElementById('StudRoomSlideNum').innerHTML = (c)
     
     this.setState({
+
       value: event.target.value
 
     })
@@ -42,22 +41,17 @@ class StudRoom extends Component {
 
     var c = Number(document.getElementById('StudRoomSlide').value)
 
-
       gathData({
+
         user: this.props.user,
         comp: c,
         topic: this.props.curr_topic
-
       })
 
   }, 1000);
 
-  
 
   render() {
-
-
-    
 
     return (
 
@@ -79,7 +73,7 @@ class StudRoom extends Component {
 
           <h2
             id='StudRoomRateH2'>Rate your comprehension of the above topic.</h2>
-
+            
           <p id='StudRoomSlideNum'>0</p>
 
           <div
@@ -108,11 +102,8 @@ class StudRoom extends Component {
 
           </div>
 
-          
-
         </div>
 
-     
         <div
           id='userRoomCont'>
 
@@ -121,7 +112,6 @@ class StudRoom extends Component {
               Username: {this.props.user}
             </div>
 
-
             <div
               id='StudRoomRoomCont'>
               Room Name:  {this.props.room}
@@ -129,10 +119,7 @@ class StudRoom extends Component {
 
           </div>
 
-    
-
       </div>
-
     )
   }
 }
