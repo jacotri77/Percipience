@@ -102,7 +102,11 @@ class StudRoom extends Component {
 
           </div>
 
+         
+
         </div>
+
+        
 
         <div
           id='userRoomCont'>
@@ -118,6 +122,8 @@ class StudRoom extends Component {
             </div>
 
           </div>
+
+
 
       </div>
     )
