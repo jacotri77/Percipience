@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import '../assets/styles/Main.css'
-import {connect} from 'react-redux'
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 import TypeSel from './TypeSel'
 
@@ -8,8 +7,6 @@ import InstLogin from './inst/InstLogin'
 import InstDash from './inst/InstDash'
 import InstRoom from './inst/InstRm'
 
-
-import StudentClassNotes from './stud/StudentClassNotes'
 import StudentDash from './stud/StudentDash'
 import StudRoom from './stud/StudRoom'
 import StudLogIn from './stud/StudLogIn'
@@ -18,69 +15,48 @@ import StudLogIn from './stud/StudLogIn'
 
 class Main extends Component {
 
-  constructor() {
-
-    super()
-
-    this.state = {
-
-      message: ''
-      
-    }
-  }
-
-
-
   render() {
 
     return (
 
       <Router>
       
-      <div>
+        <div>
 
-
-        <div
-          id='MainCont'>
+          <div
+            id='MainCont'>
         
-
-          <Route 
-            exact={true} 
-            path='/' 
-            component={TypeSel} />
-
-          <Route 
-            exact={true} 
-            path='/instLogin' 
-            component={InstLogin} />
-            
-          <Route
-            path='/studentDash'
-            component={StudentDash} />
-
-
-          <Route 
-            path='/instdash' 
-            component={InstDash} />
-
-            <Route
-            path='/instRm'
-            component={InstRoom} />
+            <Route 
+              exact={true} 
+              path='/' 
+              component={TypeSel} />
 
             <Route 
-            path='/studroom' 
-            component={StudRoom} />
+              exact={true} 
+              path='/instLogin' 
+              component={InstLogin} />
+              
+            <Route
+              path='/studentDash'
+              component={StudentDash} />
 
-          <Route
-            path='/studentClassNotes'
-            component={StudentClassNotes} />
+            <Route 
+              path='/instdash' 
+              component={InstDash} />
 
-          <Route
-            path='/studLogIn'
-            component={StudLogIn} />
+              <Route
+              path='/instRm'
+              component={InstRoom} />
 
+              <Route 
+              path='/studroom' 
+              component={StudRoom} />
 
-        </div>
+            <Route
+              path='/studLogIn'
+              component={StudLogIn} />
+
+          </div>
   
         </div>
       
@@ -91,19 +67,7 @@ class Main extends Component {
 }
 
 
-
-const mapStateToProps = function(appState) {
-
-  return {
-
-    messages: appState.messages
-
-  }
-}
-
-
-
-export default connect(mapStateToProps)(Main)
+export default Main
 
 
 
