@@ -42,8 +42,19 @@ class InstRoom extends Component {
 
           <div
           id='activeUsers'>
-          {this.props.ssList}
 
+          {
+                  this.props.ssList.map((stud_user) => {
+                      return (
+                          <ul>
+                             <li> {stud_user} </li>
+
+                           </ul> 
+                         
+                      )
+                  })
+              }
+        
 
         </div>
 
@@ -126,7 +137,8 @@ const mapStateToProps = function(appState) {
     ssList: appState.ssList,
     curr_topic: appState.curr_topic,
     comp_list: appState.comp_list,
-    user_scale:appState.user_scale
+    user_scale:appState.user_scale,
+    stud_user: appState.stud_user
 
 
 

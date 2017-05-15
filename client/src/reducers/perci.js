@@ -7,7 +7,7 @@ const initialState = {
     //......
 
     user: 'INSTNAME',
-    stud_user: 'STUDNAME',
+    stud_user: '',
     studList: ['user', 'user'],
     curr_topic: 'TOPIC',
     room: 'ROOM',
