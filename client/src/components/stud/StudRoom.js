@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
 import { gathData } from '../../api/perci'
-import StudentGraph from '../charts/studentGraph'
+
 
 
 class StudRoom extends Component {
@@ -129,7 +129,7 @@ class StudRoom extends Component {
 
           </div>
 
-        <StudentGraph />
+    
 
       </div>
 

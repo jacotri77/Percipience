@@ -4,11 +4,11 @@ import shortid from 'shortid'
 import moment from 'moment'
 
 
-const socket = io.connect('http://localhost:3001')
+// const socket = io.connect('http://localhost:3001')
 // 10.68.0.107. 192.168.1.10
 // const socket = io.connect('http://10.68.0.107:3001')
 // const socket = io.connect('http://192.168.1.10:3001')
-// const socket =io.connect('http://10.68.0.60:3001')
+const socket =io.connect('http://10.68.0.60:3001')
 
 //const socket =io.connect('http://10.68.0.60:3001')
 
@@ -55,7 +55,7 @@ socket.on('addRoomName', function(roomId) {
 
 //------------ 
 
-//------------
+//------------ 
 
 export function addNewTopic(curr_topic) {
 
@@ -137,13 +137,18 @@ socket.on('gathTopDat', function(cObj) {
 
   var gAvgList = store.getState().avg_list
 
-  console.log(gAvgList)
+  // console.log(gAvgList)
 
   gAvgList.splice(0, 1)
 
   gAvgList.push(Number(cObj.avg))
 
+  var csList = cObj.cList
+  var ssList = cObj.sList
+
   
+
+  console.log(csList, "api")
   store.dispatch( {
     type: 'GATH_AVG_DATA',
     gAvgList
@@ -154,10 +159,22 @@ socket.on('gathTopDat', function(cObj) {
     gTop
   })
 
+  store.dispatch ( {
+    type: 'UPDATE_USR_GRAPH',
+    csList
+  })
+
+  store.dispatch ( {
+    type: 'UPDATE_USR_DATA',
+    ssList
+  })
+
   store.dispatch( {
     type: 'UPDATE_GRPH',
     gTopList
   })
+
+  
 
 
 
@@ -200,23 +217,30 @@ socket.on('addUserType', function(is_inst) {
 })
 
 //------------
-export function updateTime(ut) {
+// export function updateUserGraph(rtData) {
 
 
-  socket.emit('updateTime', ut)
+//   socket.emit('updateUserGraph', rtData)
 
-}
+// }
 
 
-socket.on('updateTime', function(ut) {
+// socket.on('updateUserGraph', function(cObj) {
 
-  store.dispatch( {
+//   var csList = store.getState().cList
+//   var ssList = store.getState().sList
 
-    type: 'UPDATE_TIME',
-    ut
+//   console.log(csList, "api")
 
-  })
-})
+//   store.dispatch( {
+
+//     type: 'UPDATE_USR_GRAPH',
+//     csList,
+//     ssList
+    
+
+//   })
+// })
 //------------
 
 export function updateGrph(gd) {
@@ -272,7 +296,7 @@ export function getAvgForTopic() {
 
 socket.on('getNumStud', function(studCnt) {
 
-  console.log('API ', studCnt)
+  // console.log('API ', studCnt)
 
   store.dispatch( {
 

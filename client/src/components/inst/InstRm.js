@@ -12,8 +12,6 @@ import ClockTime from '../charts/clock'
 
 
 
-
-
 class InstRoom extends Component {
 
 
@@ -29,6 +27,8 @@ class InstRoom extends Component {
   }
 
   render() {
+
+    console.log(this.props.ssList, 'instrom')
     
     return (
 
@@ -42,7 +42,8 @@ class InstRoom extends Component {
 
           <div
           id='activeUsers'>
-          {this.props.user}
+          {this.props.ssList}
+
 
         </div>
 
@@ -122,9 +123,11 @@ const mapStateToProps = function(appState) {
 
     user: appState.user,
     room: appState.room,
+    ssList: appState.ssList,
     curr_topic: appState.curr_topic,
     comp_list: appState.comp_list,
     user_scale:appState.user_scale
+
 
 
   }
