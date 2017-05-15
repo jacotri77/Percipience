@@ -106,6 +106,7 @@ io.on('connection', function(socket) {
 //$$$$$$$$$$$$$$$$$$$$$$$$
 //$$$$$$$$$$$$$$$$$$$$$$$$
 
+
   socket.on('addCompLvl', function(score) {
 
     io.emit('addCompLvl', score)
@@ -120,9 +121,9 @@ io.on('connection', function(socket) {
 
     var studCnt = Object.keys(nspSockets).length
 
-      var userId = socket.client.conn.id
+    var userId = socket.client.conn.id
 
-    console.log('STUD COUNT ', studCnt, userId)
+    // console.log('STUD COUNT ', studCnt, userId)
 
     io.emit('getNumStud', studCnt, userId)
 
@@ -159,17 +160,15 @@ io.on('connection', function(socket) {
   })
 
   socket.on('addUserName', function(user) {
+
     var userId = socket.client.conn.id
- console.log('addUserName ', user, userId)
+
+    // console.log('addUserName ', user, userId)
+
     io.emit('addUserName', user, userId)
 
   })
 
-  socket.on('updateGrph', function(gd) {
-
-    io.emit('updateGrph', gd)
-
-  })
 
   socket.on('updateTime', function(ut) {
 

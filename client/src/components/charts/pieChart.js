@@ -3,7 +3,7 @@ import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
 import {Line} from 'react-chartjs-2'
 // updateGrph
-import {updateGrph} from '../../api/perci'
+// import {updateGrph} from '../../api/perci'
 // import {addUsers} from '../../api/perci'
 
 
@@ -20,7 +20,7 @@ class PieChart extends Component {
 
   render() {
  
-    console.log(this.props.gdata)
+    // console.log(this.props.gdata)
 
 
 	 return (

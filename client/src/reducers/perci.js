@@ -8,10 +8,14 @@ const initialState = {
 
     user: 'INSTNAME',
     stud_user: 'STUDNAME',
+    studList: ['user', 'user'],
     curr_topic: 'TOPIC',
     room: 'ROOM',
     tpc_list: ['Top', 'Top', 'Top', 'Top', 'Top', 'Top', 'Top', 'Top', 'Top', 'Top'],
-    avg_list: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2],    
+    avg_list: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+    csList: [],
+    ssList: [], 
+
 
     //.....
 
@@ -39,6 +43,22 @@ const initialState = {
         datasets: [{
 
             label: 'Comp Level',
+
+            data: [
+            0
+              
+            ]
+
+        }]
+      },
+
+      cdata: {
+
+        labels: [''],
+
+        datasets: [{
+
+            label: 'User Comp Level',
 
             data: [
             0
@@ -98,12 +118,6 @@ export default function perciReducer(state=initialState, action) {
 
 
 
-
-
-
-
-
-
          case 'UPDATE_GRPH':
          // console.log('GraphUpdate')
 
@@ -122,28 +136,13 @@ export default function perciReducer(state=initialState, action) {
                   hoverBorderColor: 'red'
                   
                 }]
-              } 
+              }, 
 
-              
-
-            }
-
-//--------------------------
-
-  case 'UPDATE_TIME':
-
-            return {
-
-              ...state,
-
-             
-
-              tdata: { 
-
-                labels: state.curr_topic,
+            cdata: { 
+                labels: state.ssList,
                 datasets: [{
-                  label: 'Topics',
-                  data: state.tpc_list,
+                  label: 'User Comp Level',
+                  data: state.csList,
                   pointBackgroundColor: 'white',
                   backgroundColor: 'rgba(128,191,255,0.2)',
                   borderColor: 'white',
@@ -157,12 +156,36 @@ export default function perciReducer(state=initialState, action) {
 
             }
 
-/*
+//--------------------------
+        case 'UPDATE_USR_DATA':
+
+        return {
+            
+            ...state, 
+
+            ssList: action.ssList
+
+        }
+
+ 
+//--------------------------
 
 
-*/
+        case 'UPDATE_USR_GRAPH':
+
+        return {
+            
+            ...state, 
+
+            csList: action.csList,
+
+        }
 
 
+//--------------------------
+
+
+//--------------------------
 
           case 'ADD_ROOM_NAME':
 
@@ -198,32 +221,7 @@ export default function perciReducer(state=initialState, action) {
 //--------------------------
 
 //--------------------------
-          case 'GATH_RT_DATA':
-
-          console.log(action.cObj)
-
-          var avr = Number(action.cObj.avg)
-          var top = Number(action.cObj.topic)
-
-            return {
-
-              ...state, 
-              gdata: { 
-
-                labels: [...state.gdata.labels, top],
-                datasets: [{
-                  label: 'Avg of Votes',
-                  data: [...state.gdata.datasets.data, avr],
-                  pointBackgroundColor: 'white',
-                  backgroundColor: 'rgba(128,191,255,0.2)',
-                  borderColor: 'white',
-                  borderWidth: 1,
-                  hoverBorderColor: 'red'
-                  
-                }]
-              } 
-
-            } 
+          
 //--------------------------
 
 
