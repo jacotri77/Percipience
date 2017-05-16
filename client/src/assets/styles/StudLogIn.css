@@ -6,17 +6,6 @@
   margin-top: 0px;
 }
 
- @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  #StudLoginCont {
-
-  width: 100%;
-  height: 100%;
-  background-color: #00284d;
-  margin-top: 0px;
-  }
-}
- 
-
 #StudLogInTitle {
 
   color: #FFF;
@@ -27,19 +16,6 @@
   font-size: 50px;
 }
 
-
-
- @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-#StudLogInTitle {
-
-  color: #FFF;
-  text-align: center;
-  padding-top: 10px;
-  margin-top: 0px;
-  font-family: 'Work Sans', cursive;
-  font-size: 20px;
-}
-}
 #StudLogInBox {
 
   width: 600px;
@@ -53,22 +29,6 @@
   
 }
 
- @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  #StudLogInBox {
-
-  width: 100%;
-  height: 120px;
-  border: 1px solid #000;
-  border-radius: 15px;
-  background-color: #80bfff;
-  margin: auto;
-  margin-top: 30px;
-  padding-top: 30px;
-  
-}
-}
- 
-
 #StudInpWrap {
 
   margin: auto;
@@ -78,17 +38,7 @@
   justify-content: space-around;
 }
 
- @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  #StudUsrNameLab {
 
-  margin-left: 10px;
-  line-height: 20px;
-  color: #00284d;
-  font-family: 'Work Sans', cursive;
-  font-size: 30px;
-
-}
-}
 
  #StudUsrNameLab {
 
@@ -96,7 +46,7 @@
   line-height: 20px;
   color: #00284d;
   font-family: 'Work Sans', cursive;
-  font-size: 50px;
+  font-size: 30px;
 
 }
 
@@ -104,7 +54,7 @@
 
   margin-top: -10px;
   margin-left: 20px;
-   font-size: 40px;
+  font-size: 40px;
 }
 
 #StudUsrName {
@@ -115,58 +65,29 @@
   margin-left: 20px;
 }
 
- 
- @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  #StudUsrName {
-
-  width: 30%;
-  height: 30px;
-  margin-top: 0px;
-  margin-left: 0px;
-}
-}
 
 
-.bluBtnGen {
 
-  width: 570px;
-  height: 85px;
-  line-height: 85px;
-  margin-top: 10px;
-  margin-left: 10px;
-  background-color: #80bfff;
-  box-shadow: none;
-  transition: box-shadow 0.5s;
-  border-radius: 20px;
-  padding-left: 10px;
-}
+
+
+
+
+
+
+
+
+
+
 
  
 
- @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-
-  .bluBtnGen {
-  width: 100%;
-  height: 85px;
-  line-height: 85px;
-  margin-top: 10px;
-  margin-left: 0px;
-  background-color: #80bfff;
-  box-shadow: none;
-  transition: box-shadow 0.5s;
-  border-radius: 20px;
-  padding-left: 0px;
-}
-}
 
 
-.bluBtnGen:hover {
+ 
 
-  cursor: pointer;
-  background-color: #6EB3FA;
-  box-shadow: 10px 5px 25px #111;
-  transition: box-shadow  0.5s;
-}
+
+
+
 
 
 

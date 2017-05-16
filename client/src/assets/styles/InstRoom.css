@@ -100,31 +100,7 @@ h1{
   border: 1px solid #000;
 }
 
-.bluBtnGen {
 
-  width: 550px;
-  height: 85px;
-  line-height: 85px;
-  margin: auto;
-  margin-top: 25px;
-  background-color: #80bfff;
-  box-shadow: none;
-  transition: box-shadow 0.5s;
-  border-radius: 20px;
-  padding-left: 10px;
-  color: #00284d;
-  font-family: 'Work Sans', cursive;
-  font-size: 40px;
-  text-align: center;
-}
-
-.bluBtnGen:hover { 
-
-  cursor: pointer;
-  background-color: #6EB3FA;
-  box-shadow: 10px 5px 25px #111;
-  transition: box-shadow  0.5s;
-}
 
 #linkDiv{
   height:120px;
