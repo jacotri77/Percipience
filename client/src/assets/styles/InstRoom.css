@@ -6,7 +6,7 @@
 	width: 100%;
   height: 1500px;
 	background-color: #00284d;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
 	color:white;
 
 }
@@ -26,7 +26,7 @@ h1{
   background-color: #80bfff;
   border-radius: 15px;  
   text-decoration: none;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
   color: #00284d;
   box-shadow: none;
   transition: box-shadow 0.5s;
@@ -45,7 +45,7 @@ h1{
 #InstRoomCurrTopic{
 
 	text-align: center;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
   color:white;
   font-size: 50px;
 }
@@ -56,7 +56,7 @@ h1{
   width: 200px;
   outline: 0px;
   margin-top: 15px;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
   color:#00284d;
   font-size: 24px;
 
@@ -68,7 +68,7 @@ h1{
   margin: auto;
 	width:100%;
 	height:200px;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
   color:#00284d;
   font-size: 24px;
   margin-bottom: 175px;
@@ -113,7 +113,7 @@ h1{
   border-radius: 20px;
   padding-left: 10px;
   color: #00284d;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
   font-size: 40px;
   text-align: center;
 }

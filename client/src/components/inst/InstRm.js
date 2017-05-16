@@ -56,8 +56,6 @@ class InstRoom extends Component {
 
         </div>
 
-
-
         <h1
           id='InstRoomCurrTopic'>
           {this.props.curr_topic}
@@ -94,7 +92,7 @@ class InstRoom extends Component {
 
         </div>
         
-        <PieChart />
+      <PieChart />
 
       <UserGraph />
 

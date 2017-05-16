@@ -21,8 +21,11 @@ and (max-device-width : 480px) {
 
 #studentDashTitle{
 
-	text-align: center;
-  	color: #FFF;
+  text-align: center;
+  color: #FFF;
+  font-family: 'Work Sans', cursive;
+  font-size: 40px;
+
 }
 
 #studentDashForm{
@@ -56,7 +59,8 @@ and (max-device-width : 480px) {
 #StudDashRoom{
 
 	margin:auto;
-	width: 250px;
+	width: 350px;
+  font-size: 30px;
 }
 
 #rmNameLbl{
