@@ -16,7 +16,7 @@ class TypeSel extends Component {
 
     }
   }
-
+  
   render() {
 
     return (
