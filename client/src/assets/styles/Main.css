@@ -15,11 +15,11 @@ body, html{
 	margin-top: 0px;
 
  }
+
+
  #MainCont {
 	margin: 0px auto;
   width: 80%;
   height: 100%;
-  border: 1px solid rgb(0,40,77);
   border-radius: 15px;
-  
 }

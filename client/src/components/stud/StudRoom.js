@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../../assets/styles/StudRoom.css'
+// import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
 import { gathData } from '../../api/perci'
 

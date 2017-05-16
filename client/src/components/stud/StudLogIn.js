@@ -49,7 +49,7 @@ class StudLogIn extends Component {
             <input
               id='StudUsrName'
               type='text' 
-              placeholder='Student Name'
+              placeholder='Name'
               autoComplete='off'/>
 
           </div>

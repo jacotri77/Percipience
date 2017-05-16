@@ -32,6 +32,7 @@ class TypeSel extends Component {
           id='TypeSelTitle'> 
           User Selection
         </h1>
+        
 
         <div
           id='TypeSelBtnCont'>
