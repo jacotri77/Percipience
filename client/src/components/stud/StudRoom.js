@@ -116,7 +116,7 @@ class StudRoom extends Component {
             
           <p id='StudRoomSlideNum'>{this.state.value}</p>
 
-          <i className="fa fa-plus-square fa-4x" aria-hidden="true" onClick={this.slideIncrement} ></i>
+          <i className="fa fa-plus-square fa-4x" aria-hidden="true" onClick={this.slideIncrement}></i>
 
           </div>
 
