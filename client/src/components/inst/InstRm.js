@@ -43,17 +43,15 @@ class InstRoom extends Component {
           <div
           id='activeUsers'>
 
-          {
-                  this.props.ssList.map((stud_user) => {
-                      return (
-                          <ul>
-                             <li> {stud_user} </li>
+              <ul>Active Users
 
-                           </ul> 
-                         
-                      )
+                {this.props.ssList.map((stud_user) => {
+
+                             <li>{stud_user}</li>   
+                      
                   })
               }
+               </ul> 
         
 
         </div>

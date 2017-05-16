@@ -1,7 +1,6 @@
 #StudRoomCont {
-
   width: 100%;
-  height: 100%;
+  height: 800px;
   background-color: #00284d;
 }
 
@@ -87,13 +86,13 @@ and (max-device-width : 480px) {
 
 #StudRoomSlide {
 
-  width: 200px;
+  width: 300px;
   margin: auto;
 }
 
 #StudRoomSlideCont {
 
-  width: 250px;
+  width: 350px;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -106,25 +105,32 @@ and (max-device-width : 480px) {
 
 #StudRoomUserCont {
 
- display:inline-block;
-  color: white;
+  display:inline-block;
+  margin: 100px 0px 0px 20px;
+  color: #00284d;
   width: 45%;
   height: 30px;
   line-height: 30px;
-  border: 1px solid white;
+  border: 1px solid #00284d;
   text-align: center;
+  font-family: 'Baloo', cursive;
+  font-size: 20px;
+
 }
 
 #StudRoomRoomCont {
 
   display: inline-block;
   float: right;
-  color:white;
+  margin:100px 20px 0px 0px;
+  color:#00284d;
   width: 45%;
   height: 30px;
   line-height: 30px;
-  border: 1px solid white;
+  border: 1px solid #00284d;
   text-align: center;
+  font-family: 'Baloo', cursive;
+  font-size: 20px;
 }
 
 #userRoomCont{
@@ -138,6 +144,12 @@ and (max-device-width : 480px) {
   color: #00284d;
   font-family: 'Baloo', cursive;
   font-size: 30px;
+}
+
+p {
+  color: #00284d;
+  font-family: 'Baloo', cursive;
+  font-size: 20px;
 }
 
 
