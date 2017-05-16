@@ -5,6 +5,7 @@ import { gathData } from '../../api/perci'
 
 
 
+
 class StudRoom extends Component {
 
   constructor(props) {
@@ -101,23 +102,31 @@ class StudRoom extends Component {
             </div>
 
           </div>
+          <div
 
-        </div>
-
-        <div
-          id='userRoomCont'>
+            id='userRoomCont'>
 
             <div
+
               id='StudRoomUserCont'>
+
               Username: {this.props.user}
+
             </div>
 
             <div
+            
               id='StudRoomRoomCont'>
+
               Room Name:  {this.props.room}
+
             </div>
 
           </div>
+         
+
+        </div>
+
 
       </div>
     )

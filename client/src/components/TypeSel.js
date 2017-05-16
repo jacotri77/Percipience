@@ -47,9 +47,7 @@ class TypeSel extends Component {
                 <div
                   id='TypeSelInstBtn'
                   className='bluBtnGen'>
-
-                    <p>Instructor</p>
-
+                  Instructor
                 </div>
                 
               </Link>

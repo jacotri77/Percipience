@@ -22,7 +22,7 @@ body, html{
 
 #AppCont {
   display: block;
-  height: 1500px;
+  height: 100%;
   width: 1368px;
   margin: 0px auto;
   margin-top: 0px;
@@ -80,7 +80,7 @@ body, html{
   border-radius: 20px;
   padding-left: 10px;
   color: #00284d;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans';
   font-size: 40px;
   text-align: center;
 }
