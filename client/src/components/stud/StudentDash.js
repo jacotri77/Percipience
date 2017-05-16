@@ -84,13 +84,13 @@ class StudentDash extends Component {
                 placeholder='Room Name'/>
 
 
-              <Link    
+              <Link 
+                id='StudDashEnterBtnLink'   
                 to={this.state.isRoom === true ? '/studRoom/' : '/studentDash/'}>
 
                 <div
-                  id='StudDashEnterBtn'
-                  className='bluBtnGen'>
-                  {this.state.isRoom === true ? `Enter Room` : 'Please Enter Room Name'}
+                  id='StudDashEnterBtn'>
+                  {this.state.isRoom === true ? `Enter Room` : 'Room Name'}
                 </div>
 
               </Link>

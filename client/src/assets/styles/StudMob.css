@@ -1,0 +1,232 @@
+
+@media only screen and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  
+
+#MainCont {
+
+  width: 95%;
+  height: 100%;
+}  
+
+#AppCont {
+
+  height: 100% ;
+  width: 100%;
+}
+
+
+.bluBtnGen {
+
+  width: 90%;
+  height: 85px;
+  line-height: 85px;
+  margin: auto;
+  margin-top: 25px;
+  background-color: #6EB3FA;
+  box-shadow: 10px 5px 25px #111;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding-left: 10px;
+  color: #00284d;
+  font-family: 'Work Sans';
+  font-size: 35px;
+  text-align: center;
+}
+
+/* ######################## */
+/* TYPE SELECT */
+/* ######################## */
+
+  #TypeSelCont {
+
+    width: 100%;
+    height: 420px;
+    background-color: #00284d;
+    margin-top: 20%;
+    border: 2px solid #FFF;
+  }
+
+  #TypeSelTitle {
+
+  color: #FFF;
+  text-align: center;
+  padding-top: 40px;
+  font-family: 'Work Sans', cursive;
+  font-size: 40px;
+  }
+
+
+  #TypeSelBtnCont {
+
+  width: 90%;
+  height: 280px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  margin: auto;
+  background-color: #80bfff;
+  margin-top: 20px;
+  }
+
+  #TypeSelInstBtn {
+
+    margin-top: 40px;
+  }
+
+/* ######################## */
+/* STUDENT LOG IN */
+/* ######################## */
+
+
+  #StudLoginCont {
+
+    width: 100%;
+    height: 380px;
+    background-color: #00284d;
+    margin-top: 0px;
+    border-radius: 15px;
+    border: 2px solid #FFF;
+  }
+
+  #StudLogInTitle {
+
+    color: #FFF;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 0px;
+    font-family: 'Work Sans', cursive;
+    font-size: 30px;
+  }
+
+  #StudLogInBox {
+
+  width: 90%;
+  height: 250px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  background-color: #80bfff;
+  margin: auto;
+  margin-top: 30px;
+  padding-top: 30px;
+  
+}
+
+
+#StudInpWrap {
+
+  margin: auto;
+  margin-top: 0px;
+}
+
+#StudUsrNameLab {
+
+  margin-left: 10px;
+  line-height: 20px;
+  color: #00284d;
+  font-family: 'Work Sans', cursive;
+  font-size: 20px;
+
+}
+
+#StudUsrName {
+
+  width: 160px;
+  height: 60px;
+  margin-top: 0px;
+  margin-left: 0px;
+  font-size: 20px;
+}
+
+#StudUsrNameLab > p {
+
+  margin-top: 0px;
+  margin-left: 0px;
+  font-size: 25px;
+}
+
+
+
+
+/* ######################## */
+/* STUDENT DASHBOARD */
+/* ######################## */
+
+
+#studentDashCont {
+
+  width: 100%;
+  height: 420px;
+  background-color: #00284d;
+  margin-top: 0px;
+  border-radius: 15px;
+  border: 2px solid #FFF;
+  }
+
+
+  #studentDashForm{
+
+  margin: auto;
+  width: 90%;
+  height: 325px;
+  border-radius: 15px;
+  background-color: #80bfff;
+  border: 1px solid #000;
+  }
+
+  #studentDashTitle {
+
+    color: #FFF;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 0px;
+    font-family: 'Work Sans', cursive;
+    font-size: 30px;
+  }
+
+  #rmNameLbl > p {
+
+    color: #00284d;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 0px;
+    font-family: 'Work Sans', cursive;
+    font-size: 20px;
+  }
+
+  #StudDashRoom {
+
+  width: 80%;
+  height: 60px;
+  margin-top: 0px;
+  margin: auto;
+  font-size: 20px; 
+  }
+
+  #StudDashEnterBtnLink {
+
+    width: 90%;
+    font-size: 20px;
+    margin: auto;
+  }
+
+  #StudDashEnterBtn {
+    
+  width: 90%;
+  height: 85px;
+  line-height: 85px;
+  margin: auto;
+  margin-top: 25px;
+  background-color: #6EB3FA;
+  box-shadow: 10px 5px 25px #111;
+  border: 1px solid #000;
+  border-radius: 20px;
+  color: #00284d;
+  font-family: 'Work Sans';
+  text-align: center;
+  }
+
+
+
+
+}
+

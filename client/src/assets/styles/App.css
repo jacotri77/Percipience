@@ -21,55 +21,18 @@ body, html{
 }
 
 #AppCont {
+  
   display: block;
   height: 100%;
   width: 1368px;
-  margin: 0px auto;
-  margin-top: 0px;
-}
-
-
- @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-
-  #AppCont {
-  display: block;
-  height: 1500px;
-  width: 100%;
   margin: auto;
-  margin-top: 0px;
+  margin-top: 20%;
 }
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 
 
 .bluBtnGen {
 
-  width: 550px;
+  width: 90%;
   height: 85px;
   line-height: 85px;
   margin: auto;
