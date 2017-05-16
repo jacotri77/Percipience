@@ -118,7 +118,13 @@ class StudRoom extends Component {
 
           <i className="fa fa-plus-square fa-4x" aria-hidden="true" onClick={this.slideIncrement}></i>
 
+          
+
+          
+
           </div>
+
+          
 
           <div
             id='StudRoomSlideCont'>
@@ -144,7 +150,16 @@ class StudRoom extends Component {
 
             </div>
 
-           
+          </div>
+
+          <div
+            id='mobIcon'>
+
+          <i className="fa fa-minus-square fa-4x" aria-hidden="true" onClick={this.slideDecrement}></i>
+            
+          <i className="fa fa-plus-square fa-4x" aria-hidden="true" onClick={this.slideIncrement}></i>
+
+
           </div>
 
           <div
@@ -155,7 +170,7 @@ class StudRoom extends Component {
 
               id='StudRoomUserCont'>
 
-              Username: {this.props.user}
+              User: {this.props.user}
 
             </div>
 
@@ -163,7 +178,7 @@ class StudRoom extends Component {
             
               id='StudRoomRoomCont'>
 
-              Room Name:  {this.props.room}
+              Room:  {this.props.room}
 
             </div>
 
