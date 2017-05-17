@@ -73,7 +73,8 @@ class InstLogin extends Component {
 
                 <div
                   onClick={this.handleSubmit}
-                  id='loginButton'>
+                  id=''
+                  className='bluBtnGen'>
 
                   Submit
 

@@ -9,7 +9,7 @@
   width: 100%;
   height: 800px;
   background-color: #00284d;
-  opacity: 0.8;
+
   margin-top: 0px;
 }
 
@@ -19,7 +19,7 @@
   margin-top: 0px;
   color: #fff;
   line-height: 100px;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
 }
 
 #InstDashFrame {
@@ -87,7 +87,7 @@
   margin-left: 50px;
   margin-top: 25px;
   line-height: 45px;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
 
 }
 
@@ -98,7 +98,7 @@
   color:#FFF;
   margin-left: 20px;
   margin-top: 25px;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
 }
 
 
