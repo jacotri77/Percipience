@@ -36,6 +36,8 @@ class StudRoom extends Component {
 
   slideIncrement = (event) => {
 
+    var sldVal = event.target.value
+
   if(this.state.value >= 10) {
     return this.setState({
       value: 10
@@ -43,7 +45,7 @@ class StudRoom extends Component {
   } else {
     return this.setState({
 
-      value: Number(document.getElementById('StudRoomSlide').value) + 1
+      value: sldVal + 1
 
     })
   }
@@ -52,6 +54,8 @@ class StudRoom extends Component {
 
   slideDecrement = (event) => {
 
+    var sldVal = event.target.value
+
   if(this.state.value <= 0) {
     return this.setState({
       value: 0
@@ -59,7 +63,7 @@ class StudRoom extends Component {
   } else {
     return this.setState({
 
-      value: Number(document.getElementById('StudRoomSlide').value) - 1
+      value: sldVal - 1
 
     })
   }
