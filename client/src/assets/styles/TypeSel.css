@@ -3,11 +3,29 @@
 
 #TypeSelCont {
 
-  width: 100%;
+  width: 70%;
   height: 650px;
   background-color: #00284d;
   border-radius: 15px;
+  opacity: 0.6;
+  left: 15%;
+  z-index: -1;
+  position: absolute;
+  overflow: hidden;
 }
+
+
+#TypeSelContOut {
+
+  width: 80%;
+  margin: auto;
+  height: 650px;
+  border-radius: 15px;
+  overflow: hidden;
+  
+}
+
+
 
 #SelRadioCont {
 

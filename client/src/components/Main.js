@@ -23,9 +23,26 @@ class Main extends Component {
       
         <div>
 
+        <div id="background-video" >
+        <video loop autoPlay>
+          <source src={require('../assets/videos/Keys.mp4')}  type='video/mp4' />
+        </video>
+
+        </div>
+
+        <div
+          id="background-videoDiv">
+        </div>
+
+        <div
+        id='TypeSelCont'>
+        </div>
+
           <div
             id='MainCont'>
         
+
+
             <Route 
               exact={true} 
               path='/' 
@@ -56,7 +73,11 @@ class Main extends Component {
               path='/studLogIn'
               component={StudLogIn} />
 
+              
+
           </div>
+
+
   
         </div>
       

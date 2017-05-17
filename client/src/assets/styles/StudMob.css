@@ -16,6 +16,26 @@ and (max-device-width : 480px) {
 }
 
 
+#background-video {
+
+display: none;
+height: 0%;
+width: 0%;
+top: 0;
+left: 0;
+z-index: -1;
+
+}
+
+#background-videoDiv {
+display: none;
+height: 0%;
+width: 0%;
+z-index: -1;
+opacity: 0;
+
+}
+
 .bluBtnGen {
 
   width: 90%;

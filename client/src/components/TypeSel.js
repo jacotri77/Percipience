@@ -22,15 +22,21 @@ class TypeSel extends Component {
     return (
 
       <div
-        id='TypeSelCont'>
+        id='TypeSelContOut'>
+
 
         
-
+        
 
             <img
               id='PerciImg' 
               alt='Plus'
               src={require('../assets/images/perci.png')} />
+
+  
+
+        
+
 
         <p 
           id='TypeSelTitle'> 
@@ -78,6 +84,8 @@ class TypeSel extends Component {
         </div>
 
       </div>
+
+      
 
     )
   }
