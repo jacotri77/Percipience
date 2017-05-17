@@ -26,7 +26,7 @@ class InstRoom extends Component {
     
   }
 
-  setNewTopic() {
+  setNewTopic = () => {
 
     var c = this.state.topic
 
