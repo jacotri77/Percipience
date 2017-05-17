@@ -24,16 +24,19 @@ class TypeSel extends Component {
       <div
         id='TypeSelCont'>
 
-        <div
-          className='aniDiv'>
-        </div>
-
-        <h1 
-          id='TypeSelTitle'> 
-          User Selection
-        </h1>
         
 
+
+            <img
+              id='PerciImg' 
+              alt='Plus'
+              src={require('../assets/images/perci.png')} />
+
+        <p 
+          id='TypeSelTitle'> 
+          User Selection
+        </p>
+        
         <div
           id='TypeSelBtnCont'>
 

@@ -53,10 +53,16 @@ class StudentDash extends Component {
     	<div
         id='studentDashCont'>
 
-        <h1 
+      <img
+              id='PerciImg' 
+              alt='Plus'
+              src={require('../../assets/images/perci.png')} />
+
+
+        <p 
           id='studentDashTitle'> 
           Student Dashboard
-        </h1>
+        </p>
 
         <div 
           id='rmNameLbl'>

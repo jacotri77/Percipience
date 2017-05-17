@@ -35,8 +35,10 @@ class InstRoom extends Component {
       <div
         id='InstRoomCont'>
 
-
-        Percipience
+      <img
+              id='PerciImg' 
+              alt='Plus'
+              src={require('../../assets/images/perci.png')} />
 
 
         <div 
