@@ -5,7 +5,7 @@ import {addNewTopic} from '../../api/perci'
 import PieChart from '../charts/pieChart'
 import UserGraph from '../charts/userGraph'
 import {Link} from 'react-router-dom'
-import ClockTime from '../charts/clock'
+
 
 
 
@@ -34,8 +34,6 @@ class InstRoom extends Component {
 
       <div
         id='InstRoomCont'>
-
-        <ClockTime />
 
         <div 
           id='InstTopicCont'>

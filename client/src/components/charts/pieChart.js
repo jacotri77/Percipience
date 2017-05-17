@@ -2,18 +2,6 @@ import React, { Component } from 'react'
 import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
 import {Line} from 'react-chartjs-2'
-// updateGrph
-// import {updateGrph} from '../../api/perci'
-// import {addUsers} from '../../api/perci'
-
-
-
-// setInterval(function(){ updateGrph(this.props.gdata) }, 1000);
-// setInterval(function(){ addUsers(); }, 1000);
-
-
-
-
 
 
 class PieChart extends Component {
@@ -32,14 +20,14 @@ class PieChart extends Component {
           data={this.props.gdata}
           id='PieChart'
           width={200}
-          height={450}
+          height={375}
           options={{
              maintainAspectRatio: false ,
              responsive: true,
              tooltips: {
 
                   enabled: true,
-                  titleFontFamily:'Baloo',
+                  titleFontFamily:'Work Sans',
                   titleFontColor: 'rgb(128,191,255)',
 
 
@@ -49,14 +37,15 @@ class PieChart extends Component {
               text: 'Topic Average Comprehension',
               fontColor:'rgb(128,191,255)',
               fontSize: 18,
-              fontFamily: 'Baloo'
+              fontFamily: 'Work Sans'
              },
 
              scales: {
                     xAxes: [{
                             display: true,
                             ticks: {
-                              fontColor: 'white'
+                              fontColor: 'white',
+                              fontFamily: 'Work Sans'
                             },
                             scaleLabel: {
                                 display: true,
@@ -74,7 +63,7 @@ class PieChart extends Component {
                                 stepValue: 5,
                                 max: 10, 
                                 fontColor: 'white',
-                                fontFamily: 'Baloo'
+                                fontFamily: 'Work Sans'
                             },
                             gridLines:{
                               color:'rgba(128,191,255, .6)'
@@ -85,7 +74,7 @@ class PieChart extends Component {
                 display: true,
                 labels: {
                   fontColor:'rgb(128,191,255)',
-                  fontFamily: 'Baloo'
+                  fontFamily: 'Work Sans'
                 }
 
               }

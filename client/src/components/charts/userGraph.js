@@ -2,13 +2,7 @@ import React, { Component } from 'react'
 import '../../assets/styles/StudRoom.css'
 import {connect} from 'react-redux'
 import {Bar} from 'react-chartjs-2'
-// updateGrph
-// import {updateGrph} from '../../api/perci'
-// import {addUsers} from '../../api/perci'
 
-
-// setInterval(function(){ updateGrph(); }, 1000);
-// setInterval(function(){ addUsers(); }, 1000);
 
 class UserGraph extends Component {
 
@@ -25,25 +19,25 @@ class UserGraph extends Component {
           <Bar
             data={this.props.cdata} 
             width={350}
-            height={450}
+            height={375}
             options={{
                maintainAspectRatio: false,
                responsive: true,
                tooltips: {
 
                   enabled: true,
-                  titleFontFamily:'Baloo',
+                  titleFontFamily:'Work Sans',
                   titleFontColor: 'rgb(128,191,255)',
 
 
-               },
+                },
+
                title: {
                 display: true,
-                text: 'User Votes',
+                text: 'User Comprehension',
                 fontColor:'rgb(128,191,255)',
                 fontSize: 18,
-                fontFamily: 'Baloo'
-      
+                fontFamily: 'Work Sans'
                },
 
                scales: {
@@ -51,7 +45,6 @@ class UserGraph extends Component {
                             display: true,
                             scaleLabel: {
                                 display: true,
-                    
                                  
                             },
                             gridLines :{
@@ -59,7 +52,7 @@ class UserGraph extends Component {
                             },
                             ticks: {
                                 fontColor: 'white',
-                                fontFamily: 'Baloo'
+                                fontFamily: 'Work Sans',
 
                               }
                         }],
@@ -71,21 +64,22 @@ class UserGraph extends Component {
                                 stepValue: 5,
                                 max: 10,
                                 fontColor: 'white',
-                                fontFamily: 'Baloo'
+                                fontFamily: 'Work Sans'
                             },
                             gridLines :{
-                              color:'rgba(128,191,255, .8)'
+                              color:'rgba(128,191,255, .6)'
                             }
-                            }],
+                            }]
+                        },
 
-                            legend: {
-                              display: true,
-                              labels: {
-                                fontColor:'rgb(128,191,255)',
-                                fontFamily: 'Baloo'
-                              }
-                          }
-                        }
+                    legend: {
+                      display: true,
+                      labels: {
+                        fontColor:'rgb(128,191,255)',
+                        fontFamily: 'Work Sans'
+                      }
+                  }
+                
              }}/>
         </div>
         
