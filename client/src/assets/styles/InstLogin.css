@@ -15,14 +15,14 @@
 
 #loginForm{
   width: 600px;
-  height: 350px;
+  height: 410px;
   border: 1px solid #000;
   border-radius: 15px;
   background-color: #80bfff;
   margin: auto;
   margin-top: 50px;
   padding-top: 50px;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
 }
 
 #usrName, #pWord{
@@ -31,7 +31,7 @@
 	margin:0 auto 20px auto;
 	width: 250px;
 	height: 60px;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
   font-size: 24px;
   color:#00284d;
 }
@@ -58,7 +58,7 @@
   text-align: center;
   padding-top: 20px;
   margin-top: 0px;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
 }
 
 
@@ -100,7 +100,7 @@
 	margin:auto;
 	text-align: center;
   color: #00284d;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
   font-size: 30px;
 }
 
