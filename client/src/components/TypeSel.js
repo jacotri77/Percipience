@@ -25,17 +25,32 @@ class TypeSel extends Component {
         id='TypeSelContOut'>
 
 
-        
-        
+        <div id="background-video" >
+        <video loop autoPlay>
+          <source src={require('../assets/videos/Keys.mp4')}  type='video/mp4' />
+        </video>
+
+        </div>
+
+        <div
+          id="background-videoDiv">
+        </div>
+
+        <div
+        id='TypeSelCont'>
+        </div>
+
+
+
+
+
+        <div
+        id='TypeSelInner'>
 
             <img
-              id='PerciImg' 
+              id='PerciImgTS' 
               alt='Plus'
               src={require('../assets/images/perci.png')} />
-
-  
-
-        
 
 
         <p 
@@ -80,6 +95,8 @@ class TypeSel extends Component {
             </div>
 
           </div>
+
+        </div>
 
         </div>
 
