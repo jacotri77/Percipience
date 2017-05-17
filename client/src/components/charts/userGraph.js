@@ -9,7 +9,7 @@ class UserGraph extends Component {
 
   render() {
 
-    console.log(this.props.cdata, 'usergraph')
+    // console.log(this.props.cdata, 'usergraph')
     
     return (
 
