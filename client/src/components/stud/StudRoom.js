@@ -36,7 +36,9 @@ class StudRoom extends Component {
 
   slideIncrement = (event) => {
 
+
     var sldVal = this.state.value
+
 
   if(this.state.value >= 10) {
     return this.setState({
@@ -54,7 +56,11 @@ class StudRoom extends Component {
 
   slideDecrement = (event) => {
 
+
+    var sldVal = event.target.value
+
     var sldVal = this.state.value
+
 
   if(this.state.value <= 0) {
     return this.setState({
@@ -116,7 +122,11 @@ class StudRoom extends Component {
           <div
             id='StudRoomScore'>
             
-            <p id='StudRoomSlideNum'>{this.state.value}</p>
+
+          <p id='StudRoomSlideNum'>{this.state.value}</p>
+
+          <i className="fa fa-plus-square fa-4x" aria-hidden="true" onClick={this.slideIncrement}></i>
+
 
           </div>
 

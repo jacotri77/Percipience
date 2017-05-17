@@ -75,7 +75,7 @@ export default function perciReducer(state=initialState, action) {
 
 //--------------------------
 
-    case 'GATH_TOP_DATA':
+  case 'GATH_TOP_DATA':
 
     state.tpc_list.splice(0, 1)
 
@@ -88,7 +88,7 @@ export default function perciReducer(state=initialState, action) {
 
 //--------------------------
 
-    case 'GATH_AVG_DATA':
+  case 'GATH_AVG_DATA':
 
     return {
       
@@ -99,7 +99,7 @@ export default function perciReducer(state=initialState, action) {
 
 //--------------------------
 
-   case 'UPDATE_GRPH':
+    case 'UPDATE_GRPH':
    
       return {
 

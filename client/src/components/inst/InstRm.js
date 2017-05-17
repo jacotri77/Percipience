@@ -35,7 +35,9 @@ class InstRoom extends Component {
       <div
         id='InstRoomCont'>
 
+
         Percipience
+
 
         <div 
           id='InstTopicCont'>
