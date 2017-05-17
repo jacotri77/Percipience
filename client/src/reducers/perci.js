@@ -3,13 +3,13 @@ const initialState = {
 
     user: 'INSTNAME',
 
-    stud_user: 'STUDNAME',
+    stud_user: 'Student',
 
     studList: ['user', 'user'],
 
     curr_topic: 'TOPIC',
 
-    room: 'ROOM',
+    room: 'Room',
 
     tpc_list: ['Top', 'Top', 'Top', 'Top', 'Top', 'Top', 'Top', 'Top', 'Top', 'Top'],
 

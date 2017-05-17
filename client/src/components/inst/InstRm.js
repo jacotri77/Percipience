@@ -14,29 +14,63 @@ import {Link} from 'react-router-dom'
 
 class InstRoom extends Component {
 
+  constructor(props) {
 
+    super(props)
+
+    this.state = {
+
+      topic: ''
+    }
+
+    
+  }
 
   setNewTopic() {
 
-    var c = document.getElementById('InstRoomAddTopicInp').value
+    var c = this.state.topic
 
     addNewTopic(c)
 
-    document.getElementById('InstRoomAddTopicInp').value = ''
+    this.setState({
+
+      topic: ''
+
+    })
+  }
+
+  handleChange  = (e) => {
+
+    this.setState({
+
+      topic: e.target.value
+
+    })
 
   }
 
+  handleKeyPress = (e) => {
+
+    if(e.key === 'Enter'){
+    
+      this.setNewTopic()
+
+    }
+}
+
   render() {
 
-    console.log(this.props.ssList, 'instrom')
+    // console.log(this.props.ssList, 'instrom')
     
     return (
 
       <div
         id='InstRoomCont'>
 
-
-        Percipience
+      <img
+              id='PerciImg' 
+              alt='Plus'
+              src={require('../../assets/images/perci.png')} />
 
 
         <div 
@@ -87,8 +121,11 @@ class InstRoom extends Component {
 
             <input 
               id='InstRoomAddTopicInp'
+              onKeyPress={this.handleKeyPress}
+              onChange={this.handleChange}
               type='text' 
               name='roomname'
+              value={this.state.topic}
               placeholder='Topic'/>
 
             <div

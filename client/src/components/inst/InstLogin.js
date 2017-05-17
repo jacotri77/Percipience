@@ -22,6 +22,13 @@ class InstLogin extends Component {
       <div
         id='InstLoginCont'>
 
+
+        <img
+              id='PerciImg' 
+              alt='Plus'
+              src={require('../../assets/images/perci.png')} />
+              
+
           <h1 
             id='loginTitle'> 
 

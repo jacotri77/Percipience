@@ -20,6 +20,16 @@ body, html{
   text-decoration: none;
 }
 
+
+#PerciImg {
+  width: 100px;
+  height: 70px;
+  margin-left: 5px;
+  margin-top: 5px;
+  position: absolute;
+
+}
+
 #AppCont {
   
   display: block;

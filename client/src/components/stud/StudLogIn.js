@@ -22,10 +22,16 @@ class StudLogIn extends Component {
       <div
         id='StudLoginCont'>
 
-        <h1 
+
+        <img
+              id='PerciImg' 
+              alt='Plus'
+              src={require('../../assets/images/perci.png')} />
+
+        <p 
           id='StudLogInTitle'> 
           Student Log In
-        </h1>
+        </p>
 
         <div
          id='StudLogInBox'>

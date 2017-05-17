@@ -1,17 +1,17 @@
 import io from 'socket.io-client'
 import store from '../store'
-import shortid from 'shortid'
+// import shortid from 'shortid'
 import moment from 'moment'
 
 
-const socket = io.connect('http://localhost:3001')
+// const socket = io.connect('http://localhost:3001')
 // 10.68.0.107. 192.168.1.10
 
 // const socket = io.connect('http://10.68.0.107:3001')
 // const socket = io.connect('http://192.168.1.10:3001')
 
  // const socket = io.connect('http://10.68.0.107:3001')
-// const socket = io.connect('http://192.168.1.10:3001')
+const socket = io.connect('http://192.168.1.10:3001')
 // const socket =io.connect('http://10.68.0.60:3001')
 
 
@@ -55,9 +55,13 @@ socket.on('addCompLvl', function(score) {
 
 export function addRoomName() {
 
-  var roomId = shortid.generate()
+  // Commented for Demo Day 
 
-  roomId = roomId.toUpperCase()
+  // var roomId = shortid.generate()
+
+  // roomId = roomId.toUpperCase()
+
+  var roomId = 'Room'
 
   socket.emit('addRoomName', roomId)
 

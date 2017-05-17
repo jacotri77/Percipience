@@ -1,7 +1,8 @@
 #studentDashCont {
 
   width: 100%;
-  height: 800px;
+  height: 650px;
+  border-radius: 15px;
   margin-left: 0px;
   background-color: #00284d;
   border: 1px solid #000;
@@ -11,18 +12,18 @@
 
 #studentDashTitle{
 
-  text-align: center;
   color: #FFF;
+  text-align: center;
+  padding-top: 20px;
   font-family: 'Work Sans', cursive;
-  font-size: 40px;
-
+  font-size: 50px;
 }
 
 #studentDashForm{
 
 	margin: auto;
 	width: 600px;
-	height: 320px;
+	height: 280px;
   border-radius: 15px;
   background-color: #80bfff;
 	border: 1px solid #000;

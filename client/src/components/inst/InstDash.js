@@ -22,6 +22,11 @@ class InstDash extends Component {
       <div
         id='InstDashCont'>
 
+<img
+              id='PerciImg' 
+              alt='Plus'
+              src={require('../../assets/images/perci.png')} />
+
         <h1
           id='InstDashHeader'>
 
