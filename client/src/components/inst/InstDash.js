@@ -22,7 +22,7 @@ class InstDash extends Component {
       <div
         id='InstDashCont'>
 
-<img
+          <img
               id='PerciImg' 
               alt='Plus'
               src={require('../../assets/images/perci.png')} />

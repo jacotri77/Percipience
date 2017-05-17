@@ -1,4 +1,5 @@
 #instDashLink{
+  
   text-decoration: none;
   color: #00284d;
 
@@ -75,7 +76,7 @@
   transition: box-shadow 0.5s;
   border-radius: 20px;
   padding-left: 10px;
-  font-family: 'Baloo', cursive;
+  font-family: 'Work Sans', cursive;
   font-size: 30px;
 }
 
