@@ -58,20 +58,22 @@ class StudentDash extends Component {
           Student Dashboard
         </h1>
 
+        <div 
+          id='rmNameLbl'>
+
+          <p>
+            {`Welcome, ${this.props.stud_user}. Please enter the Room Name to join.`}
+          </p>
+
+        </div>
+
         <div
          id='studentDashBox'>
 
           <div
             id='studentDashForm'>
 
-            <div 
-              id='rmNameLbl'>
-
-              <p>
-                {`Welcome, ${this.props.stud_user}. Please enter the Room Name to join.`}
-              </p>
-
-            </div>
+            
 
             <div
               id='StudDashLogCont'>

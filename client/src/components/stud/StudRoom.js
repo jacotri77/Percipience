@@ -36,7 +36,9 @@ class StudRoom extends Component {
 
   slideIncrement = (event) => {
 
-    var sldVal = event.target.value
+
+    var sldVal = this.state.value
+
 
   if(this.state.value >= 10) {
     return this.setState({
@@ -54,7 +56,11 @@ class StudRoom extends Component {
 
   slideDecrement = (event) => {
 
+
     var sldVal = event.target.value
+
+    var sldVal = this.state.value
+
 
   if(this.state.value <= 0) {
     return this.setState({
@@ -74,7 +80,7 @@ class StudRoom extends Component {
 
   rtd = setInterval( ()=> { 
 
-    var c = Number(document.getElementById('StudRoomSlide').value)
+    var c = this.state.value
 
       gathData({
 
@@ -115,16 +121,12 @@ class StudRoom extends Component {
 
           <div
             id='StudRoomScore'>
-
-             <i className="fa fa-minus-square fa-4x" aria-hidden="true" onClick={this.slideDecrement} ></i>
             
+
           <p id='StudRoomSlideNum'>{this.state.value}</p>
 
           <i className="fa fa-plus-square fa-4x" aria-hidden="true" onClick={this.slideIncrement}></i>
 
-          
-
-          
 
           </div>
 
