@@ -169,7 +169,7 @@ class InstRoom extends Component {
 
 const mapStateToProps = function(appState) {
 
-
+console.log(appState)
 
   return {
 

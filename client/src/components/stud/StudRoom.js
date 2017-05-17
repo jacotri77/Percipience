@@ -82,7 +82,7 @@ class StudRoom extends Component {
       gathData({
 
         user: this.props.user,
-        comp: c,
+        comp: Number(c),
         topic: this.props.curr_topic
       })
 
