@@ -3,7 +3,7 @@ import '../../assets/styles/StudentDash.css'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 
-// import { getRoomName } from '../../api/perci'
+
 
 
 class StudentDash extends Component {
@@ -39,11 +39,6 @@ class StudentDash extends Component {
     }
   }
 
-   // componentWillMount = () => {
-
-   //  getRoomName()
-    
-   // }
 
 
   render() {

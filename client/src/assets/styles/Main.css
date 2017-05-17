@@ -5,21 +5,27 @@ html {
 {
   box-sizing: inherit;
 }
+
+
 body, html{
+
   margin-top:0px;
   padding-top:0px;
 
  }
 
  h1{
+
 	margin-top: 0px;
 
  }
 
 
  #MainCont {
+
 	margin: auto;
   width: 80%;
   height: 100%;
   border-radius: 15px;
+  
 }
