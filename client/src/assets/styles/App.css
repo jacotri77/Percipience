@@ -20,6 +20,29 @@ body, html{
   text-decoration: none;
 }
 
+#background-video {
+
+height: 100%;
+width: 100%;
+top: 0;
+left: 0;
+z-index: -1;
+overflow: hidden;
+position: absolute;
+}
+
+#background-videoDiv {
+
+height: 100%;
+width: 100%;
+z-index: -1;
+opacity: 0.6;
+left: 0;
+top: 0;
+background-color: #80bfff;
+position: absolute;
+}
+
 
 #PerciImg {
   width: 100px;

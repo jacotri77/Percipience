@@ -56,7 +56,11 @@ class Main extends Component {
               path='/studLogIn'
               component={StudLogIn} />
 
+              
+
           </div>
+
+
   
         </div>
       
