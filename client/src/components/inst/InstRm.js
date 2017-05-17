@@ -60,7 +60,6 @@ class InstRoom extends Component {
 
   render() {
 
-    // console.log(this.props.ssList, 'instrom')
     
     return (
 
