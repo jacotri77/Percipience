@@ -19,7 +19,7 @@
     "momentjs": "^2.0.0",
     "nodemon": "^1.11.0",
     "react-chartjs": "^0.8.0",
-    "react-chartjs-2": "^2.0.5",
+    "react-chartjs-2": "^2.7.6",
     "react-google-charts": "^1.5.4-alpha.1",
     "react-tap-event-plugin": "^2.0.1",
     "shortid": "^2.2.8",
