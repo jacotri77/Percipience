@@ -8,7 +8,7 @@
     "start": "concurrently \"nodemon server\" \"cd client && npm start\""
   },
   "dependencies": {
-    "body-parser": "^1.17.1",
+    "body-parser": "^1.19.0",
     "chart.js": "^2.8",
     "clockwise": "^1.0.0",
     "concurrently": "^3.4.0",
