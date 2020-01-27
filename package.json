@@ -11,7 +11,7 @@
     "body-parser": "^1.17.1",
     "chart.js": "^2.8",
     "clockwise": "^1.0.0",
-    "concurrently": "^3.4.0",
+    "concurrently": "^5.1.0",
     "express": "^4.15.2",
     "jquery": "^3.4.0",
     "material-ui": "^0.18.1",
