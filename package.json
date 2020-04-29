@@ -13,7 +13,7 @@
     "clockwise": "^1.0.0",
     "concurrently": "^3.4.0",
     "express": "^4.15.2",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "material-ui": "^0.18.1",
     "moment": "^2.24.0",
     "momentjs": "^2.0.0",
